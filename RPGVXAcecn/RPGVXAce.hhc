@@ -259,7 +259,7 @@
 					<param name="Local" value="vx_user/010_002b.html">
 					</OBJECT>
 				<LI> <OBJECT type="text/sitemap">
-					<param name="Name" value="技能/物品">
+					<param name="Name" value="特技/物品">
 					<param name="Local" value="vx_user/010_002c.html">
 					</OBJECT>
 				<LI> <OBJECT type="text/sitemap">
@@ -267,7 +267,7 @@
 					<param name="Local" value="vx_user/010_002d.html">
 					</OBJECT>
 				<LI> <OBJECT type="text/sitemap">
-					<param name="Name" value="护甲">
+					<param name="Name" value="防具">
 					<param name="Local" value="vx_user/010_002e.html">
 					</OBJECT>
 				<LI> <OBJECT type="text/sitemap">
@@ -275,7 +275,7 @@
 					<param name="Local" value="vx_user/010_002f.html">
 					</OBJECT>
 				<LI> <OBJECT type="text/sitemap">
-					<param name="Name" value="敌群">
+					<param name="Name" value="敌人队伍">
 					<param name="Local" value="vx_user/010_002g.html">
 					</OBJECT>
 				<LI> <OBJECT type="text/sitemap">
