@@ -36,7 +36,7 @@
 </tr></table>
 <p>RGSS 已经预先内置了名为 <a href="../rgss/gc_window.html">Window</a> 的类。这个类控制了窗口的边框、背景的描绘、内容卷动等基本的处理。</p>
 <p>Window_Base 类继承了 <a href="../rgss/gc_window.html">Window</a> 类，新增了 RPG 窗口必要的基本功能。这个类重要的功能是，自动把设置为当前窗口外观的素材图片读取进来。此外各种文字的颜色也是在这个类里定义的。在 VX Ace 中，\C[n] 这类基本文字控制符的处理也是在这个类中进行的。</p>
-<p>Window_Selectable 类继承了 Window_Base 类，新增了检测方向键输入使光标移动、调用事先链接到的窗口方法之类的处理。例如道具的选择等等，在游戏中进行选择的窗口就经常需要用到。这个类就定义了那些窗口共通的功能。而实际上光标移动的处理，是在叫做 update 的法被调用的时候进行的。</p>
+<p>Window_Selectable 类继承了 Window_Base 类，新增了检测方向键输入使光标移动、调用事先链接到的窗口方法之类的处理。例如物品的选择等等，在游戏中进行选择的窗口就经常需要用到。这个类就定义了那些窗口共通的功能。而实际上光标移动的处理，是在叫做 update 的法被调用的时候进行的。</p>
 <p>调用窗口的 update 方法的是<strong>场景类</strong>，会在下一章进行解释。</p>
 
 
@@ -96,12 +96,12 @@ href="111_hash.html">哈希表</a>对象。</p>
  <td>Window_Command</td>
 </tr></table>
 <p>这些类控制所有指令窗口的基本处理。菜单画面或战斗画面的各种指令窗口都有定义各自的类，不过所有的类都是以 Window_Command 类作为父类的。</p>
-<p>Window_Command 类使用了前一节解释的 handler 的结构，每个指令都链接到一个符号上。比如要让「道具」这个指令链接到 :item 这个符号上，就要像下方一样使用 add_command 。</p>
+<p>Window_Command 类使用了前一节解释的 handler 的结构，每个指令都链接到一个符号上。比如要让「物品」这个指令链接到 :item 这个符号上，就要像下方一样使用 add_command 。</p>
 <pre>
-  add_command("道具", :item)
+  add_command("物品", :item)
 </pre>
 <p>add_command 的第一个参数是要当做指令名称显示的字符串，第二个参数则是用来指定所对应的符号。</p>
-<p>像这个例子所进行的指定是，当选择「道具」这个指令并按下确定键后，对应 :item 的 handler（通过 set_handler 方法）有设置的话，那么就调用该方法。</p>
+<p>像这个例子所进行的指定是，当选择「物品」这个指令并按下确定键后，对应 :item 的 handler（通过 set_handler 方法）有设置的话，那么就调用该方法。</p>
 <p>掌握 handler 的使用会有点辛苦，不过只要先记住大致的概念就足够了。在实践篇中将会用具体的例子进一步说明。</p>
 
 
@@ -135,17 +135,17 @@ href="111_hash.html">哈希表</a>对象。</p>
  <td>Window_Selectable</td>
 </tr><tr>
  <td>Window_MenuActor</td>
- <td>道具、技能</td>
+ <td>物品、技能</td>
  <td>项目选择窗口</td>
  <td>Window_MenuStatus</td>
 </tr><tr>
  <td>Window_ItemCategory</td>
- <td>道具、商店</td>
+ <td>物品、商店</td>
  <td>分类选择窗口</td>
  <td>Window_HorzCommand</td>
 </tr><tr>
  <td>Window_ItemList</td>
- <td>道具</td>
+ <td>物品</td>
  <td>物品选择窗口</td>
  <td>Window_Selectable</td>
 </tr><tr>
@@ -186,7 +186,7 @@ href="111_hash.html">哈希表</a>对象。</p>
 </tr><tr>
  <td>Window_EquipItem</td>
  <td>装备</td>
- <td>道具窗口</td>
+ <td>物品窗口</td>
  <td>Window_ItemList</td>
 </tr><tr>
  <td>Window_Status</td>

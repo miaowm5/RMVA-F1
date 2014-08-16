@@ -90,7 +90,7 @@
 		<param name="Local" value="rpgvxace/4120_ev_mapevent_outline.html#key_mapevent_outline_condition">
 		</OBJECT>
 	<LI> <OBJECT type="text/sitemap">
-		<param name="Name" value="使用效果的设定方法">
+		<param name="Name" value="使用效果的设置方法">
 		<param name="Local" value="rpgvxace/3420_db_effect.html#key_effect">
 		</OBJECT>
 	<LI> <OBJECT type="text/sitemap">
@@ -174,7 +174,7 @@
 		<param name="Local" value="rpgvxace/1140_intro_supporttool.html#testplay">
 		</OBJECT>
 	<LI> <OBJECT type="text/sitemap">
-		<param name="Name" value="特性的设定方法">
+		<param name="Name" value="特性的设置方法">
 		<param name="Local" value="rpgvxace/3410_db_feature.html#key_feature">
 		</OBJECT>
 	<LI> <OBJECT type="text/sitemap">
@@ -250,11 +250,11 @@
 		<param name="Local" value="rpgvxace/4120_ev_mapevent_outline.html">
 		</OBJECT>
 	<LI> <OBJECT type="text/sitemap">
-		<param name="Name" value="地图事件的设定">
+		<param name="Name" value="地图事件的设置">
 		<param name="Local" value="rpgvxace/4140_ev_mapevent_setting.html">
 		</OBJECT>
 	<LI> <OBJECT type="text/sitemap">
-		<param name="Name" value="地图数据的设定">
+		<param name="Name" value="地图数据的设置">
 		<param name="Local" value="rpgvxace/2140_map_setting.html#map_setting">
 		</OBJECT>
 	<LI> <OBJECT type="text/sitemap">
