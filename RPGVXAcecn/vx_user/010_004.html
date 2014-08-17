@@ -1,0 +1,140 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+<HEAD>
+<META http-equiv="Content-Type" content="text/html; charset=GBK">
+<META http-equiv="Content-Style-Type" content="text/css">
+<TITLE>给VX用户的建议</TITLE>
+<LINK rel="stylesheet" href="style.css" type="text/css">
+</HEAD>
+<BODY>
+<H1>给VX用户的建议</H1>
+<UL>
+  <LI><A href="#01">关于普通攻击的命中率</A>
+  <LI><A href="#02">关于状态「普通攻击」</A>
+  <LI><A href="#03">关于敌人进行的「毒攻击」和「黑暗攻击」</A>
+  <LI><A href="#04">将 VX 的图像素材用于 VA</A>
+</UL>
+<P>这里解说 VX 用户可能会感到疑惑的地方。</P>
+<H2><A name="01"></A>关于普通攻击的命中率</H2>
+<P>普通攻击的命中率，在 VX 中是直接使用装备武器的命中率（空手时为 95%）。而在 VA 中使用的是[角色]、[职业]、[武器]、[护甲]、[状态]的特性中设置的命中率之和。因此，如果以 VX 的感觉来设置武器命中率的话，经过[武器]之外设置的命中率相加后，可能会导致最终命中率超过 100%。</P>
+<P>VA 中，在[角色]和[职业]的特性中设置的命中率相加就是空手时的命中率。因此，角色的基本命中率应该在[角色]和[职业]中设置，而[武器]、[护甲]、[状态]这三个里面则设置基本命中率的修正值。</P>
+<H2><A name="02"></A>关于状态「普通攻击」</H2>
+<P><IMG src="img/010/010_004_01.png" width="302" height="72" border="0" class="float_r">在[技能]和[物品]中的[使用效果]中可以设定[附加状态]。在可选的状态之中，有一个[状态]标签里不能设置的[普通攻击]。这是继承了装备中的武器上设置的[攻击附加状态]。</P>
+<P>比如，你可以新建一个技能「强击」，可以造成比普通攻击更高的伤害，并且附加状态「普通攻击」。那么，使用「强击」时，装备普通的武器就只会造成更大伤害，而装备了普通攻击带「毒」状态的武器后，「强击」也会带有附加「毒」状态的效果；装备了普通攻击带「睡眠」状态的武器后，「强击」也会带有附加「睡眠」状态的效果。</P>
+<H2><A name="03"></A>关于敌人进行的「毒攻击」和「黑暗攻击」</H2>
+<P>VX 为你准备了「毒攻击」和「黑暗攻击」等带有追加效果的普通攻击技能。但 VA 中没有了这些。想要制作使用这种攻击的敌人，不需要准备新的技能，按照以下方式设置即可。</P>
+<P class="red">[敌人]特性-攻击-攻击附加状态</P>
+<P><IMG src="img/010/010_004_02.png" width="331" height="308" border="0" class="float_n"></P>
+<UL>
+  <LI>这样，只要行为模式里设置了[攻击]，那么敌人的普通攻击就会按照指定的概率产生追加效果。
+</UL>
+<H2><A name="04"></A>将 VX 的图像素材用于 VA</H2>
+<P>VX 的素材基本都可以直接用于 VA。但是也发生了一定的变化，要沿用图像素材的话请参考以下的表格。</P>
+<TABLE border="1" cellpadding="2" cellspacing="1" class="sys">
+  <TBODY>
+    <TR>
+      <TD class="list_title">素材名</TD>
+      <TD class="list_title">文件夹</TD>
+      <TD class="list_title">备注</TD>
+    </TR>
+    <TR>
+      <TD class="list_line1">人物</TD>
+      <TD class="list_line1">Graphics/Characters</TD>
+      <TD class="list_line1"><BR>
+      </TD>
+    </TR>
+    <TR>
+      <TD class="list_line2">脸图</TD>
+      <TD class="list_line2">Graphics/Faces</TD>
+      <TD class="list_line2"><BR>
+      </TD>
+    </TR>
+    <TR>
+      <TD class="list_line1">敌人</TD>
+      <TD class="list_line1">Graphics/Battlers</TD>
+      <TD class="list_line1"><BR>
+      </TD>
+    </TR>
+    <TR>
+      <TD class="list_line2">动画</TD>
+      <TD class="list_line2">Graphics/Animations</TD>
+      <TD class="list_line2"><BR>
+      </TD>
+    </TR>
+    <TR>
+      <TD class="list_line1">图块</TD>
+      <TD class="list_line1">Graphics/Tilesets</TD>
+      <TD class="list_line1">● 文件夹位置变化<BR>
+      ● 设置时将模式选为[兼容 VX 的类型]。</TD>
+    </TR>
+    <TR>
+      <TD class="list_line2">远景图</TD>
+      <TD class="list_line2">Graphics/Parallaxes</TD>
+      <TD class="list_line2"><BR>
+      </TD>
+    </TR>
+    <TR>
+      <TD class="list_line1">心情图标</TD>
+      <TD class="list_line1">Graphics/System</TD>
+      <TD class="list_line1"><BR>
+      </TD>
+    </TR>
+    <TR>
+      <TD class="list_line2">消息背景</TD>
+      <TD class="list_line2">----------</TD>
+      <TD class="list_line2">● 不能使用（※）</TD>
+    </TR>
+    <TR>
+      <TD class="list_line1">图标</TD>
+      <TD class="list_line1">Graphics/System</TD>
+      <TD class="list_line1"><BR>
+      </TD>
+    </TR>
+    <TR>
+      <TD class="list_line2">开始战斗时效果</TD>
+      <TD class="list_line2">Graphics/System</TD>
+      <TD class="list_line2"><BR>
+      </TD>
+    </TR>
+    <TR>
+      <TD class="list_line1">战斗画面地板</TD>
+      <TD class="list_line1">----------</TD>
+      <TD class="list_line1">● VA 已废弃，无法使用</TD>
+    </TR>
+    <TR>
+      <TD class="list_line2">飞艇影子</TD>
+      <TD class="list_line2">Graphics/System</TD>
+      <TD class="list_line2"><BR>
+      </TD>
+    </TR>
+    <TR>
+      <TD class="list_line1">标题画面</TD>
+      <TD class="list_line1">Graphics/Titles1</TD>
+      <TD class="list_line1">● 文件夹位置变化</TD>
+    </TR>
+    <TR>
+      <TD class="list_line2">游戏结束画面</TD>
+      <TD class="list_line2">Graphics/System</TD>
+      <TD class="list_line2"><BR>
+      </TD>
+    </TR>
+    <TR>
+      <TD class="list_line1">窗口皮肤</TD>
+      <TD class="list_line1">Graphics/System</TD>
+      <TD class="list_line1"><BR>
+      </TD>
+    </TR>
+    <TR>
+      <TD class="list_line2">图片</TD>
+      <TD class="list_line2">Graphics/Pictures</TD>
+      <TD class="list_line2"><BR>
+      </TD>
+    </TR>
+  </TBODY>
+</TABLE>
+<UL>
+  <LI>「消息背景」已经不是由图像素材绘制，而是变为在脚本中的 Window_Message#create_back_bitmap 方法里绘制。
+</UL>
+<HR>
+</BODY>
+</HTML>
