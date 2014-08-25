@@ -1,0 +1,122 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+<HEAD>
+<META http-equiv="Content-Type" content="text/html; charset=GBK">
+<META http-equiv="Content-Style-Type" content="text/css">
+<TITLE>技能/物品</TITLE>
+<LINK rel="stylesheet" href="style.css" type="text/css">
+</HEAD>
+<BODY>
+<H1>技能/物品</H1>
+<UL>
+  <LI><A href="#01">[伤害效果]设置方法</A>
+  <LI><A href="#02">[恢复效果]设置方法</A>
+  <LI><A href="#03">[物理攻击]设置方法</A>
+  <LI><A href="#04">[MP伤害]设置方法</A>
+  <LI><A href="#05">[吸收伤害值]设置方法</A>
+  <LI><A href="#06">[无视防御]设置方法</A>
+  <LI><A href="#07">[状态变化]设置方法</A>
+  <LI><A href="#08">[公共事件]设置方法</A>
+  <LI><A href="#09">[成长效果]设置方法</A>
+  <LI><A href="#10">「能力强化/弱化」的技能(道具)制作方法</A>
+</UL>
+<H2><A name="01"></A>[伤害效果]设置方法</H2>
+<P>在 VA 中可以个别设定技能（物品）的伤害计算公式，可以将各式各样的属性加入计算公式。另外也设置了[简易设置]这个选项，设置方法与 VX 相同（其中[精神关系度]名称变更为[魔法关系度]）。
+<P><IMG src="img/010/010_002c_01.png" width="293" height="154" border="0" class="float_n"></P>
+<P>此外，在 VA 中新增了[魔法防御]这个数值，和魔法（VX 中称为[精神]）相关的技能公式会有些许差异。要得到与 VX 相同的效果请参考以下步骤。 </P>
+<OL>
+  <LI>首先将[简易设置]的[基础伤害量]与[魔法关系度]设置成与 VX 相同的数值后按下[OK]
+  <LI>将出现的公式里[b.mdf]的系数减半
+  <LI>将[b.mdf]更改为[b.mat]
+</OL>
+<P>如此一来就能使用和 VX 相同的计算公式。 </P>
+<P>但是这个方法完全不会使用到[魔法防御]这个数值，需要使用的话请忽略步骤 3，只进行步骤 1 和 2 即可。 </P>
+<H2><A name="02"></A>[恢复效果]设置方法</H2>
+<P>物品或技能都可以用这个方法设置恢复效果。 </P>
+<P class="red">[技能/物品]使用效果 - 恢复</P>
+<P><IMG src="img/010/010_002c_02.png" width="331" height="308" border="0" class="float_n"></P>
+<UL>
+  <LI>若恢复量想以[百分比/固定值]以外的方法设置，请将伤害类型改为[体力值恢复]或[魔力值恢复]后使用伤害计算公式。
+</UL>
+<H2><A name="03"></A>[物理攻击]设置方法</H2>
+<P>想让技能（物品）使用与普通攻击相同的命中判定时使用的设置方法。 </P>
+<P class="red">[技能/物品]使用 - 命中类型 - 物理攻击</P>
+<P><IMG src="img/010/010_002c_03.png" width="351" height="120" border="0" class="float_n"></P>
+<UL>
+  <LI>这样设置后，效果就和 VX 一样了。
+</UL>
+<H2><A name="04"></A>[MP伤害]设置方法</H2>
+<P>令造成伤害损失的不是对方的 HP 而是 MP 。 </P>
+<P class="red">[技能/物品]伤害 - 类型 - 魔力值伤害</P>
+<P><IMG src="img/010/010_002c_04.png" width="303" height="64" border="0" class="float_n"></P>
+<UL>
+  <LI>这样设置后，效果就和 VX 一样了。
+</UL>
+<H2><A name="05"></A>[吸收伤害值]设置方法</H2>
+<P>给予对方伤害的同时令使用者恢复。 </P>
+
+<P class="red">[技能/物品]伤害 - 类型 - 体力值吸收/魔力值吸收</P>
+<P><IMG src="img/010/010_002c_05.png" width="301" height="126" border="0" class="float_n"></P>
+<UL>
+  <LI>这样设置后，效果就和 VX 一样了。
+</UL>
+<H2><A name="06"></A>[无视防御]设置方法</H2>
+<P>无视对象的防御和魔法防御（VX 中为精神）给予对象伤害的技能（物品）的设置方法。 </P>
+<P class="red">[技能/物品]伤害 - 简易设置 - [忽略目标的防御力]打勾</P>
+<P><IMG src="img/010/010_002c_06.png" width="293" height="154" border="0" class="float_n"></P>
+<UL>
+  <LI>也可以直接编辑计算公式，将算式里的防御（b.def）、魔法防御（b.mdf）消除即可。
+</UL>
+<TABLE border="1" cellpadding="2" cellspacing="1" class="sys">
+  <TBODY>
+    <TR>
+      <TD class="vx_topic">攻击方式</TD>
+      <TD class="vx_topic">默认的计算公式</TD>
+      <TD class="vx_topic">无视防御的计算公式</TD>
+    </TR>
+    <TR>
+      <TD class="vx_line1">普通攻击</TD>
+      <TD class="vx_line1">a.atk * 4 - b.def * 2</TD>
+      <TD class="vx_line1">a.atk * 4</TD>
+    </TR>
+    <TR>
+      <TD class="vx_line2">火球术</TD>
+      <TD class="vx_line2">150 + a.mat * 2 - b.mdf * 2</TD>
+      <TD class="vx_line2">150 + a.mat * 2</TD>
+    </TR>
+  </TBODY>
+</TABLE>
+<H2><A name="07"></A>[状态变化]设置方法</H2>
+<P>附加/解除对象的状态。 </P>
+<P class="red">[技能/物品]使用效果 - 状态 - 附加状态/解除状态</P>
+<P><IMG src="img/010/010_002c_07.png" width="662" height="308" border="0" class="float_n"></P>
+<UL>
+  <LI>要得到与 VX 相同的效果请设置为 <B>100%</B> 。
+</UL>
+<H2><A name="08"></A>[公共事件]设置方法</H2>
+<P>使用技能（物品）后呼叫公共事件。 </P>
+<P class="red">[技能/物品]使用效果 - 其他 - 公共事件</P>
+<P><IMG src="img/010/010_002c_08.png" width="331" height="308" border="0" class="float_n"></P>
+<UL>
+  <LI>这样设置后，效果就和 VX 一样了。
+</UL>
+<H2><A name="09"></A>[成长效果]设置方法</H2>
+<P>使用技能(物品)后永久性增加角色的能力值。 </P>
+<P class="red">[技能/物品]使用效果 - 其他 - 能力提升</P>
+<P><IMG src="img/010/010_002c_09.png" width="331" height="308" border="0" class="float_n"></P>
+<UL>
+  <LI>在 VA 中，技能中也可以设置成长效果了。
+</UL>
+<H2><A name="10"></A>「能力强化/弱化」的技能(道具)制作方法</H2>
+<P>使用技能（物品）令对象的攻击力或防御力暂时性的提升。 </P>
+<P>在 VX 中利用状态实现这个功能，而在 VA 中无须设置状态即可完成。 </P>
+<P class="red">[技能/物品]使用效果 - 能力值 - 能力强化/能力弱化</P>
+<P><IMG src="img/010/010_002c_10.png" width="662" height="308" border="0" class="float_n"></P>
+<UL>
+  <LI>强化/弱化可以叠加2个阶段。
+  <LI>每个阶段的能力值变动25%。
+  <LI>若需要详细设置能力值变动量，请和 VX 一样使用状态。但这会导致状态无法叠加。
+</UL>
+<HR>
+</BODY>
+</HTML>
