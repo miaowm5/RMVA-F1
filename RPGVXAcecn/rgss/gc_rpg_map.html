@@ -1,7 +1,7 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
 <HTML lang=zh><HEAD><TITLE>RPG::Map</TITLE>
 <META content="text/html; charset=GBK" http-equiv=Content-Type>
-<META content=text/css http-equiv=Content-Style-Type><LINK rel=stylesheet 
+<META content=text/css http-equiv=Content-Style-Type><LINK rel=stylesheet
 type=text/css href="../style.css">
 <META name=GENERATOR content="MSHTML 9.00.8112.16447"></HEAD>
 <BODY>
@@ -9,84 +9,83 @@ type=text/css href="../style.css">
 <P>地图数据类。</P>
 <H2>超类</H2>
 <UL>
-  <LI><A href="sc_object.html">Object</A> </LI></UL>
+  <LI><A href="sc_object.html">Object</A></LI></UL>
 <H2>属性</H2>
 <DL>
-  <DT>display_name 
+  <DT>display_name
   <DD>
   <P>地图显示名。</P>
-  <DT>tileset_id 
+  <DT>tileset_id
   <DD>
-  <P>地图元件集序号。</P>
-  <DT>width 
+  <P>地图图块组 ID。</P>
+  <DT>width
   <DD>
   <P>地图宽度。</P>
-  <DT>height 
+  <DT>height
   <DD>
   <P>地图高度。</P>
-  <DT>scroll_type 
+  <DT>scroll_type
   <DD>
   <P>循环方式（0：不循环、1：纵向循环、2：横向循环、3：纵横循环）。</P>
-  <DT>specify_battleback 
+  <DT>specify_battleback
   <DD>
-  <P>指定战斗背景的开关。</P>
-  <DT>battleback1_name 
+  <P>是否使用战斗背景图像。</P>
+  <DT>battleback1_name
   <DD>
-  <P>如果指定战斗背景选项被打开，该属性会被用来指定下部战斗图。</P>
-  <DT>battleback2_name 
+  <P>使用战斗背景图像时地板图像的文件名。</P>
+  <DT>battleback2_name
   <DD>
-  <P>如果指定战斗背景选项被打开，该属性会被用来指定上部战斗图。</P>
-  <DT>autoplay_bgm 
+  <P>使用战斗背景图像时墙壁图像的文件名。</P>
+  <DT>autoplay_bgm
   <DD>
-  <P>自动切换BGM的开关。</P>
-  <DT>bgm 
+  <P>是否自动切换背景音乐。</P>
+  <DT>bgm
   <DD>
-  <P>如果自动切换BGM选项被打开，所切换的BGM名称（<A href="gc_rpg_bgm.html">RPG::BGM</A>&nbsp;）。</P>
-  <DT>autoplay_bgs 
+  <P>自动切换背景音乐时对应的背景音乐（<A href="gc_rpg_bgm.html">RPG::BGM</A>）。</P>
+  <DT>autoplay_bgs
   <DD>
-  <P>自动切换BGS的开关。</P>
-  <DT>bgs 
+  <P>自动切换背景声音的开关。</P>
+  <DT>bgs
   <DD>
-  <P>如果自动切换BGS选项被打开，所切换的BGS名称（<A href="gc_rpg_bgs.html">RPG::BGS</A>&nbsp;）。</P>
-  <DT>disable_dashing 
+  <P>自动切换背景声音时对应的背景声音（<A href="gc_rpg_bgs.html">RPG::BGS</A>&nbsp;）。</P>
+  <DT>disable_dashing
   <DD>
-  <P>禁用奔跑功能的开关.</P>
-  <DT>encounter_list 
+  <P>是否禁止跑步。</P>
+  <DT>encounter_list
   <DD>
-  <P>遇敌列表。敌人队伍 ID 编号的数组。（<A 
-  href="gc_rpg_map_encounter.html">RPG::Map::Encounter</A>）</P>
-  <DT>encounter_step 
+  <P>遇敌列表。<A
+  href="gc_rpg_map_encounter.html">RPG::Map::Encounter</A> 的数组。</P>
+  <DT>encounter_step
   <DD>
-  <P>平均遇敌的步数。</P>
-  <DT>parallax_name 
+  <P>平均遇敌步数。</P>
+  <DT>parallax_name
   <DD>
   <P>远景图像的文件名。</P>
-  <DT>parallax_loop_x 
+  <DT>parallax_loop_x
   <DD>
   <P>横向循环的开关。</P>
-  <DT>parallax_loop_y 
+  <DT>parallax_loop_y
   <DD>
   <P>纵向循环的开关。</P>
-  <DT>parallax_sx 
+  <DT>parallax_sx
   <DD>
-  <P>自动横向滚动的速度。</P>
-  <DT>parallax_sy 
+  <P>横向自动卷动的速度。</P>
+  <DT>parallax_sy
   <DD>
-  <P>自动纵向滚动的速度。</P>
-  <DT>parallax_show 
+  <P>纵向自动卷动的速度。</P>
+  <DT>parallax_show
   <DD>
-  <P>在地图编辑器显示远景的开关。</P>
-  <DT>note 
+  <P>在地图编辑器显示的开关。</P>
+  <DT>note
   <DD>
-  <P>地图的备注。</P>
-  <DT>data 
+  <P>备注。</P>
+  <DT>data
   <DD>
-  <P>地图数据。地图元件 ID 编号的三维数组。（<A href="gc_table.html">Table</A>&nbsp;）。</P>
-  <DT>events 
+  <P>地图数据。地图元件 ID 及其数据的三维数组。（<A href="gc_table.html">Table</A>）。</P>
+  <DT>events
   <DD>
-  <P>地图事件。以事件 ID 为主键， <A 
-  href="rgss/gc_rpg_event.html">RPG::Event</A> 
-  实例为对应值组成的哈希表。</P></DD></DL>
+  <P>地图事件。以事件 ID 为主键，<A
+  href="rgss/gc_rpg_event.html">RPG::Event</A> 的实例为值的哈希表。</P></DD></DL>
 <H2>内部类</H2>
 <UL>
   <LI><A href="gc_rpg_map_encounter.html">RPG::Map::Encounter</A> </LI></UL>
