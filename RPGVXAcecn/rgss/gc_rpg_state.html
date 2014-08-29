@@ -1,7 +1,7 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
 <HTML lang=zh><HEAD><TITLE>RPG::State</TITLE>
 <META content="text/html; charset=GBK" http-equiv=Content-Type>
-<META content=text/css http-equiv=Content-Style-Type><LINK rel=stylesheet 
+<META content=text/css http-equiv=Content-Style-Type><LINK rel=stylesheet
 type=text/css href="../style.css">
 <META name=GENERATOR content="MSHTML 9.00.8112.16447"></HEAD>
 <BODY>
@@ -12,54 +12,54 @@ type=text/css href="../style.css">
   <LI><A href="gc_rpg_baseitem.html">RPG::BaseItem</A> </LI></UL>
 <H2>属性</H2>
 <DL>
-  <DT>restriction 
+  <DT>restriction
   <DD>
-  <P>行为限制。</P>
+  <P>限制。</P>
   <UL>
-    <LI>0:&nbsp;无 
+    <LI>0: 无
     <LI>1: 攻击敌人
     <LI>2: 攻击双方
     <LI>3: 攻击队友
     <LI>4: 无法行动</LI></UL>
-  <DT>priority 
+  <DT>priority
   <DD>
   <P>显示优先级（0..100）。</P>
-  <DT>remove_at_battle_end 
+  <DT>remove_at_battle_end
   <DD>
   <P>战斗结束时解除（true/false）。</P>
-  <DT>remove_by_restriction 
+  <DT>remove_by_restriction
   <DD>
   <P>获得其他限制性状态时解除（true/false）。</P>
-  <DT>auto_removal_timing 
+  <DT>auto_removal_timing
   <DD>
   <P>自动解除的时机。</P>
   <UL>
-    <LI>0:&nbsp;无 
+    <LI>0: 无
     <LI>1: 行动结束时
     <LI>2: 回合结束时</LI></UL>
-  <DT>min_turns 
-  <DT>max_turns 
+  <DT>min_turns
+  <DT>max_turns
   <DD>
-  <P>状态持续回合数。</P>
-  <DT>remove_by_damage 
+  <P>状态持续回合数的最小最大值。</P>
+  <DT>remove_by_damage
   <DD>
   <P>受到伤害时解除（true/false）。</P>
-  <DT>chance_by_damage 
+  <DT>chance_by_damage
   <DD>
-  <P>解除状态需要受到的伤害，占自身总血量的百分比（%）。</P>
-  <DT>remove_by_walking 
+  <P>受到伤害时解除的概率（%）。</P>
+  <DT>remove_by_walking
   <DD>
   <P>一定步数后解除（true/false）。</P>
-  <DT>steps_to_remove 
+  <DT>steps_to_remove
   <DD>
   <P>解除状态所需要经过的步数。</P>
-  <DT>message1 
-  <DT>message2 
-  <DT>message3 
-  <DT>message4 
+  <DT>message1
+  <DT>message2
+  <DT>message3
+  <DT>message4
   <DD>
   <P>状态提示信息，分别代表:&nbsp;附加到队友、附加到敌人、状态持续、状态解除</P></DD></DL>
-<H2>Definition</H2><PRE>class RPG::State &lt; RPG::BaseItem
+<H2>定义</H2><PRE>class RPG::State &lt; RPG::BaseItem
   def initialize
     super
     @restriction = 0

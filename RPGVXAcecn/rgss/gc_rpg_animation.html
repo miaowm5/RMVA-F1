@@ -1,7 +1,7 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
 <HTML lang=zh><HEAD><TITLE>RPG::Animation</TITLE>
 <META content="text/html; charset=GBK" http-equiv=Content-Type>
-<META content=text/css http-equiv=Content-Style-Type><LINK rel=stylesheet 
+<META content=text/css http-equiv=Content-Style-Type><LINK rel=stylesheet
 type=text/css href="../style.css">
 <META name=GENERATOR content="MSHTML 9.00.8112.16447"></HEAD>
 <BODY>
@@ -12,48 +12,48 @@ type=text/css href="../style.css">
   <LI><A href="sc_object.html">Object</A> </LI></UL>
 <H2>属性</H2>
 <DL>
-  <DT>id 
+  <DT>id
   <DD>
   <P>动画 ID 标号。</P>
-  <DT>name 
+  <DT>name
   <DD>
   <P>动画名称。</P>
-  <DT>animation1_name 
+  <DT>animation1_name
   <DD>
   <P>胶片素材1 文件名。</P>
-  <DT>animation1_hue 
+  <DT>animation1_hue
   <DD>
   <P>胶片素材1 色调调整值（0～360）。</P>
-  <DT>animation2_name 
+  <DT>animation2_name
   <DD>
   <P>胶片素材2 图文件名。</P>
-  <DT>animation2_hue 
+  <DT>animation2_hue
   <DD>
   <P>胶片素材2 色调调整值（0～360）。</P>
-  <DT>position 
+  <DT>position
   <DD>
   <P>动画显示基准位置（0：头上、1：中心、2：脚下、3：画面）。</P>
-  <DT>frame_max 
+  <DT>frame_max
   <DD>
   <P>可用帧数。</P>
-  <DT>frames 
+  <DT>frames
   <DD>
-  <P>图象元内容。是由 <A href="gc_rpg_animation_frame.html">RPG::Animation::Frame</A> 
+  <P>图象元内容。是由 <A href="gc_rpg_animation_frame.html">RPG::Animation::Frame</A>
   对象所组成的数组。</P>
-  <DT>timings 
+  <DT>timings
   <DD>
-  <P>音效和闪烁效果时间内容。是由 <A 
-  href="gc_rpg_animation_timing.html">RPG::Animation::Timing</A> 
+  <P>音效和闪烁效果时间内容。是由 <A
+  href="gc_rpg_animation_timing.html">RPG::Animation::Timing</A>
   对象所组成的数组。</P></DD></DL>
 <H2>方法</H2>
 <DL>
-  <DT>to_screen? 
+  <DT>to_screen?
   <DD>
-  <P>判断该动画是否全屏显示，当 position 的值为3的时候返回true。</P>
+  <P>判断该动画是否全屏显示，当 position 的值为3的时候返回true。</P></DD>
   <H2>内部类</H2>
   <UL>
-    <LI><A href="gc_rpg_animation_frame.html">RPG::Animation::Frame</A> 
-    <LI><A href="gc_rpg_animation_timing.html">RPG::Animation::Timing</A> 
+    <LI><A href="gc_rpg_animation_frame.html">RPG::Animation::Frame</A>
+    <LI><A href="gc_rpg_animation_timing.html">RPG::Animation::Timing</A>
   </LI></UL>
   <H2>定义</H2><PRE>class RPG::Animation
   def initialize

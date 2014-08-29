@@ -1,7 +1,7 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
 <HTML lang=zh><HEAD><TITLE>RPG::Animation::Frame</TITLE>
 <META content="text/html; charset=GBK" http-equiv=Content-Type>
-<META content=text/css http-equiv=Content-Style-Type><LINK rel=stylesheet 
+<META content=text/css http-equiv=Content-Style-Type><LINK rel=stylesheet
 type=text/css href="../style.css">
 <META name=GENERATOR content="MSHTML 9.00.8112.16447"></HEAD>
 <BODY>
@@ -15,19 +15,15 @@ type=text/css href="../style.css">
   <LI><A href="gc_rpg_animation.html">RPG::Animation</A> </LI></UL>
 <H2>属性</H2>
 <DL>
-  <DT>cell_max 
+  <DT>cell_max
   <DD>
-  <P>图象元数。相当于本帧中图象元的最大编号。</P>
-  <DT>cell_data 
+  <P>单元个数。相当于本帧中单元的最大编号。</P>
+  <DT>cell_data
   <DD>
-  <P>包含图象元内容的二维数组（<A href="gc_table.html">Table</A>&nbsp;）。</P>
+  <P>包含单元内容的二维数组（<A href="gc_table.html">Table</A>）。</P>
   <P>使用 cell_data[<VAR>cell_index</VAR>, <VAR>data_index</VAR>] 的形式。</P>
-  <P><VAR>data_index</VAR> 的范围是从 0 到 7 ，分别代表下面的各种图象元信息：</P>
-  <DD>
-  <P>0：图象元号<BR>1：X 坐标<BR>2：Y 
-  坐标<BR>3：放大率<BR>4：旋转角度<BR>5：横向翻转<BR>6：不透明度<BR>7：合成方式</P>
-  <DD>
-  <P>图象元号实际上为RPGVX编辑器中所显现的图象元编号，编号为-1则代表该图象元不被使用。</P></DD></DL>
+  <P><VAR>data_index</VAR> 的范围是从 0 到 7 ，代表单元的各项信息。（0：图案，1：X 坐标，2：Y
+  坐标，3：缩放度，4：旋转角度，5：左右翻转，6：不透明度，7：合成方式。图案实际上编辑器中的图案编号减 1。-1 表示不存在该单元。</P></DD></DL>
 <H2>定义</H2><PRE>class RPG::Animation::Frame
   def initialize
     @cell_max = 0
