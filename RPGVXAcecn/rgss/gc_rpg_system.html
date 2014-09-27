@@ -14,43 +14,43 @@ type=text/css href="../style.css">
 <DL>
   <DT>game_title
   <DD>
-  <P>标题文字。</P>
+  <P>游戏标题。</P>
   <DT>version_id
   <DD>
-  <P>检查更新用的随机数，RPG Maker VX每次存档都会变更此数值。</P>
+  <P>检查更新用的随机数，编辑器每次保存数据时都会变更此数值。</P>
   <DT>japanese
   <DD>
-  <P>在日文版本中始终开启的开关。</P>
+  <P>日文版中始终为 true。</P>
   <DT>party_members
   <DD>
-  <P>初始队伍。角色 ID 编号的数组。</P>
+  <P>初始队伍。角色 ID 的数组。</P>
   <DT>currency_unit
   <DD>
   <P>货币单位。</P>
   <DT>window_tone
   <DD>
-  <P>窗口颜色（<A href="gc_tone.html">Tone</A>&nbsp;）。</P>
+  <P>窗口颜色（<A href="gc_tone.html">Tone</A>）。</P>
   <DT>elements
   <DD>
-  <P>属性列表。以属性 ID 编号为索引的字符串数组，0 号元素为 nil。</P>
+  <P>属性列表。以属性 ID 为下标的字符串数组，0 号元素为空字符串。</P>
   <DT>skill_types
   <DD>
-  <P>技能类型列表。以技能类型 ID 编号为索引的字符串数组，0 号元素为 nil。</P>
+  <P>技能类型列表。以技能类型 ID 为下标的字符串数组，0 号元素为空字符串。</P>
   <DT>weapon_types
   <DD>
-  <P>武器类型列表。以武器类型 ID 编号为索引的字符串数组，0 号元素为 nil。</P>
+  <P>武器类型列表。以武器类型 ID 为下标的字符串数组，0 号元素为空字符串。</P>
   <DT>armor_types
   <DD>
-  <P>护甲类型列表。以护甲类型 ID 编号为索引的字符串数组，0 号元素为 nil。</P>
+  <P>护甲类型列表。以护甲类型 ID 为下标的字符串数组，0 号元素为空字符串。</P>
   <DT>switches
   <DD>
-  <P>开关列表。以开关 ID 编号为索引的字符串数组，0 号元素为 nil。</P>
+  <P>开关列表。以开关 ID 为下标的字符串数组，0 号元素为 nil。</P>
   <DT>variables
   <DD>
-  <P>变量列表。以变量 ID 编号为索引的字符串数组，0 号元素为 nil。</P>
+  <P>变量列表。以变量 ID 为下标的字符串数组，0 号元素为 nil。</P>
   <DT>boat
   <DD>
-  <P>小船设置（<A
+  <P>小舟设置（<A
   href="gc_rpg_system_vehicle.html">RPG::System::Vehicle</A>）。</P>
   <DT>ship
   <DD>
@@ -62,10 +62,10 @@ type=text/css href="../style.css">
 href="gc_rpg_system_vehicle.html">RPG::System::Vehicle</A>）。</P>
   <DT>title1_name
   <DD>
-  <P>标题背景画面的文件名。</P>
+  <P>标题画面图像（背景）的文件名。</P>
   <DT>title2_name
   <DD>
-  <P>标题前端画面的文件名。</P>
+  <P>标题画面图像（边框）的文件名。</P>
   <DT>opt_draw_title
   <DD>
   <P>绘制标题文字的开关。</P>
@@ -92,53 +92,53 @@ href="gc_rpg_system_vehicle.html">RPG::System::Vehicle</A>）。</P>
   <P>替补队员可获得经验值的开关。</P>
   <DT>title_bgm
   <DD>
-  <P>标题画面背景音乐（<A href="gc_rpg_bgm.html">RPG::BGM</A>）。</P>
+  <P>标题画面 BGM（<A href="gc_rpg_bgm.html">RPG::BGM</A>）。</P>
   <DT>battle_bgm
   <DD>
-  <P>战斗画面背景音乐（<A href="gc_rpg_bgm.html">RPG::BGM</A>）。</P>
+  <P>战斗画面 BGM（<A href="gc_rpg_bgm.html">RPG::BGM</A>）。</P>
   <DT>battle_end_me
   <DD>
-  <P>战斗结束音效（<A href="gc_rpg_me.html">RPG::ME</A>）</P>
+  <P>战斗结束 ME（<A href="gc_rpg_me.html">RPG::ME</A>）</P>
   <DT>gameover_me
   <DD>
-  <P>游戏结束音效（<A href="gc_rpg_me.html">RPG::ME</A>）。</P>
+  <P>游戏结束 ME（<A href="gc_rpg_me.html">RPG::ME</A>）。</P>
   <DT>sounds
   <DD>
-  <P>声效设置（<A href="gc_rpg_se.html">RPG::SE</A> 数组）。</P>
+  <P>声效。<A href="gc_rpg_se.html">RPG::SE</A> 的数组。</P>
   <DT>start_map_id
   <DD>
-  <P>玩家初始位置的地图编号。</P>
+  <P>玩家初始位置的地图 ID。</P>
   <DT>start_x
   <DD>
-  <P>玩家初始位置的 X 坐标。</P>
+  <P>玩家初始位置的地图 X 坐标。</P>
   <DT>start_y
   <DD>
-  <P>玩家初始位置的&nbsp;Y 坐标。</P>
+  <P>玩家初始位置的地图 Y 坐标。</P>
   <DT>terms
   <DD>
   <P>用语（<A href="gc_rpg_system_terms.html">RPG::System::Terms</A>）。</P>
   <DT>test_battlers
   <DD>
-  <P>战斗测试设置（<A
-  href="gc_rpg_system_testbattler.html">RPG::System::TestBattler</A>）。</P>
+  <P>战斗测试的队伍设置。<A
+  href="gc_rpg_system_testbattler.html">RPG::System::TestBattler</A> 的数组。</P>
   <DT>test_troop_id
   <DD>
-  <P>战斗测试中的敌群编号。</P>
+  <P>战斗测试的敌群 ID。</P>
   <DT>battleback1_name
   <DD>
-  <P>战斗测试背景下半部文件名。</P>
+  <P>编辑敌群以及战斗测试中，战斗背景（地板）图像的文件名。</P>
   <DT>battleback2_name
   <DD>
-  <P>战斗测试背景上半部文件名。</P>
+  <P>编辑敌群以及战斗测试中，战斗背景（墙壁）图像的文件名。</P>
   <DT>battler_name
   <DD>
-  <P>编辑器内部使用，战斗图文件名。</P>
+  <P>在编辑动画时使用的战斗图文件名。</P>
   <DT>battler_hue
   <DD>
-  <P>编辑器内部使用，战斗图档色调调整值（0～360）。</P>
+  <P>在编辑动画时使用的战斗图色调变化量（0～360）。</P>
   <DT>edit_map_id
   <DD>
-  <P>编辑器内部使用，目前正在编辑的地图 ID 编号。</P></DD></DL>
+  <P>编辑器内部使用。当前正在编辑的地图 ID 。</P></DD></DL>
 <H2>内部类</H2>
 <UL>
   <LI><A href="gc_rpg_system_vehicle.html">RPG::System::Vehicle</A>
