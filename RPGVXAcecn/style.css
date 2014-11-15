@@ -1,5 +1,6 @@
 body         { font-family: "Microsoft YaHei", Verdana;
                background-image: url('img/back.png');
+               background-repeat: repeat-y;
                color: black;
                margin-left: 1.8em;
                line-height: 120%;
