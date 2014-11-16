@@ -1,134 +1,134 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
-<HTML lang=zh><HEAD><TITLE>Bitmap</TITLE>
-<META content="text/html; charset=GBK" http-equiv=Content-Type>
-<META content=text/css http-equiv=Content-Style-Type><LINK rel=stylesheet
+<html lang=zh><head><title>Bitmap</title>
+<meta content="text/html; charset=GBK" http-equiv=Content-Type>
+<meta content=text/css http-equiv=Content-Style-Type><link rel=stylesheet
 type=text/css href="../style.css">
-<META name=GENERATOR content="MSHTML 9.00.8112.16447"></HEAD>
-<BODY>
-<H1>Bitmap</H1>
-<P>位图类，其实就是图像类。</P>
-<P>在画面上显示位图，必须使用精灵（<A href="gc_sprite.html">Sprite</A>）之类的对象。</P>
-<H2>超类</H2>
-<UL>
-  <LI><A href="sc_object.html">Object</A> </LI></UL>
-<H2>类方法</H2>
-<DL>
-  <DT><A name=new>Bitmap.new(<VAR>filename</VAR>)</A>
-  <DD>
-  <P>载入由 filename 参数所指定的图像，并生成一个对应的位图类对象。</P>
-  <P>函数会自动搜索 <A href="rgss.html#rgss_rtp">RGSS-RTP</A> 和 <A
-  href="rgss.html#encryption_archive">加密档案</A> 中的文件，并且扩展名可以省略。</P>
-  <DT>Bitmap.new(<VAR>width</VAR>, <VAR>height</VAR>)
-  <DD>
-  <P>生成指定大小的位图对象。</P></DD></DL>
-<H2>方法</H2>
-<DL>
-  <DT><A name=dispose>dispose</A>
-  <DD>
-  <P>释放位图，若位图已释放，则什么都不做。</P>
-  <DT>disposed?
-  <DD>
-  <P>如果位图已释放，则返回 true 。</P>
-  <DT>width
-  <DD>
-  <P>获取位图的宽度。</P>
-  <DT>height
-  <DD>
-  <P>获取位图的高度。</P>
-  <DT>rect
-  <DD>
-  <P>获取位图矩形（<A href="gc_rect.html">Rect</A>）。</P>
-  <DT>blt(<VAR>x</VAR>, <VAR>y</VAR>, <VAR>src_bitmap</VAR>,
-  <VAR>src_rect</VAR>[, <VAR>opacity</VAR>])
-  <DD>
-  <P>将位图 <VAR>src_bitmap</VAR> 的矩形 <VAR>src_rect</VAR>（<A href="gc_rect.html">Rect</A>）中的数据整体传送到当前位图的坐标 (<VAR>x</VAR>, <VAR>y</VAR>) 处。</P>
-  <P><VAR>opacity</VAR> 是透明度，范围 0～255。</P>
-  <DT>stretch_blt(<VAR>dest_rect</VAR>, <VAR>src_bitmap</VAR>,
-  <VAR>src_rect</VAR>[, <VAR>opacity</VAR>])
-  <DD>
-  <P>将位图 <VAR>src_bitmap</VAR> 的矩形
-  <VAR>src_rect</VAR>（<A href="gc_rect.html">Rect</A>）中的数据整体传送到当前位图的矩形 <VAR>dest_rect</VAR>（<A
-  href="gc_rect.html">Rect</A>）处。</P>
-  <P><VAR>opacity</VAR> 是透明度，范围 0～255。</P>
-  <DT>fill_rect(<VAR>x</VAR>, <VAR>y</VAR>, <VAR>width</VAR>,
-  <VAR>height</VAR>, <VAR>color</VAR>)
-  <DT>fill_rect(<VAR>rect</VAR>, <VAR>color</VAR>)
-  <DD>
-  <P>将位图区域 (<VAR>x</VAR>, <VAR>y</VAR>, <VAR>width</VAR>,
-  <VAR>height</VAR>) 或矩形（<A href="gc_rect.html">Rect</A>）填满指定的颜色 <VAR>color</VAR> （<A
-  href="gc_color.html">Color</A>）。</P>
-  <DT>gradient_fill_rect(<VAR>x</VAR>, <VAR>y</VAR>,
-  <VAR>width</VAR>, <VAR>height</VAR>, <VAR>color1</VAR>, <VAR>color2</VAR>[,
-  <VAR>vertical</VAR>])
-  <DT>gradient_fill_rect(<VAR>rect</VAR>, <VAR>color1</VAR>,
-  <VAR>color2</VAR>[, <VAR>vertical</VAR>])
-  <DD>
-  <P>将位图区域 (<VAR>x</VAR>, <VAR>y</VAR>, <VAR>width</VAR>,
-  <VAR>height</VAR>) 或矩形（<A href="gc_rect.html">Rect</A>）填满从颜色 <VAR>color</VAR>1（<A href="gc_color.html">Color</A>）至<VAR>
-  color2</VAR>（<A href="rgss/gc_color.html">Color</A>）的渐变色彩。</P>
-  <P>将 <VAR>vertical</VAR> 设为 true 生成纵向的渐变色彩，默认为横向渐变。</P>
-  <DT>clear
-  <DD>
-  <P>清除整个位图。</P>
-  <DT>clear_rect(<VAR>x</VAR>, <VAR>y</VAR>, <VAR>width</VAR>,
-  <VAR>height</VAR>)
-  <DT>clear_rect(<VAR>rect</VAR>)
-  <DD>
-  <P>清除位图区域 (<VAR>x</VAR>, <VAR>y</VAR>, <VAR>width</VAR>,
-  <VAR>height</VAR>) 或矩形 <VAR>rect</VAR> （<A
-  href="rgss/gc_rect.html">Rect</A> )
-  。</P>
-  <DT>get_pixel(<VAR>x</VAR>, <VAR>y</VAR>)
-  <DD>
-  <P>获取指定像素点 (<VAR>x</VAR>, <VAR>y</VAR>) 的色彩（<A
-  href="rgss/gc_color.html">Color</A>）。</P>
-  <DT>set_pixel(<VAR>x</VAR>, <VAR>y</VAR>, <VAR>color</VAR>)
+<meta name=GENERATOR content="MSHTML 9.00.8112.16447"></head>
+<body>
+<h1>Bitmap</h1>
+<p>位图类，其实就是图像类。</p>
+<p>在画面上显示位图，必须使用精灵（<a href="gc_sprite.html">Sprite</a>）之类的对象。</p>
+<h2>超类</h2>
+<ul>
+  <li><a href="sc_object.html">Object</a> </li></ul>
+<h2>类方法</h2>
+<dl>
+  <dt><a name=new>Bitmap.new(<var>filename</var>)</a>
+  <dd>
+  <p>载入由 filename 参数所指定的图像，并生成一个对应的位图类对象。</p>
+  <p>函数会自动搜索 <a href="rgss.html#rgss_rtp">RGSS-RTP</a> 和 <a
+  href="rgss.html#encryption_archive">加密档案</a> 中的文件，并且扩展名可以省略。</p>
+  <dt>Bitmap.new(<var>width</var>, <var>height</var>)
+  <dd>
+  <p>生成指定大小的位图对象。</p></dd></dl>
+<h2>方法</h2>
+<dl>
+  <dt><a name=dispose>dispose</a>
+  <dd>
+  <p>释放位图，若位图已释放，则什么都不做。</p>
+  <dt>disposed?
+  <dd>
+  <p>如果位图已释放，则返回 true 。</p>
+  <dt>width
+  <dd>
+  <p>获取位图的宽度。</p>
+  <dt>height
+  <dd>
+  <p>获取位图的高度。</p>
+  <dt>rect
+  <dd>
+  <p>获取位图矩形（<a href="gc_rect.html">Rect</a>）。</p>
+  <dt>blt(<var>x</var>, <var>y</var>, <var>src_bitmap</var>,
+  <var>src_rect</var>[, <var>opacity</var>])
+  <dd>
+  <p>将位图 <var>src_bitmap</var> 的矩形 <var>src_rect</var>（<a href="gc_rect.html">Rect</a>）中的数据整体传送到当前位图的坐标 (<var>x</var>, <var>y</var>) 处。</p>
+  <p><var>opacity</var> 是透明度，范围 0～255。</p>
+  <dt>stretch_blt(<var>dest_rect</var>, <var>src_bitmap</var>,
+  <var>src_rect</var>[, <var>opacity</var>])
+  <dd>
+  <p>将位图 <var>src_bitmap</var> 的矩形
+  <var>src_rect</var>（<a href="gc_rect.html">Rect</a>）中的数据整体传送到当前位图的矩形 <var>dest_rect</var>（<a
+  href="gc_rect.html">Rect</a>）处。</p>
+  <p><var>opacity</var> 是透明度，范围 0～255。</p>
+  <dt>fill_rect(<var>x</var>, <var>y</var>, <var>width</var>,
+  <var>height</var>, <var>color</var>)
+  <dt>fill_rect(<var>rect</var>, <var>color</var>)
+  <dd>
+  <p>将位图区域 (<var>x</var>, <var>y</var>, <var>width</var>,
+  <var>height</var>) 或矩形（<a href="gc_rect.html">Rect</a>）填满指定的颜色 <var>color</var> （<a
+  href="gc_color.html">Color</a>）。</p>
+  <dt>gradient_fill_rect(<var>x</var>, <var>y</var>,
+  <var>width</var>, <var>height</var>, <var>color1</var>, <var>color2</var>[,
+  <var>vertical</var>])
+  <dt>gradient_fill_rect(<var>rect</var>, <var>color1</var>,
+  <var>color2</var>[, <var>vertical</var>])
+  <dd>
+  <p>将位图区域 (<var>x</var>, <var>y</var>, <var>width</var>,
+  <var>height</var>) 或矩形（<a href="gc_rect.html">Rect</a>）填满从颜色 <var>color</var>1（<a href="gc_color.html">Color</a>）至<var>
+  color2</var>（<a href="rgss/gc_color.html">Color</a>）的渐变色彩。</p>
+  <p>将 <var>vertical</var> 设为 true 生成纵向的渐变色彩，默认为横向渐变。</p>
+  <dt>clear
+  <dd>
+  <p>清除整个位图。</p>
+  <dt>clear_rect(<var>x</var>, <var>y</var>, <var>width</var>,
+  <var>height</var>)
+  <dt>clear_rect(<var>rect</var>)
+  <dd>
+  <p>清除位图区域 (<var>x</var>, <var>y</var>, <var>width</var>,
+  <var>height</var>) 或矩形 <var>rect</var> （<a
+  href="rgss/gc_rect.html">Rect</a> )
+  。</p>
+  <dt>get_pixel(<var>x</var>, <var>y</var>)
+  <dd>
+  <p>获取指定像素点 (<var>x</var>, <var>y</var>) 的色彩（<a
+  href="rgss/gc_color.html">Color</a>）。</p>
+  <dt>set_pixel(<var>x</var>, <var>y</var>, <var>color</var>)
 
-  <DD>
-  <P>设置指定像素点 (<VAR>x</VAR>, <VAR>y</VAR>) 的色彩（<A
-  href="rgss/gc_color.html">Color</A>
-  )。</P>
-  <DT>hue_change(<VAR>hue</VAR>)
-  <DD>
-  <P>在 360 度内变换位图的色相。</P>
-  <P>此处理需要花费时间，另外色彩转换有误差，反复转换可能会导致色彩损失。</P>
-  <DT>blur
-  <DD>
-  <P>对位图执行模糊效果。此处理需要花费时间。</P>
-  <DT>radial_blur(<VAR>angle</VAR>, <VAR>division</VAR>)
-  <DD>
-  <P>对位图执行放射型模糊。<VAR>angle</VAR> 指定 0～360
-  的角度，角度愈大，效果愈圆润。</P>
-  <P><VAR>division</VAR> 指定 2～100
-  的分界数，分界数愈大，效果愈平滑。此处理需要花费大量时间。</P>
-  <DT>draw_text(<VAR>x</VAR>, <VAR>y</VAR>, <VAR>width</VAR>,
-  <VAR>height</VAR>, <VAR>str</VAR>[, <VAR>align</VAR>])
-  <DT>draw_text(<VAR>rect</VAR>, <VAR>str</VAR>[,
-  <VAR>align</VAR>])
-  <DD>
-  <P>在位图区域 (<VAR>x</VAR>, <VAR>y</VAR>, <VAR>width</VAR>,
-  <VAR>height</VAR>) 或矩形 <VAR>rect</VAR>（<A
-  href="rgss/gc_rect.html">Rect</A>）
-  中描绘字符串 <VAR>str</VAR> 。</P>
-  <P>若 <VAR>str</VAR> 不是字符串对象，则会在执行之前，先调用 to_s
-  方法转换成字符串。</P>
-  <DD>
-  <P>若文字长度超过区域的宽度，文字宽度会自动缩放，最高缩放60%。</P>
-  <DD>
-  <P>文字的横向对齐方式预设为靠左对齐，可以设置 <VAR>align</VAR> 为 1 居中对齐，或设置为 2
-  靠右对齐。纵向则必定是总是居中对齐。</P>
-  <P>此处理需要花费时间，因此不建议每帧重绘一次文字。</P>
-  <DT>text_size(<VAR>str</VAR>)
-  <DD>
-  <P>获取使用 draw_text 方法描绘 str 字符串时所需要的区域（<A
-  href="rgss/gc_rect.html">Rect</A> )
-  。该区域不包含轮廓部分 <SPAN class=rgss3>(RGSS3)</SPAN> 和斜体的突出部分。</P>
-  <P>若 <VAR>str</VAR> 不是字符串对象，则会在执行之前，先调用 to_s
-  方法转换成字符串。</P></DD></DL>
-<H2>属性</H2>
-<DL>
-  <DT>font
-  <DD>
-  <P>使用 draw_text 方法描绘字符串时所使用的字体。（<A
-  href="gc_font.html">Font</A>）。</P></DD></DL>
-<H6></H6></BODY></HTML>
+  <dd>
+  <p>设置指定像素点 (<var>x</var>, <var>y</var>) 的色彩（<a
+  href="rgss/gc_color.html">Color</a>
+  )。</p>
+  <dt>hue_change(<var>hue</var>)
+  <dd>
+  <p>在 360 度内变换位图的色相。</p>
+  <p>此处理需要花费时间，另外色彩转换有误差，反复转换可能会导致色彩损失。</p>
+  <dt>blur
+  <dd>
+  <p>对位图执行模糊效果。此处理需要花费时间。</p>
+  <dt>radial_blur(<var>angle</var>, <var>division</var>)
+  <dd>
+  <p>对位图执行放射型模糊。<var>angle</var> 指定 0～360
+  的角度，角度愈大，效果愈圆润。</p>
+  <p><var>division</var> 指定 2～100
+  的分界数，分界数愈大，效果愈平滑。此处理需要花费大量时间。</p>
+  <dt>draw_text(<var>x</var>, <var>y</var>, <var>width</var>,
+  <var>height</var>, <var>str</var>[, <var>align</var>])
+  <dt>draw_text(<var>rect</var>, <var>str</var>[,
+  <var>align</var>])
+  <dd>
+  <p>在位图区域 (<var>x</var>, <var>y</var>, <var>width</var>,
+  <var>height</var>) 或矩形 <var>rect</var>（<a
+  href="rgss/gc_rect.html">Rect</a>）
+  中描绘字符串 <var>str</var> 。</p>
+  <p>若 <var>str</var> 不是字符串对象，则会在执行之前，先调用 to_s
+  方法转换成字符串。</p>
+  <dd>
+  <p>若文字长度超过区域的宽度，文字宽度会自动缩放，最高缩放60%。</p>
+  <dd>
+  <p>文字的横向对齐方式预设为靠左对齐，可以设置 <var>align</var> 为 1 居中对齐，或设置为 2
+  靠右对齐。纵向则必定是总是居中对齐。</p>
+  <p>此处理需要花费时间，因此不建议每帧重绘一次文字。</p>
+  <dt>text_size(<var>str</var>)
+  <dd>
+  <p>获取使用 draw_text 方法描绘 str 字符串时所需要的区域（<a
+  href="rgss/gc_rect.html">Rect</a> )
+  。该区域不包含轮廓部分 <span class=rgss3>(RGSS3)</span> 和斜体的突出部分。</p>
+  <p>若 <var>str</var> 不是字符串对象，则会在执行之前，先调用 to_s
+  方法转换成字符串。</p></dd></dl>
+<h2>属性</h2>
+<dl>
+  <dt>font
+  <dd>
+  <p>使用 draw_text 方法描绘字符串时所使用的字体。（<a
+  href="gc_font.html">Font</a>）。</p></dd></dl>
+<h6></h6></body></html>

@@ -1,51 +1,51 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
-<HTML lang=zh><HEAD><TITLE>RPG::Actor</TITLE>
-<META content="text/html; charset=GBK" http-equiv=Content-Type>
-<META content=text/css http-equiv=Content-Style-Type><LINK rel=stylesheet 
+<html lang=zh><head><title>RPG::Actor</title>
+<meta content="text/html; charset=GBK" http-equiv=Content-Type>
+<meta content=text/css http-equiv=Content-Style-Type><link rel=stylesheet
 type=text/css href="../style.css">
-<META name=GENERATOR content="MSHTML 9.00.8112.16447"></HEAD>
-<BODY>
-<H1>RPG::Actor</H1>
-<P>角色的数据类。</P>
-<H2>超类</H2>
-<UL>
-  <LI><A href="gc_rpg_baseitem.html">RPG::BaseItem</A> </LI></UL>
-<H2>属性</H2>
-<DL>
-  <DT>nickname 
-  <DD>
-  <P>角色称号。</P>
-  <DT>class_id 
-  <DD>
-  <P>角色职业编号。</P>
-  <DT>initial_level 
-  <DD>
-  <P>角色初始等级。</P>
-  <DT>max_level 
-  <DD>
-  <P>角色最终等级。</P>
-  <DT>character_name 
-  <DD>
-  <P>角色行走图的文件名。</P>
-  <DT>character_index 
-  <DD>
-  <P>角色行走图的序号（0-7）。</P>
-  <DT>face_name 
-  <DD>
-  <P>角色头像的文件名。</P>
-  <DT>face_index 
-  <DD>
-  <P>角色头像的序号（0-7）。</P>
-  <DT>equips 
-  <DD>
-  <P>角色的初始装备。存储数组的格式如下所述：</P>
-  <UL>
-    <LI>0:&nbsp;武器 
-    <LI>1:&nbsp;盾牌 
-    <LI>2:&nbsp;头盔 
-    <LI>3:&nbsp;铠甲 
-    <LI>4:&nbsp;饰品 </LI></UL></DD></DL>
-<H2>定义</H2><PRE>class RPG::Actor &lt; RPG::BaseItem
+<meta name=GENERATOR content="MSHTML 9.00.8112.16447"></head>
+<body>
+<h1>RPG::Actor</h1>
+<p>角色的数据类。</p>
+<h2>超类</h2>
+<ul>
+  <li><a href="gc_rpg_baseitem.html">RPG::BaseItem</a> </li></ul>
+<h2>属性</h2>
+<dl>
+  <dt>nickname
+  <dd>
+  <p>角色称号。</p>
+  <dt>class_id
+  <dd>
+  <p>角色职业编号。</p>
+  <dt>initial_level
+  <dd>
+  <p>角色初始等级。</p>
+  <dt>max_level
+  <dd>
+  <p>角色最终等级。</p>
+  <dt>character_name
+  <dd>
+  <p>角色行走图的文件名。</p>
+  <dt>character_index
+  <dd>
+  <p>角色行走图的序号（0-7）。</p>
+  <dt>face_name
+  <dd>
+  <p>角色头像的文件名。</p>
+  <dt>face_index
+  <dd>
+  <p>角色头像的序号（0-7）。</p>
+  <dt>equips
+  <dd>
+  <p>角色的初始装备。存储数组的格式如下所述：</p>
+  <ul>
+    <li>0:&nbsp;武器
+    <li>1:&nbsp;盾牌
+    <li>2:&nbsp;头盔
+    <li>3:&nbsp;铠甲
+    <li>4:&nbsp;饰品 </li></ul></dd></dl>
+<h2>定义</h2><pre>class RPG::Actor &lt; RPG::BaseItem
   def initialize
     super
     @nickname = ''
@@ -68,5 +68,5 @@ type=text/css href="../style.css">
   attr_accessor :face_index
   attr_accessor :equips
 end
-</PRE>
-<H6></H6></BODY></HTML>
+</pre>
+<h6></h6></body></html>

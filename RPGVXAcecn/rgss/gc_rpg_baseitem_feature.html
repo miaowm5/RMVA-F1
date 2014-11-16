@@ -1,30 +1,30 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
-<HTML lang=zh><HEAD><TITLE>RPG::BaseItem::Feature</TITLE>
-<META content="text/html; charset=GBK" http-equiv=Content-Type>
-<META content=text/css http-equiv=Content-Style-Type><LINK rel=stylesheet 
+<html lang=zh><head><title>RPG::BaseItem::Feature</title>
+<meta content="text/html; charset=GBK" http-equiv=Content-Type>
+<meta content=text/css http-equiv=Content-Style-Type><link rel=stylesheet
 type=text/css href="../style.css">
-<META name=GENERATOR content="MSHTML 9.00.8112.16447"></HEAD>
-<BODY>
-<H1>RPG::BaseItem::Feature</H1>
-<P>特性的数据类。&nbsp;</P>
-<H2>超类</H2>
-<UL>
-  <LI><A href="sc_object.html">Object</A> </LI></UL>
-<H2>调用者</H2>
-<UL>
-  <LI><A href="gc_rpg_baseitem.html">RPG::BaseItem</A> </LI></UL>
-<H2>属性</H2>
-<DL>
-  <DT>code 
-  <DD>
-  <P>特性编号。</P>
-  <DT>data_id 
-  <DD>
-  <P>特性类型编号（比如攻击附加属性、攻击附加状态）</P>
-  <DT>value 
-  <DD>
-  <P>该条特性的具体数值。</P></DD></DL>
-<H2>定义</H2><PRE>class RPG::BaseItem::Feature
+<meta name=GENERATOR content="MSHTML 9.00.8112.16447"></head>
+<body>
+<h1>RPG::BaseItem::Feature</h1>
+<p>特性的数据类。&nbsp;</p>
+<h2>超类</h2>
+<ul>
+  <li><a href="sc_object.html">Object</a> </li></ul>
+<h2>调用者</h2>
+<ul>
+  <li><a href="gc_rpg_baseitem.html">RPG::BaseItem</a> </li></ul>
+<h2>属性</h2>
+<dl>
+  <dt>code
+  <dd>
+  <p>特性编号。</p>
+  <dt>data_id
+  <dd>
+  <p>特性类型编号（比如攻击附加属性、攻击附加状态）</p>
+  <dt>value
+  <dd>
+  <p>该条特性的具体数值。</p></dd></dl>
+<h2>定义</h2><pre>class RPG::BaseItem::Feature
   def initialize(code = 0, data_id = 0, value = 0)
     @code = code
     @data_id = data_id
@@ -34,5 +34,5 @@ type=text/css href="../style.css">
   attr_accessor :data_id
   attr_accessor :value
 end
-</PRE>
-<H6></H6></BODY></HTML>
+</pre>
+<h6></h6></body></html>

@@ -1,53 +1,53 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
-<HTML lang=zh><HEAD><TITLE>RGSS Built-in Functions</TITLE>
-<META content="text/html; charset=GBK" http-equiv=Content-Type>
-<META content=text/css http-equiv=Content-Style-Type><LINK rel=stylesheet
+<html lang=zh><head><title>RGSS Built-in Functions</title>
+<meta content="text/html; charset=GBK" http-equiv=Content-Type>
+<meta content=text/css http-equiv=Content-Style-Type><link rel=stylesheet
 type=text/css href="../style.css">
-<META name=GENERATOR content="MSHTML 8.00.7601.17785"></HEAD>
-<BODY>
-<H1>RGSS 内建函数</H1>
-<P>RGSS中定义了下面的内建函数：</P>
-<DL>
-  <DT><A name=rgss_main>rgss_main { ... }</A> <SPAN class=rgss3>(RGSS3)</SPAN>
-  <P></P>
-  <DD>
-  <P>仅进行一次加载的函数。</P>
-  <P>当检测到用户按下F12的时候，这个函数会被重置。</P><PRE>rgss_main { SceneManager.run }
-</PRE>
-  <DT><A name=rgss_stop>rgss_stop</A> <SPAN class=rgss3>(RGSS3)</SPAN>
-  <P></P>
-  <DD>
-  <P>停止脚本的执行，而只保留屏幕图像的刷新。关于使用的定义请查阅 <A
-  href="../intro/index.html">脚本简介</A></P>
-  <P>效果等效于下面这一句：</P><PRE>loop { Graphics.update }
-</PRE>
-  <DT><A name=load_data>load_data(<VAR>filename</VAR>)</A>
-  <DD>
-  <P>加载由 <VAR>filename</VAR> 指定的数据文件，并重建各种对象。</P><PRE>$data_actors = load_data("Data/Actors.rvdata2")
-</PRE>这个函数本质上与下面的语句相同： <PRE>File.open(filename, "rb") { |f|
+<meta name=GENERATOR content="MSHTML 8.00.7601.17785"></head>
+<body>
+<h1>RGSS 内建函数</h1>
+<p>RGSS中定义了下面的内建函数：</p>
+<dl>
+  <dt><a name=rgss_main>rgss_main { ... }</a> <span class=rgss3>(RGSS3)</span>
+  <p></p>
+  <dd>
+  <p>仅进行一次加载的函数。</p>
+  <p>当检测到用户按下F12的时候，这个函数会被重置。</p><pre>rgss_main { SceneManager.run }
+</pre>
+  <dt><a name=rgss_stop>rgss_stop</a> <span class=rgss3>(RGSS3)</span>
+  <p></p>
+  <dd>
+  <p>停止脚本的执行，而只保留屏幕图像的刷新。关于使用的定义请查阅 <a
+  href="../intro/index.html">脚本简介</a></p>
+  <p>效果等效于下面这一句：</p><pre>loop { Graphics.update }
+</pre>
+  <dt><a name=load_data>load_data(<var>filename</var>)</a>
+  <dd>
+  <p>加载由 <var>filename</var> 指定的数据文件，并重建各种对象。</p><pre>$data_actors = load_data("Data/Actors.rvdata2")
+</pre>这个函数本质上与下面的语句相同： <pre>File.open(filename, "rb") { |f|
   obj = Marshal.load(f)
 }
-</PRE>
-  <P>不同之处在于，本函数可以从 <A
-  href="rgss.html#encryption_archive">加密文件</A>&nbsp;内加载数据文件。</P>
-  <DT><A name=save_data>save_data(<VAR>obj</VAR>, <VAR>filename</VAR>)</A>
-  <DD>
-  <P>将对象 <VAR>obj</VAR> 写入名为 <VAR>filename</VAR> 的数据文件。</P><PRE>save_data($data_actors, "Data/Actors.rvdata2")
-</PRE>这个函数本质上与下面的语句相同： <PRE>File.open(filename, "wb") { |f|
+</pre>
+  <p>不同之处在于，本函数可以从 <a
+  href="rgss.html#encryption_archive">加密文件</a>&nbsp;内加载数据文件。</p>
+  <dt><a name=save_data>save_data(<var>obj</var>, <var>filename</var>)</a>
+  <dd>
+  <p>将对象 <var>obj</var> 写入名为 <var>filename</var> 的数据文件。</p><pre>save_data($data_actors, "Data/Actors.rvdata2")
+</pre>这个函数本质上与下面的语句相同： <pre>File.open(filename, "wb") { |f|
   Marshal.dump(obj, f)
 }
-</PRE>
-  <DT><A name=msgbox>msgbox(<VAR>arg</VAR>[, ...])</A> <SPAN
-  class=rgss3>(RGSS3)</SPAN>
-  <DD>
-  <P>输出一个包含参数字符串的消息框，如果参数并不是字符串的形式，则会使用 to_s 方法转换为字符串后再进行输出。</P>
-  <DD>
-  <P>返回值为 nil 。</P>
-  <DT><A name=msgbox_p>msgbox_p(<VAR>obj</VAR>, [<VAR>obj2</VAR>, ...])</A>
-  <SPAN class=rgss3>(RGSS3)</SPAN>
-  <DD>
-  <P>将 obj 以人类可读的格式输出，也就是对话显示框的形式，相当于下面的代码（具体请参看 <A
-  href="sc_object.html#L000572">Object#inspect</A>&nbsp;）：</P><PRE>msgbox obj.inspect, "\n", obj2.inspect, "\n", ...
-</PRE>
-  <P>返回值为 nil 。</P></DD></DL>
-<H6></H6></BODY></HTML>
+</pre>
+  <dt><a name=msgbox>msgbox(<var>arg</var>[, ...])</a> <span
+  class=rgss3>(RGSS3)</span>
+  <dd>
+  <p>输出一个包含参数字符串的消息框，如果参数并不是字符串的形式，则会使用 to_s 方法转换为字符串后再进行输出。</p>
+  <dd>
+  <p>返回值为 nil 。</p>
+  <dt><a name=msgbox_p>msgbox_p(<var>obj</var>, [<var>obj2</var>, ...])</a>
+  <span class=rgss3>(RGSS3)</span>
+  <dd>
+  <p>将 obj 以人类可读的格式输出，也就是对话显示框的形式，相当于下面的代码（具体请参看 <a
+  href="sc_object.html#L000572">Object#inspect</a>&nbsp;）：</p><pre>msgbox obj.inspect, "\n", obj2.inspect, "\n", ...
+</pre>
+  <p>返回值为 nil 。</p></dd></dl>
+<h6></h6></body></html>

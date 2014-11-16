@@ -1,36 +1,36 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
-<HTML lang=zh><HEAD><TITLE>RPG::Animation::Timing</TITLE>
-<META content="text/html; charset=GBK" http-equiv=Content-Type>
-<META content=text/css http-equiv=Content-Style-Type><LINK rel=stylesheet 
+<html lang=zh><head><title>RPG::Animation::Timing</title>
+<meta content="text/html; charset=GBK" http-equiv=Content-Type>
+<meta content=text/css http-equiv=Content-Style-Type><link rel=stylesheet
 type=text/css href="../style.css">
-<META name=GENERATOR content="MSHTML 9.00.8112.16447"></HEAD>
-<BODY>
-<H1>RPG::Animation::Timing</H1>
-<P>音效和闪烁效果时间的数据类。</P>
-<H2>超类</H2>
-<UL>
-  <LI><A href="sc_object.html">Object</A> </LI></UL>
-<H2>调用者</H2>
-<UL>
-  <LI><A href="gc_rpg_animation.html">RPG::Animation</A> </LI></UL>
-<H2>属性</H2>
-<DL>
-  <DT>frame 
-  <DD>
-  <P>帧编号，实际上为显示的数据减 1。</P>
-  <DT>se 
-  <DD>
-  <P>声效（<A href="gc_rpg_se.html">RPG::SE</A>）。</P>
-  <DT>flash_scope 
-  <DD>
-  <P>闪烁范围（0：无、 1：闪烁目标、2：闪烁屏幕、3：隐藏目标）。</P>
-  <DT>flash_color 
-  <DD>
-  <P>闪烁颜色（<A href="gc_color.html">Color</A>&nbsp;）。</P>
-  <DT>flash_duration 
-  <DD>
-  <P>闪烁持续时间。</P></DD></DL>
-<H2>定义</H2><PRE>class RPG::Animation::Timing
+<meta name=GENERATOR content="MSHTML 9.00.8112.16447"></head>
+<body>
+<h1>RPG::Animation::Timing</h1>
+<p>音效和闪烁效果时间的数据类。</p>
+<h2>超类</h2>
+<ul>
+  <li><a href="sc_object.html">Object</a> </li></ul>
+<h2>调用者</h2>
+<ul>
+  <li><a href="gc_rpg_animation.html">RPG::Animation</a> </li></ul>
+<h2>属性</h2>
+<dl>
+  <dt>frame
+  <dd>
+  <p>帧编号，实际上为显示的数据减 1。</p>
+  <dt>se
+  <dd>
+  <p>声效（<a href="gc_rpg_se.html">RPG::SE</a>）。</p>
+  <dt>flash_scope
+  <dd>
+  <p>闪烁范围（0：无、 1：闪烁目标、2：闪烁屏幕、3：隐藏目标）。</p>
+  <dt>flash_color
+  <dd>
+  <p>闪烁颜色（<a href="gc_color.html">Color</a>&nbsp;）。</p>
+  <dt>flash_duration
+  <dd>
+  <p>闪烁持续时间。</p></dd></dl>
+<h2>定义</h2><pre>class RPG::Animation::Timing
   def initialize
     @frame = 0
     @se = RPG::SE.new('', 80)
@@ -44,5 +44,5 @@ type=text/css href="../style.css">
   attr_accessor :flash_color
   attr_accessor :flash_duration
 end
-</PRE>
-<H6></H6></BODY></HTML>
+</pre>
+<h6></h6></body></html>

@@ -1,66 +1,66 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
-<HTML lang=zh><HEAD><TITLE>Plane</TITLE>
-<META content="text/html; charset=GBK" http-equiv=Content-Type>
-<META content=text/css http-equiv=Content-Style-Type><LINK rel=stylesheet 
+<html lang=zh><head><title>Plane</title>
+<meta content="text/html; charset=GBK" http-equiv=Content-Type>
+<meta content=text/css http-equiv=Content-Style-Type><link rel=stylesheet
 type=text/css href="../style.css">
-<META name=GENERATOR content="MSHTML 9.00.8112.16447"></HEAD>
-<BODY>
-<H1>Plane</H1>
-<P>平面的类。平面是将位图平铺在画面上的特殊精灵，用来显示远景图等使用。</P>
-<H2>超类</H2>
-<UL>
-  <LI><A href="sc_object.html">Object</A> </LI></UL>
-<H2>类方法</H2>
-<DL>
-  <DT>Plane.new([<VAR>viewport</VAR>]) 
-  <DD>
-  <P>生成一个平面对象。必要时指定一个显示端口（<A 
-  href="gc_viewport.html">Viewport</A>）。</P></DD></DL>
-<H2>方法</H2>
-<DL>
-  <DT>dispose 
-  <DD>
-  <P>释放平面。若是已经若显示端口已释放则什么都不做。</P>
-  <DT>disposed? 
-  <DD>
-  <P>当平面已释放则返回 true。</P></DD></DL>
-<H2>属性</H2>
-<DL>
-  <DT>bitmap 
-  <DD>
-  <P>引用此平面所使用的位图（<A href="gc_bitmap.html">Bitmap</A>）。</P>
-  <DT>viewport 
-  <DD>
-  <P>引用与平面关联的显示端口（<A href="rgss/gc_viewport.html">Viewport</A>）。</P>
-  <DT>visible 
-  <DD>
-  <P>平面可见的状态。true表示可见。</P>
-  <DT>z 
-  <DD>
-  <P>平面的 Z 坐标。数值愈大的平面愈靠近玩家。Z 坐标相同的，最后生成的对象则会最靠近玩家。</P>
-  <DT>ox 
-  <DD>
-  <P>平面开始点的 X 坐标。滚动平面时修改此数值。</P>
-  <DT>oy 
-  <DD>
-  <P>平面开始点的&nbsp;Y 坐标。滚动平面时修改此数值。</P>
-  <DT>zoom_x 
-  <DD>
-  <P>平面的横向放大率，1.0 代表原始大小。</P>
-  <DT>zoom_y 
-  <DD>
-  <P>平面的纵向放大率，1.0 代表原始大小。</P>
-  <DT>opacity 
-  <DD>
-  <P>平面的不透明度（0～255）。超出范围的数值会自动修正。</P>
-  <DT>blend_type 
-  <DD>
-  <P>平面的合成方式（0：正常、1：加法、2：减法）。</P>
-  <DT>color 
-  <DD>
-  <P>与平面合成的颜色（<A href="gc_color.html">Color</A>&nbsp;）色彩的 alpha 
-  值作为合成的比例。</P>
-  <DT>tone 
-  <DD>
-  <P>平面的色调（<A href="gc_tone.html">Tone</A>&nbsp;）。</P></DD></DL>
-<H6></H6></BODY></HTML>
+<meta name=GENERATOR content="MSHTML 9.00.8112.16447"></head>
+<body>
+<h1>Plane</h1>
+<p>平面的类。平面是将位图平铺在画面上的特殊精灵，用来显示远景图等使用。</p>
+<h2>超类</h2>
+<ul>
+  <li><a href="sc_object.html">Object</a> </li></ul>
+<h2>类方法</h2>
+<dl>
+  <dt>Plane.new([<var>viewport</var>])
+  <dd>
+  <p>生成一个平面对象。必要时指定一个显示端口（<a
+  href="gc_viewport.html">Viewport</a>）。</p></dd></dl>
+<h2>方法</h2>
+<dl>
+  <dt>dispose
+  <dd>
+  <p>释放平面。若是已经若显示端口已释放则什么都不做。</p>
+  <dt>disposed?
+  <dd>
+  <p>当平面已释放则返回 true。</p></dd></dl>
+<h2>属性</h2>
+<dl>
+  <dt>bitmap
+  <dd>
+  <p>引用此平面所使用的位图（<a href="gc_bitmap.html">Bitmap</a>）。</p>
+  <dt>viewport
+  <dd>
+  <p>引用与平面关联的显示端口（<a href="rgss/gc_viewport.html">Viewport</a>）。</p>
+  <dt>visible
+  <dd>
+  <p>平面可见的状态。true表示可见。</p>
+  <dt>z
+  <dd>
+  <p>平面的 Z 坐标。数值愈大的平面愈靠近玩家。Z 坐标相同的，最后生成的对象则会最靠近玩家。</p>
+  <dt>ox
+  <dd>
+  <p>平面开始点的 X 坐标。滚动平面时修改此数值。</p>
+  <dt>oy
+  <dd>
+  <p>平面开始点的&nbsp;Y 坐标。滚动平面时修改此数值。</p>
+  <dt>zoom_x
+  <dd>
+  <p>平面的横向放大率，1.0 代表原始大小。</p>
+  <dt>zoom_y
+  <dd>
+  <p>平面的纵向放大率，1.0 代表原始大小。</p>
+  <dt>opacity
+  <dd>
+  <p>平面的不透明度（0～255）。超出范围的数值会自动修正。</p>
+  <dt>blend_type
+  <dd>
+  <p>平面的合成方式（0：正常、1：加法、2：减法）。</p>
+  <dt>color
+  <dd>
+  <p>与平面合成的颜色（<a href="gc_color.html">Color</a>&nbsp;）色彩的 alpha
+  值作为合成的比例。</p>
+  <dt>tone
+  <dd>
+  <p>平面的色调（<a href="gc_tone.html">Tone</a>&nbsp;）。</p></dd></dl>
+<h6></h6></body></html>
