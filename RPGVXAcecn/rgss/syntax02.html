@@ -1,7 +1,7 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
-<html lang=zh><head><title>Variables and Constants</title>
+<html lang=zh><head><title>变量与常量</title>
 <meta content="text/html; charset=GBK" http-equiv=Content-Type>
-<meta content=text/css http-equiv=Content-Style-Type><link rel=stylesheet 
+<meta content=text/css http-equiv=Content-Style-Type><link rel=stylesheet
 type=text/css href="../style.css">
 <meta name=GENERATOR content="MSHTML 8.00.7601.17744"></head>
 <body>
@@ -19,8 +19,8 @@ type=text/css href="../style.css">
   <div align=left><a href="#L000229">伪变量</a> </div>
   <li>
   <div align=left><a href="#L000236">常量</a> </div></li></ul>
-<p align=left>在 Ruby 之中，变量的类型 &#9472;&#9472; 无论是区域、实例、类、全局变量还是常量 &#9472;&#9472; 
-都是以名称的第一个字符来决定的。通常变量名称，除了第一个字符以外，都是由英数字符或下划线所组成。不过有些内建变量是由「$」+一个字符所组成的。（参看 <a 
+<p align=left>在 Ruby 之中，变量的类型 &#9472;&#9472; 无论是区域、实例、类、全局变量还是常量 &#9472;&#9472;
+都是以名称的第一个字符来决定的。通常变量名称，除了第一个字符以外，都是由英数字符或下划线所组成。不过有些内建变量是由「$」+一个字符所组成的。（参看 <a
 href="s_variables.html">内建变量</a>&nbsp;）</p>
 <p align=left>变量或常量会指向特定对象，将对象代入变量/常量只是变更了指定的对象，并不会复制该对象的实例。</p>
 <h2 align=left>区域变量</h2>
@@ -31,8 +31,8 @@ href="s_variables.html">内建变量</a>&nbsp;）</p>
 <h2 align=left><a name=L000226>实例变量</a></h2>
 <p align=left>实例：</p>
 <div align=left><pre>@foobar</pre></div>
-<p>以「<font 
-face=Verdana><code>@」</code>开头的变量就是实例变量，属于特定对象。实例变量可以在任何本类或子类方法内引用。引用时，未初始化的实例变量其值为 
+<p>以「<font
+face=Verdana><code>@」</code>开头的变量就是实例变量，属于特定对象。实例变量可以在任何本类或子类方法内引用。引用时，未初始化的实例变量其值为
 nil。</font></p>
 <h2 align=left><a name=L000227>类变量</a></h2>
 <p align=left>实例：</p>
@@ -42,11 +42,11 @@ nil。</font></p>
     puts @@foo
   end
 end</pre></div>
-<p>以「<font 
+<p>以「<font
 face=Verdana><code>@@</code>」开头的变量就是类变量。类变量在类定义中声明，可以由特殊类方法或实例方法等所引用/赋值。</font></p>
 <p align=left>类变量与 <a href="#L000236">常量</a> 的差异如下：</p>
 <ul>
-  <li>类变量可以重新赋值（若对常量执行则会出现警告。）&nbsp; 
+  <li>类变量可以重新赋值（若对常量执行则会出现警告。）&nbsp;
   <li>无法在本类以外直接引用，但可以在子类中引用/赋值。 </li></ul>
 <h2 align=left><a name=L000228>全局变量</a></h2>
 <p align=left>实例：</p>
@@ -70,13 +70,13 @@ face=Verdana><code>@@</code>」开头的变量就是类变量。类变量在类定义中声明，可以由
   <dt>
   <div align=left>false </div>
   <dd>
-  <p align=left><a href="sc_falseclass.html">FalseClass</a> 
+  <p align=left><a href="sc_falseclass.html">FalseClass</a>
 类唯一的实例。表示伪。</p></dd></dl>
 <p>伪变量的值无法修改，对伪变量赋值会出现语法错误。</p>
 <h2 align=left><a name=L000236>常量</a></h2>
 <p align=left>实例：</p>
 <div align=left><pre>FOOBAR</pre></div>
-<p align=left>以大写英文字母开头的标识符为常量。对常量赋值就是定义（与初始化）；常量不可在方法中声明。存取未定义常量会产生 <a 
+<p align=left>以大写英文字母开头的标识符为常量。对常量赋值就是定义（与初始化）；常量不可在方法中声明。存取未定义常量会产生 <a
 href="s_exceptions.html#NameError">NameError</a> 异常。</p>
 <p>常量可以在类或模块中定义，可以由子类、包含该模块的类、和该模块所引用。在类/模块外引用常量需要使用运算符「::」。</p>
 <div align=left><pre>class Foo
