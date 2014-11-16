@@ -1,85 +1,85 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
-<HTML lang=zh><HEAD><TITLE>Variables and Constants</TITLE>
-<META content="text/html; charset=GBK" http-equiv=Content-Type>
-<META content=text/css http-equiv=Content-Style-Type><LINK rel=stylesheet 
+<html lang=zh><head><title>Variables and Constants</title>
+<meta content="text/html; charset=GBK" http-equiv=Content-Type>
+<meta content=text/css http-equiv=Content-Style-Type><link rel=stylesheet 
 type=text/css href="../style.css">
-<META name=GENERATOR content="MSHTML 8.00.7601.17744"></HEAD>
-<BODY>
-<H1 align=left>变量与常量</H1>
-<UL>
-  <LI>
-  <DIV align=left><A href="#L000225">区域变量</A> </DIV>
-  <LI>
-  <DIV align=left><A href="#L000226">实例变量</A> </DIV>
-  <LI>
-  <DIV align=left><A href="#L000227">类变量</A> </DIV>
-  <LI>
-  <DIV align=left><A href="#L000228">全局变量</A> </DIV>
-  <LI>
-  <DIV align=left><A href="#L000229">伪变量</A> </DIV>
-  <LI>
-  <DIV align=left><A href="#L000236">常量</A> </DIV></LI></UL>
-<P align=left>在 Ruby 之中，变量的类型 &#9472;&#9472; 无论是区域、实例、类、全局变量还是常量 &#9472;&#9472; 
-都是以名称的第一个字符来决定的。通常变量名称，除了第一个字符以外，都是由英数字符或下划线所组成。不过有些内建变量是由「$」+一个字符所组成的。（参看 <A 
-href="s_variables.html">内建变量</A>&nbsp;）</P>
-<P align=left>变量或常量会指向特定对象，将对象代入变量/常量只是变更了指定的对象，并不会复制该对象的实例。</P>
-<H2 align=left>区域变量</H2>
-<P align=left>实例：</P>
-<DIV align=left><PRE>foobar</PRE></DIV>
-<P>以小写字母或是下划线开头的标识符就是区域变量或是方法调用。</P>
-<P>在区域变量作用区（类、模块、方法定义）内，初次对这类的标识符赋值则视为（该区内的）变量声明。引用未声明的标识符则视为调用无参数的方法。</P>
-<H2 align=left><A name=L000226>实例变量</A></H2>
-<P align=left>实例：</P>
-<DIV align=left><PRE>@foobar</PRE></DIV>
-<P>以「<FONT 
-face=Verdana><CODE>@」</CODE>开头的变量就是实例变量，属于特定对象。实例变量可以在任何本类或子类方法内引用。引用时，未初始化的实例变量其值为 
-nil。</FONT></P>
-<H2 align=left><A name=L000227>类变量</A></H2>
-<P align=left>实例：</P>
-<DIV align=left><PRE>class Foo
+<meta name=GENERATOR content="MSHTML 8.00.7601.17744"></head>
+<body>
+<h1 align=left>变量与常量</h1>
+<ul>
+  <li>
+  <div align=left><a href="#L000225">区域变量</a> </div>
+  <li>
+  <div align=left><a href="#L000226">实例变量</a> </div>
+  <li>
+  <div align=left><a href="#L000227">类变量</a> </div>
+  <li>
+  <div align=left><a href="#L000228">全局变量</a> </div>
+  <li>
+  <div align=left><a href="#L000229">伪变量</a> </div>
+  <li>
+  <div align=left><a href="#L000236">常量</a> </div></li></ul>
+<p align=left>在 Ruby 之中，变量的类型 &#9472;&#9472; 无论是区域、实例、类、全局变量还是常量 &#9472;&#9472; 
+都是以名称的第一个字符来决定的。通常变量名称，除了第一个字符以外，都是由英数字符或下划线所组成。不过有些内建变量是由「$」+一个字符所组成的。（参看 <a 
+href="s_variables.html">内建变量</a>&nbsp;）</p>
+<p align=left>变量或常量会指向特定对象，将对象代入变量/常量只是变更了指定的对象，并不会复制该对象的实例。</p>
+<h2 align=left>区域变量</h2>
+<p align=left>实例：</p>
+<div align=left><pre>foobar</pre></div>
+<p>以小写字母或是下划线开头的标识符就是区域变量或是方法调用。</p>
+<p>在区域变量作用区（类、模块、方法定义）内，初次对这类的标识符赋值则视为（该区内的）变量声明。引用未声明的标识符则视为调用无参数的方法。</p>
+<h2 align=left><a name=L000226>实例变量</a></h2>
+<p align=left>实例：</p>
+<div align=left><pre>@foobar</pre></div>
+<p>以「<font 
+face=Verdana><code>@」</code>开头的变量就是实例变量，属于特定对象。实例变量可以在任何本类或子类方法内引用。引用时，未初始化的实例变量其值为 
+nil。</font></p>
+<h2 align=left><a name=L000227>类变量</a></h2>
+<p align=left>实例：</p>
+<div align=left><pre>class Foo
   @@foo = 1
   def bar
     puts @@foo
   end
-end</PRE></DIV>
-<P>以「<FONT 
-face=Verdana><CODE>@@</CODE>」开头的变量就是类变量。类变量在类定义中声明，可以由特殊类方法或实例方法等所引用/赋值。</FONT></P>
-<P align=left>类变量与 <A href="#L000236">常量</A> 的差异如下：</P>
-<UL>
-  <LI>类变量可以重新赋值（若对常量执行则会出现警告。）&nbsp; 
-  <LI>无法在本类以外直接引用，但可以在子类中引用/赋值。 </LI></UL>
-<H2 align=left><A name=L000228>全局变量</A></H2>
-<P align=left>实例：</P>
-<DIV align=left><PRE>$foobar</PRE></DIV>
-<P>以「$」开头的变量就是全局变量，可以在程序中任何一处引用（因此使用时要特别注意）。全局变量不需要声明，引用时若未初始化其值为 nil。</P>
-<H2 align=left><A name=L000229>伪变量</A></H2>
-<P>除了一般变量外，还有一种叫做伪变量的特殊变量。</P>
-<DL>
-  <DT>
-  <DIV align=left>self </DIV>
-  <DD>
-  <P>当前方法的执行对象本身。</P>
-  <DT>
-  <DIV align=left>nil </DIV>
-  <DD>
-  <P align=left><A href="sc_nilclass.html">NilClass</A> 类唯一的实例。表示伪。</P>
-  <DT>
-  <DIV align=left>true </DIV>
-  <DD>
-  <P align=left><A href="sc_trueclass.html">TrueClass</A> 类唯一的实例。表示真。</P>
-  <DT>
-  <DIV align=left>false </DIV>
-  <DD>
-  <P align=left><A href="sc_falseclass.html">FalseClass</A> 
-类唯一的实例。表示伪。</P></DD></DL>
-<P>伪变量的值无法修改，对伪变量赋值会出现语法错误。</P>
-<H2 align=left><A name=L000236>常量</A></H2>
-<P align=left>实例：</P>
-<DIV align=left><PRE>FOOBAR</PRE></DIV>
-<P align=left>以大写英文字母开头的标识符为常量。对常量赋值就是定义（与初始化）；常量不可在方法中声明。存取未定义常量会产生 <A 
-href="s_exceptions.html#NameError">NameError</A> 异常。</P>
-<P>常量可以在类或模块中定义，可以由子类、包含该模块的类、和该模块所引用。在类/模块外引用常量需要使用运算符「::」。</P>
-<DIV align=left><PRE>class Foo
+end</pre></div>
+<p>以「<font 
+face=Verdana><code>@@</code>」开头的变量就是类变量。类变量在类定义中声明，可以由特殊类方法或实例方法等所引用/赋值。</font></p>
+<p align=left>类变量与 <a href="#L000236">常量</a> 的差异如下：</p>
+<ul>
+  <li>类变量可以重新赋值（若对常量执行则会出现警告。）&nbsp; 
+  <li>无法在本类以外直接引用，但可以在子类中引用/赋值。 </li></ul>
+<h2 align=left><a name=L000228>全局变量</a></h2>
+<p align=left>实例：</p>
+<div align=left><pre>$foobar</pre></div>
+<p>以「$」开头的变量就是全局变量，可以在程序中任何一处引用（因此使用时要特别注意）。全局变量不需要声明，引用时若未初始化其值为 nil。</p>
+<h2 align=left><a name=L000229>伪变量</a></h2>
+<p>除了一般变量外，还有一种叫做伪变量的特殊变量。</p>
+<dl>
+  <dt>
+  <div align=left>self </div>
+  <dd>
+  <p>当前方法的执行对象本身。</p>
+  <dt>
+  <div align=left>nil </div>
+  <dd>
+  <p align=left><a href="sc_nilclass.html">NilClass</a> 类唯一的实例。表示伪。</p>
+  <dt>
+  <div align=left>true </div>
+  <dd>
+  <p align=left><a href="sc_trueclass.html">TrueClass</a> 类唯一的实例。表示真。</p>
+  <dt>
+  <div align=left>false </div>
+  <dd>
+  <p align=left><a href="sc_falseclass.html">FalseClass</a> 
+类唯一的实例。表示伪。</p></dd></dl>
+<p>伪变量的值无法修改，对伪变量赋值会出现语法错误。</p>
+<h2 align=left><a name=L000236>常量</a></h2>
+<p align=left>实例：</p>
+<div align=left><pre>FOOBAR</pre></div>
+<p align=left>以大写英文字母开头的标识符为常量。对常量赋值就是定义（与初始化）；常量不可在方法中声明。存取未定义常量会产生 <a 
+href="s_exceptions.html#NameError">NameError</a> 异常。</p>
+<p>常量可以在类或模块中定义，可以由子类、包含该模块的类、和该模块所引用。在类/模块外引用常量需要使用运算符「::」。</p>
+<div align=left><pre>class Foo
   FOO = 'FOO'
 end
 
@@ -87,6 +87,6 @@ class Bar &lt; Foo
   p FOO             # =&gt; "FOO"
 end
 
-p Foo::FOO          # =&gt; "FOO"</PRE></DIV>
-<P>类和模块的名称视为常数处理。</P>
-<H6 align=left></H6></BODY></HTML>
+p Foo::FOO          # =&gt; "FOO"</pre></div>
+<p>类和模块的名称视为常数处理。</p>
+<h6 align=left></h6></body></html>

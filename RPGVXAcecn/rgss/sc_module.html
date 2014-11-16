@@ -1,72 +1,72 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
-<HTML lang=zh><HEAD><TITLE>Module</TITLE>
-<META content="text/html; charset=GBK" http-equiv=Content-Type>
-<META content=text/css http-equiv=Content-Style-Type><LINK rel=stylesheet
+<html lang=zh><head><title>Module</title>
+<meta content="text/html; charset=GBK" http-equiv=Content-Type>
+<meta content=text/css http-equiv=Content-Style-Type><link rel=stylesheet
 type=text/css href="../style.css">
-<META name=GENERATOR content="MSHTML 9.00.8112.16447"></HEAD>
-<BODY>
-<H1>Module</H1>
-<P>模块的类。</P>
-<H2>超类</H2>
-<UL>
-  <LI><A href="sc_object.html">Object</A> </LI></UL>
-<H2>方法</H2>
-<DL>
-  <DT><VAR>self</VAR> === <VAR>obj</VAR>
-  <DD>
-  <P>此方法大部分是用在 <A href="syntax05.html#L000301">case</A> 条件句比较用的。若是 <VAR>obj</VAR> 与
-  <VAR>self</VAR> 之间有着 <A href="sc_object.html#L000580">Object#kind_of?</A> 的关联则返回
-  true。换句话说，<A href="syntax05.html#L000301">case</A> 可以用来检查类、模块之间的从属关系。</P><PRE>str = String.new
+<meta name=GENERATOR content="MSHTML 9.00.8112.16447"></head>
+<body>
+<h1>Module</h1>
+<p>模块的类。</p>
+<h2>超类</h2>
+<ul>
+  <li><a href="sc_object.html">Object</a> </li></ul>
+<h2>方法</h2>
+<dl>
+  <dt><var>self</var> === <var>obj</var>
+  <dd>
+  <p>此方法大部分是用在 <a href="syntax05.html#L000301">case</a> 条件句比较用的。若是 <var>obj</var> 与
+  <var>self</var> 之间有着 <a href="sc_object.html#L000580">Object#kind_of?</a> 的关联则返回
+  true。换句话说，<a href="syntax05.html#L000301">case</a> 可以用来检查类、模块之间的从属关系。</p><pre>str = String.new
 case str
 when String     # evaluates String === str
   p true        # =&gt; true
 end
-</PRE></DD></DL>
-<H2>私有方法</H2>
-<DL>
-  <DT><A name=L001113>attr_accessor(<VAR>name</VAR> ...
-  )</A>
-  <DD>
-  <P>定义属性 <VAR>name</VAR> 的读写方法，<VAR>name</VAR> 是由 <A
-  href="sc_symbol.html">Symbol</A>
-  或字符串所指定的。</P>
-  <P>由 attr_accessor 所定义的方法如下：</P><PRE>def name
+</pre></dd></dl>
+<h2>私有方法</h2>
+<dl>
+  <dt><a name=L001113>attr_accessor(<var>name</var> ...
+  )</a>
+  <dd>
+  <p>定义属性 <var>name</var> 的读写方法，<var>name</var> 是由 <a
+  href="sc_symbol.html">Symbol</a>
+  或字符串所指定的。</p>
+  <p>由 attr_accessor 所定义的方法如下：</p><pre>def name
   @name
 end
 def name=(val)
   @name = val
 end
-</PRE>
-  <DT>attr_reader(<VAR>name</VAR> ... )
-  <DD>
-  <P>定义属性 <VAR>name</VAR> 的读出方法，<VAR>name</VAR> 是由 <A
-  href="sc_symbol.html">Symbol</A>
-  或字符串所指定的。</P>
-  <P>由 attr_reader 所定义的方法如下：</P><PRE>def name
+</pre>
+  <dt>attr_reader(<var>name</var> ... )
+  <dd>
+  <p>定义属性 <var>name</var> 的读出方法，<var>name</var> 是由 <a
+  href="sc_symbol.html">Symbol</a>
+  或字符串所指定的。</p>
+  <p>由 attr_reader 所定义的方法如下：</p><pre>def name
   @name
 end
-</PRE>
-  <DT>attr_writer(<VAR>name</VAR> ... )
-  <DD>
-  <P>定义属性 <VAR>name</VAR> 的写入方法（name=），<VAR>name</VAR> 是由
-  <A href="sc_symbol.html">Symbol</A> 或字符串所指定的。</P>
-  <DD>
-  <P>由 attr_writer 所定义的方法如下：</P>
-  <DD><PRE>def name=(val)
+</pre>
+  <dt>attr_writer(<var>name</var> ... )
+  <dd>
+  <p>定义属性 <var>name</var> 的写入方法（name=），<var>name</var> 是由
+  <a href="sc_symbol.html">Symbol</a> 或字符串所指定的。</p>
+  <dd>
+  <p>由 attr_writer 所定义的方法如下：</p>
+  <dd><pre>def name=(val)
   @name = val
 end
-</PRE>
-  <DT><A name=L001119>include(<VAR>module</VAR> ...
-  )</A>
-  <DD>
-  <P>添加指定模块的性质（方法和常量）。返回 self。include
-  是用来实现替代多重继承的揉合（mix-in）</P><PRE>class C
+</pre>
+  <dt><a name=L001119>include(<var>module</var> ...
+  )</a>
+  <dd>
+  <p>添加指定模块的性质（方法和常量）。返回 self。include
+  是用来实现替代多重继承的揉合（mix-in）</p><pre>class C
   include FileTest
   include Math
 end
-</PRE>
-  <P>模块的能力会插入在类继承之间。因此，在搜索方法时，包含的模块其搜索优先度会在超类之上。</P>
-  <P>若是重复包含同个模块时，只有第一次的 include 有效。此外，若是执行 include
-  时会导致模块间循环继承，则会抛出 <A href="s_exceptions.html#ArgumentError">ArgumentError</A>
-异常。</P></DD></DL>
-<H6></H6></BODY></HTML>
+</pre>
+  <p>模块的能力会插入在类继承之间。因此，在搜索方法时，包含的模块其搜索优先度会在超类之上。</p>
+  <p>若是重复包含同个模块时，只有第一次的 include 有效。此外，若是执行 include
+  时会导致模块间循环继承，则会抛出 <a href="s_exceptions.html#ArgumentError">ArgumentError</a>
+异常。</p></dd></dl>
+<h6></h6></body></html>

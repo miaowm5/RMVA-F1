@@ -1,43 +1,43 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
-<HTML lang=zh><HEAD><TITLE>RPG::Enemy::Action</TITLE>
-<META content="text/html; charset=GBK" http-equiv=Content-Type>
-<META content=text/css http-equiv=Content-Style-Type><LINK rel=stylesheet 
+<html lang=zh><head><title>RPG::Enemy::Action</title>
+<meta content="text/html; charset=GBK" http-equiv=Content-Type>
+<meta content=text/css http-equiv=Content-Style-Type><link rel=stylesheet 
 type=text/css href="../style.css">
-<META name=GENERATOR content="MSHTML 9.00.8112.16447"></HEAD>
-<BODY>
-<H1>RPG::Enemy::Action</H1>
-<P>敌方行动的数据类。</P>
-<H2>超类</H2>
-<UL>
-  <LI><A href="sc_object.html">Object</A> </LI></UL>
-<H2>调用者</H2>
-<UL>
-  <LI><A href="gc_rpg_enemy.html">RPG::Enemy</A> </LI></UL>
-<H2>属性</H2>
-<DL>
-  <DT>skill_id 
-  <DD>
-  <P>技能编号。</P>
-  <DT>condition_type 
-  <DD>
-  <P>行动条件。</P>
-  <UL>
-    <LI>0:&nbsp;平时 
-    <LI>1:&nbsp;回合数 
-    <LI>2:&nbsp;体力值 
-    <LI>3:&nbsp;魔力值 
-    <LI>4:&nbsp;状态 
-    <LI>5: 队伍等级
-    <LI>6:&nbsp;开关 </LI></UL>
-  <DT>condition_param1 
-  <DT>condition_param2 
-  <DD>
-  <P>条件的参数，所有的类型共享。</P>
-  <P>举例来说，当条件为「体力值」时，condition_param1 就是最低值而 condition_param2 就是最高值。</P>
-  <DT>rating 
-  <DD>
-  <P>行动优先级（1..10）。</P></DD></DL>
-<H2>定义</H2><PRE>class RPG::Enemy::Action
+<meta name=GENERATOR content="MSHTML 9.00.8112.16447"></head>
+<body>
+<h1>RPG::Enemy::Action</h1>
+<p>敌方行动的数据类。</p>
+<h2>超类</h2>
+<ul>
+  <li><a href="sc_object.html">Object</a> </li></ul>
+<h2>调用者</h2>
+<ul>
+  <li><a href="gc_rpg_enemy.html">RPG::Enemy</a> </li></ul>
+<h2>属性</h2>
+<dl>
+  <dt>skill_id 
+  <dd>
+  <p>技能编号。</p>
+  <dt>condition_type 
+  <dd>
+  <p>行动条件。</p>
+  <ul>
+    <li>0:&nbsp;平时 
+    <li>1:&nbsp;回合数 
+    <li>2:&nbsp;体力值 
+    <li>3:&nbsp;魔力值 
+    <li>4:&nbsp;状态 
+    <li>5: 队伍等级
+    <li>6:&nbsp;开关 </li></ul>
+  <dt>condition_param1 
+  <dt>condition_param2 
+  <dd>
+  <p>条件的参数，所有的类型共享。</p>
+  <p>举例来说，当条件为「体力值」时，condition_param1 就是最低值而 condition_param2 就是最高值。</p>
+  <dt>rating 
+  <dd>
+  <p>行动优先级（1..10）。</p></dd></dl>
+<h2>定义</h2><pre>class RPG::Enemy::Action
   def initialize
     @skill_id = 1
     @condition_type = 0
@@ -51,5 +51,5 @@ type=text/css href="../style.css">
   attr_accessor :condition_param2
   attr_accessor :rating
 end
-</PRE>
-<H6></H6></BODY></HTML>
+</pre>
+<h6></h6></body></html>

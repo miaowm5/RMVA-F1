@@ -1,100 +1,100 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
-<HTML lang=zh><HEAD><TITLE>Math</TITLE>
-<META content="text/html; charset=GBK" http-equiv=Content-Type>
-<META content=text/css http-equiv=Content-Style-Type><LINK rel=stylesheet
+<html lang=zh><head><title>Math</title>
+<meta content="text/html; charset=GBK" http-equiv=Content-Type>
+<meta content=text/css http-equiv=Content-Style-Type><link rel=stylesheet
 type=text/css href="../style.css">
-<META name=GENERATOR content="MSHTML 9.00.8112.16447"></HEAD>
-<BODY>
-<H1>Math</H1>
-<P>支持浮点小数计算的模块。</P>
-<H2>模块方法</H2>
-<DL>
-  <DT>Math.acos(<VAR>x</VAR>)
-  <DT>Math.asin(<VAR>x</VAR>)
-  <DT>Math.atan(<VAR>x</VAR>)
-  <DD>
-  <P>以弧度返回 x 的反三角函数计算值。</P>
-  <P>返回值的范围分别是 [0, +&#960;]、[-&#960;/2, +&#960;/2] 和 (-&#960;/2, +&#960;/2)。</P>
-  <P>在 acos(x) 和 asin(x) 中，<VAR>x</VAR> 之值必须是 -1.0 &lt;= <VAR>x</VAR> &lt;= 1
-  的范围（通常返回 NaN）。</P>
-  <P>acos() 和 asin() 遇到超出范围的参数，会抛出 <A
-  href="s_exceptions.html#Errno">Errno::EDOM</A> 异常。</P>
-  <DT>Math.atan2(<VAR>y</VAR>, <VAR>x</VAR>)
-  <DD>
-  <P>返回 [-&#960;, &#960;] 范围内的 <VAR>y</VAR>/<VAR>x</VAR> 反正切函数。</P>
-  <DT>Math.acosh(<VAR>x</VAR>)
-  <DT>Math.asinh(<VAR>x</VAR>)
-  <DT>Math.atanh(<VAR>x</VAR>)
-  <DD>
-  <P>返回 x 的反双曲函数计算值。</P><PRE>asinh(x) = log(x + sqrt(x * x + 1))
+<meta name=GENERATOR content="MSHTML 9.00.8112.16447"></head>
+<body>
+<h1>Math</h1>
+<p>支持浮点小数计算的模块。</p>
+<h2>模块方法</h2>
+<dl>
+  <dt>Math.acos(<var>x</var>)
+  <dt>Math.asin(<var>x</var>)
+  <dt>Math.atan(<var>x</var>)
+  <dd>
+  <p>以弧度返回 x 的反三角函数计算值。</p>
+  <p>返回值的范围分别是 [0, +&#960;]、[-&#960;/2, +&#960;/2] 和 (-&#960;/2, +&#960;/2)。</p>
+  <p>在 acos(x) 和 asin(x) 中，<var>x</var> 之值必须是 -1.0 &lt;= <var>x</var> &lt;= 1
+  的范围（通常返回 NaN）。</p>
+  <p>acos() 和 asin() 遇到超出范围的参数，会抛出 <a
+  href="s_exceptions.html#Errno">Errno::EDOM</a> 异常。</p>
+  <dt>Math.atan2(<var>y</var>, <var>x</var>)
+  <dd>
+  <p>返回 [-&#960;, &#960;] 范围内的 <var>y</var>/<var>x</var> 反正切函数。</p>
+  <dt>Math.acosh(<var>x</var>)
+  <dt>Math.asinh(<var>x</var>)
+  <dt>Math.atanh(<var>x</var>)
+  <dd>
+  <p>返回 x 的反双曲函数计算值。</p><pre>asinh(x) = log(x + sqrt(x * x + 1))
 acosh(x) = log(x + sqrt(x * x - 1)) [x &gt;= 1]
 atanh(x) = log((1+x)/(1-x)) / 2     [-1 &lt; x &lt; 1]
-</PRE>
-  <P>在&nbsp;acosh(x)，<VAR>x</VAR> 必须 &gt;= 1（通常会抛出 <A
-  href="s_exceptions.html#Errno">Errno::EDOM</A> 异常）。</P>
-  <P>在&nbsp;atanh(x)，<VAR>x</VAR> 必须在 -1.0 &lt; <VAR>x</VAR> &lt; 1 的范围内（通常会抛出
-  <A href="s_exceptions.html#Errno">Errno::EDOM</A> 异常）。</P>
-  <DT>Math.cos(<VAR>x</VAR>)
-  <DT>Math.sin(<VAR>x</VAR>)
-  <DT>Math.tan(<VAR>x</VAR>)
-  <DD>
-  <P>以弧度返回 x 的三角函数 [-1, 1] 的范围内的计算值。</P>
-  <DT>Math.cosh(<VAR>x</VAR>)
-  <DT>Math.sinh(<VAR>x</VAR>)
-  <DT>Math.tanh(<VAR>x</VAR>)
-  <DD>
-  <P>返回 x 的双曲函数计算值。</P><PRE>cosh(x) = (exp(x) + exp(-x)) / 2
+</pre>
+  <p>在&nbsp;acosh(x)，<var>x</var> 必须 &gt;= 1（通常会抛出 <a
+  href="s_exceptions.html#Errno">Errno::EDOM</a> 异常）。</p>
+  <p>在&nbsp;atanh(x)，<var>x</var> 必须在 -1.0 &lt; <var>x</var> &lt; 1 的范围内（通常会抛出
+  <a href="s_exceptions.html#Errno">Errno::EDOM</a> 异常）。</p>
+  <dt>Math.cos(<var>x</var>)
+  <dt>Math.sin(<var>x</var>)
+  <dt>Math.tan(<var>x</var>)
+  <dd>
+  <p>以弧度返回 x 的三角函数 [-1, 1] 的范围内的计算值。</p>
+  <dt>Math.cosh(<var>x</var>)
+  <dt>Math.sinh(<var>x</var>)
+  <dt>Math.tanh(<var>x</var>)
+  <dd>
+  <p>返回 x 的双曲函数计算值。</p><pre>cosh(x) = (exp(x) + exp(-x)) / 2
 sinh(x) = (exp(x) - exp(-x)) / 2
 tanh(x) = sinh(x) / cosh(x)
-</PRE>
-  <DT>Math.erf(<VAR>x</VAR>)
-  <DT>Math.erfc(<VAR>x</VAR>)
-  <DD>
-  <P>返回 x
-  的误差函数（erf）、补余误差函数（erfc）的计算值。</P>
-  <DT>Math.exp(<VAR>x</VAR>)
-  <DD>
-  <P>返回 <VAR>x</VAR> 的指数函数计算值。</P>
-  <DT>Math.frexp(<VAR>x</VAR>)
-  <DD>
-  <P>返回实数 <VAR>x</VAR> 的浮点数字表示法（<FONT class=post>exponent and mantissa
-  </FONT><FONT class=post>指数与假数</FONT>）。</P>
-  <DT>Math.hypot(<VAR>x</VAR>, <VAR>y</VAR>)
-  <DD>
-  <P>返回 sqrt(x*x + y*y)。</P>
-  <DT>Math.ldexp(<VAR>x</VAR>, <VAR>exp</VAR>)
-  <DD>
-  <P>返回实数 x 乘以 2 的 exp 次方。</P>
-  <DT>Math.log(<VAR>x</VAR>)
-  <DD>
-  <P>返回 x 的自然对数。<VAR></VAR></P>
-  <P><VAR>x</VAR> 必须是正值（通常负值会返回 NaN，0 会返回负无穷）。</P>
-  <P>超出范围的参数，负数会抛出 <A href="s_exceptions.html#Errno">Errno::EDOM</A> 异常，而 0 会抛出
-  <A href="s_exceptions.html#Errno">Errno::ERANGE</A> 异常。</P>
-  <DT>Math.log10(<VAR>x</VAR>)
-  <DD>
-  <P>返回 x 的常用对数。<VAR></VAR></P>
-  <P><VAR>x</VAR> 必须是正值（通常负值会返回 NaN，0 会返回负无穷）。</P>
-  <P>超出范围的参数，负数会抛出 <A
-  href="ata/Local/Temp/RPGVXAce/rgss/s_exceptions.html#Errno">Errno::EDOM</A>
-  异常，而 0 会抛出 <A
-  href="ata/Local/Temp/RPGVXAce/rgss/s_exceptions.html#Errno">Errno::ERANGE</A>
-  异常。</P>
-  <DT>Math.sqrt(<VAR>x</VAR>)
-  <DD>
-  <P>返回 <VAR>x</VAR> 的平方根。若 <VAR>x</VAR> 为负数，抛出 <A
-  href="s_exceptions.html#ArgumentError">ArgumentError</A> 异常。</P>
-  <P>通常负数会抛出 <A href="s_exceptions.html#Errno">Errno::EDOM</A> 异常。</P></DD></DL>
-<H2>定数</H2>
-<DL>
-  <DT>E
-  <DD>
-  <P>自然对数的底数。</P><PRE>p Math::E
+</pre>
+  <dt>Math.erf(<var>x</var>)
+  <dt>Math.erfc(<var>x</var>)
+  <dd>
+  <p>返回 x
+  的误差函数（erf）、补余误差函数（erfc）的计算值。</p>
+  <dt>Math.exp(<var>x</var>)
+  <dd>
+  <p>返回 <var>x</var> 的指数函数计算值。</p>
+  <dt>Math.frexp(<var>x</var>)
+  <dd>
+  <p>返回实数 <var>x</var> 的浮点数字表示法（<font class=post>exponent and mantissa
+  </font><font class=post>指数与假数</font>）。</p>
+  <dt>Math.hypot(<var>x</var>, <var>y</var>)
+  <dd>
+  <p>返回 sqrt(x*x + y*y)。</p>
+  <dt>Math.ldexp(<var>x</var>, <var>exp</var>)
+  <dd>
+  <p>返回实数 x 乘以 2 的 exp 次方。</p>
+  <dt>Math.log(<var>x</var>)
+  <dd>
+  <p>返回 x 的自然对数。<var></var></p>
+  <p><var>x</var> 必须是正值（通常负值会返回 NaN，0 会返回负无穷）。</p>
+  <p>超出范围的参数，负数会抛出 <a href="s_exceptions.html#Errno">Errno::EDOM</a> 异常，而 0 会抛出
+  <a href="s_exceptions.html#Errno">Errno::ERANGE</a> 异常。</p>
+  <dt>Math.log10(<var>x</var>)
+  <dd>
+  <p>返回 x 的常用对数。<var></var></p>
+  <p><var>x</var> 必须是正值（通常负值会返回 NaN，0 会返回负无穷）。</p>
+  <p>超出范围的参数，负数会抛出 <a
+  href="ata/Local/Temp/RPGVXAce/rgss/s_exceptions.html#Errno">Errno::EDOM</a>
+  异常，而 0 会抛出 <a
+  href="ata/Local/Temp/RPGVXAce/rgss/s_exceptions.html#Errno">Errno::ERANGE</a>
+  异常。</p>
+  <dt>Math.sqrt(<var>x</var>)
+  <dd>
+  <p>返回 <var>x</var> 的平方根。若 <var>x</var> 为负数，抛出 <a
+  href="s_exceptions.html#ArgumentError">ArgumentError</a> 异常。</p>
+  <p>通常负数会抛出 <a href="s_exceptions.html#Errno">Errno::EDOM</a> 异常。</p></dd></dl>
+<h2>定数</h2>
+<dl>
+  <dt>E
+  <dd>
+  <p>自然对数的底数。</p><pre>p Math::E
 # =&gt; 2.718281828
-</PRE>
-  <DT>PI
-  <DD>
-  <P>圆周率。</P><PRE>p Math::PI
+</pre>
+  <dt>PI
+  <dd>
+  <p>圆周率。</p><pre>p Math::PI
 # =&gt; 3.141592654
-</PRE></DD></DL>
-<H6></H6></BODY></HTML>
+</pre></dd></dl>
+<h6></h6></body></html>

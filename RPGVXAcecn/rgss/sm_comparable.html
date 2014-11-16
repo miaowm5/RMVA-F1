@@ -1,44 +1,44 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
-<HTML lang=zh><HEAD><TITLE>Comparable</TITLE>
-<META content="text/html; charset=GBK" http-equiv=Content-Type>
-<META content=text/css http-equiv=Content-Style-Type><LINK rel=stylesheet
+<html lang=zh><head><title>Comparable</title>
+<meta content="text/html; charset=GBK" http-equiv=Content-Type>
+<meta content=text/css http-equiv=Content-Style-Type><link rel=stylesheet
 type=text/css href="../style.css">
-<META name=GENERATOR content="MSHTML 9.00.8112.16447"></HEAD>
-<BODY>
-<H1>Comparable</H1>
-<P>包含所有比较操作的模块。包含此模块的类必须定义基本的比较运算符 &lt;、= 和 &gt;。其他的比较 运算符可以从这些定义中衍生。 </P>
-<H2>方法</H2>
-<DL>
-  <DT><VAR>self</VAR> == <VAR>other</VAR>
-  <DD>
-  <P>若 <VAR>self</VAR> 与 <VAR>other</VAR> 相等，则返回 true。</P>
-  <P>若 &lt;=&gt; 返回 nil，则返回 nil。</P>
-  <DT><VAR>self</VAR> &gt; <VAR>other</VAR>
-  <DD>
-  <P>若 <VAR>self</VAR> 大于 <VAR>other</VAR>，则返回 true。</P>
-  <P>若 &lt;=&gt; 返回 nil，则抛出 <A
-  href="s_exceptions.html#ArgumentError">ArgumentError</A> 异常。</P>
-  <DT><VAR>self</VAR> &gt;= <VAR>other</VAR>
-  <DD>
-  <P>若 <VAR>self</VAR> 大于或与 <VAR>other</VAR> 相等，则返回 true。</P>
-  <P>若 &lt;=&gt; 返回 nil，则抛出 <A
-  href="s_exceptions.html#ArgumentError">ArgumentError</A> 异常。</P>
-  <DT><VAR>self</VAR> &lt; <VAR>other</VAR>
-  <DD>
-  <P>若 <VAR>self</VAR> 小于 <VAR>other</VAR>，则返回 true。</P>
-  <P>若 &lt;=&gt; 返回 nil，则抛出 <A
-  href="s_exceptions.html#ArgumentError">ArgumentError</A> 异常。</P>
-  <DT><VAR>self</VAR> &lt;= <VAR>other</VAR>
-  <DD>
-  <P>若 <VAR>self</VAR> 小于或与 <VAR>other</VAR> 相等，则返回 true。</P>
-  <P>若 &lt;=&gt; 返回 nil，则抛出 <A
-  href="s_exceptions.html#ArgumentError">ArgumentError</A> 异常。</P>
-  <DT>between?(<VAR>min</VAR>, <VAR>max</VAR>)
-  <DD>
-  <P>若&nbsp;<VAR>self</VAR> 介于（包含） <VAR>min</VAR> 至 <VAR>max</VAR> 的范围，则返回
-  true。</P>
-  <P>若&nbsp;<VAR>self</VAR> &lt;=&gt; <VAR>min</VAR> 或 <VAR>self</VAR> &lt;=&gt;
-  <VAR>max</VAR> 返回 nil，则抛出 <A
-  href="s_exceptions.html#ArgumentError">ArgumentError</A>
-异常。</P></DD></DL>
-<H6></H6></BODY></HTML>
+<meta name=GENERATOR content="MSHTML 9.00.8112.16447"></head>
+<body>
+<h1>Comparable</h1>
+<p>包含所有比较操作的模块。包含此模块的类必须定义基本的比较运算符 &lt;、= 和 &gt;。其他的比较 运算符可以从这些定义中衍生。 </p>
+<h2>方法</h2>
+<dl>
+  <dt><var>self</var> == <var>other</var>
+  <dd>
+  <p>若 <var>self</var> 与 <var>other</var> 相等，则返回 true。</p>
+  <p>若 &lt;=&gt; 返回 nil，则返回 nil。</p>
+  <dt><var>self</var> &gt; <var>other</var>
+  <dd>
+  <p>若 <var>self</var> 大于 <var>other</var>，则返回 true。</p>
+  <p>若 &lt;=&gt; 返回 nil，则抛出 <a
+  href="s_exceptions.html#ArgumentError">ArgumentError</a> 异常。</p>
+  <dt><var>self</var> &gt;= <var>other</var>
+  <dd>
+  <p>若 <var>self</var> 大于或与 <var>other</var> 相等，则返回 true。</p>
+  <p>若 &lt;=&gt; 返回 nil，则抛出 <a
+  href="s_exceptions.html#ArgumentError">ArgumentError</a> 异常。</p>
+  <dt><var>self</var> &lt; <var>other</var>
+  <dd>
+  <p>若 <var>self</var> 小于 <var>other</var>，则返回 true。</p>
+  <p>若 &lt;=&gt; 返回 nil，则抛出 <a
+  href="s_exceptions.html#ArgumentError">ArgumentError</a> 异常。</p>
+  <dt><var>self</var> &lt;= <var>other</var>
+  <dd>
+  <p>若 <var>self</var> 小于或与 <var>other</var> 相等，则返回 true。</p>
+  <p>若 &lt;=&gt; 返回 nil，则抛出 <a
+  href="s_exceptions.html#ArgumentError">ArgumentError</a> 异常。</p>
+  <dt>between?(<var>min</var>, <var>max</var>)
+  <dd>
+  <p>若&nbsp;<var>self</var> 介于（包含） <var>min</var> 至 <var>max</var> 的范围，则返回
+  true。</p>
+  <p>若&nbsp;<var>self</var> &lt;=&gt; <var>min</var> 或 <var>self</var> &lt;=&gt;
+  <var>max</var> 返回 nil，则抛出 <a
+  href="s_exceptions.html#ArgumentError">ArgumentError</a>
+异常。</p></dd></dl>
+<h6></h6></body></html>

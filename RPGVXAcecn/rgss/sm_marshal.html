@@ -1,27 +1,27 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
-<HTML lang=zh><HEAD><TITLE>Marshal</TITLE>
-<META content="text/html; charset=GBK" http-equiv=Content-Type>
-<META content=text/css http-equiv=Content-Style-Type><LINK rel=stylesheet
+<html lang=zh><head><title>Marshal</title>
+<meta content="text/html; charset=GBK" http-equiv=Content-Type>
+<meta content=text/css http-equiv=Content-Style-Type><link rel=stylesheet
 type=text/css href="../style.css">
-<META name=GENERATOR content="MSHTML 9.00.8112.16447"></HEAD>
-<BODY>
-<H1>Marshal</H1>
-<P>提供将 Ruby 对象写入或读出文件（或字符串）的能力。</P>
-<H2>模块方法</H2>
-<DL>
-  <DT>Marshal.dump(<VAR>obj</VAR>[, <VAR>port</VAR>][, <VAR>limit</VAR>])
-  <DD>
-  <P>将 <VAR>obj</VAR> 对象递归写入文件。</P>
-  <P>有些对象，如 <A href="sc_file.html">File</A> 或 <A
-  href="c_matchdata.html">MatchData</A> ，或定义了特殊方法的对象，无法写入文件中。若尝试将这类对象写入文件会抛出 <A
-  href="s_exceptions.html#TypeError">TypeError</A> 异常。</P>
-  <P><VAR>port</VAR> 指定 IO（或其子类）的实例。此时会返回 <VAR>port</VAR>。省略时，dump
-  返回将对象序列化之后的字符串。</P>
-  <P>若指定了 <VAR>limit</VAR> ，则不会序列化深于 <VAR>limit</VAR> （默认100）层链接的对象。若
-  <VAR>limit</VAR> 为负数，则不会进行层数检查。</P>
-  <DT>Marshal.load(<VAR>port</VAR>)
-  <DD>
-  <P>从 <VAR>port</VAR>
-  中读取序列化数据（Marshal.dump 所输出的字符串）并生成与原对象同样状态的对象。<VAR>port</VAR> 指定
-  字符串或IO（或其子类）的实例。</P></DD></DL>
-<H6></H6></BODY></HTML>
+<meta name=GENERATOR content="MSHTML 9.00.8112.16447"></head>
+<body>
+<h1>Marshal</h1>
+<p>提供将 Ruby 对象写入或读出文件（或字符串）的能力。</p>
+<h2>模块方法</h2>
+<dl>
+  <dt>Marshal.dump(<var>obj</var>[, <var>port</var>][, <var>limit</var>])
+  <dd>
+  <p>将 <var>obj</var> 对象递归写入文件。</p>
+  <p>有些对象，如 <a href="sc_file.html">File</a> 或 <a
+  href="c_matchdata.html">MatchData</a> ，或定义了特殊方法的对象，无法写入文件中。若尝试将这类对象写入文件会抛出 <a
+  href="s_exceptions.html#TypeError">TypeError</a> 异常。</p>
+  <p><var>port</var> 指定 IO（或其子类）的实例。此时会返回 <var>port</var>。省略时，dump
+  返回将对象序列化之后的字符串。</p>
+  <p>若指定了 <var>limit</var> ，则不会序列化深于 <var>limit</var> （默认100）层链接的对象。若
+  <var>limit</var> 为负数，则不会进行层数检查。</p>
+  <dt>Marshal.load(<var>port</var>)
+  <dd>
+  <p>从 <var>port</var>
+  中读取序列化数据（Marshal.dump 所输出的字符串）并生成与原对象同样状态的对象。<var>port</var> 指定
+  字符串或IO（或其子类）的实例。</p></dd></dl>
+<h6></h6></body></html>

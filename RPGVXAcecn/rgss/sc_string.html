@@ -35,7 +35,7 @@ type=text/css href="../style.css">
 <p>若 <var>nth</var> 超出范围，返回 nil。</p>
 <dt>self[regexp]
 <dd>
-<p>返回第一个匹配 <var>regexp</var> 的子字符串。匹配信息储存于内建变量 <A
+<p>返回第一个匹配 <var>regexp</var> 的子字符串。匹配信息储存于内建变量 <a
 href="s_variables.html#L000428">$~</a> 中。</p>
 <p>若是 <var>regexp</var> 匹配失败，返回 nil。</p><pre>p "foobar"[/bar/]   # =&gt; "bar"
 </pre>
@@ -47,7 +47,7 @@ href="s_variables.html#L000428">$~</a> 中。</p>
 <dt>self[regexp]=val
 <dd>
 <p>将第一个匹配 <var>regexp</var> 的子字符串替换为 <var>val</var> 字符串。</p>
-<p>若匹配失败，抛出 <A
+<p>若匹配失败，抛出 <a
 href="s_exceptions.html#IndexError">IndexError</a> 异常。</p>
 <p>返回 <var>val。</var></p>
 <dt>clone

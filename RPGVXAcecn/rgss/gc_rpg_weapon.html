@@ -1,31 +1,31 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
-<HTML lang=zh><HEAD><TITLE>RPG::Weapon</TITLE>
-<META content="text/html; charset=GBK" http-equiv=Content-Type>
-<META content=text/css http-equiv=Content-Style-Type><LINK rel=stylesheet 
+<html lang=zh><head><title>RPG::Weapon</title>
+<meta content="text/html; charset=GBK" http-equiv=Content-Type>
+<meta content=text/css http-equiv=Content-Style-Type><link rel=stylesheet 
 type=text/css href="../style.css">
-<META name=GENERATOR content="MSHTML 9.00.8112.16447"></HEAD>
-<BODY>
-<H1>RPG::Weapon</H1>
-<P>武器的数据类。</P>
-<H2>超类</H2>
-<UL>
-  <LI><A href="gc_rpg_equipitem.html">RPG::EquipItem</A> </LI></UL>
-<H2>属性</H2>
-<DL>
-  <DT>wtype_id 
-  <DD>
-  <P>武器类型编号。</P>
-  <DT>animation_id 
-  <DD>
-  <P>普通攻击动画编号。</P></DD></DL>
-<H2>方法</H2>
-<DL>
-  <DT>performance 
-  <DD>
-  <P>武器评价，通过装备更换界面调用。</P>
-  <DD>
-  <P>返回物理攻击、魔法攻击以及特性加成效果之和。</P></DD></DL>
-<H2>定义</H2><PRE>class RPG::Weapon &lt; RPG::EquipItem
+<meta name=GENERATOR content="MSHTML 9.00.8112.16447"></head>
+<body>
+<h1>RPG::Weapon</h1>
+<p>武器的数据类。</p>
+<h2>超类</h2>
+<ul>
+  <li><a href="gc_rpg_equipitem.html">RPG::EquipItem</a> </li></ul>
+<h2>属性</h2>
+<dl>
+  <dt>wtype_id 
+  <dd>
+  <p>武器类型编号。</p>
+  <dt>animation_id 
+  <dd>
+  <p>普通攻击动画编号。</p></dd></dl>
+<h2>方法</h2>
+<dl>
+  <dt>performance 
+  <dd>
+  <p>武器评价，通过装备更换界面调用。</p>
+  <dd>
+  <p>返回物理攻击、魔法攻击以及特性加成效果之和。</p></dd></dl>
+<h2>定义</h2><pre>class RPG::Weapon &lt; RPG::EquipItem
   def initialize
     super
     @wtype_id = 0
@@ -39,5 +39,5 @@ type=text/css href="../style.css">
   attr_accessor :wtype_id
   attr_accessor :animation_id
 end
-</PRE>
-<H6></H6></BODY></HTML>
+</pre>
+<h6></h6></body></html>

@@ -1,55 +1,55 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
-<HTML lang=zh><HEAD><TITLE>RPG::Troop::Page::Condition</TITLE>
-<META content="text/html; charset=GBK" http-equiv=Content-Type>
-<META content=text/css http-equiv=Content-Style-Type><LINK rel=stylesheet 
+<html lang=zh><head><title>RPG::Troop::Page::Condition</title>
+<meta content="text/html; charset=GBK" http-equiv=Content-Type>
+<meta content=text/css http-equiv=Content-Style-Type><link rel=stylesheet 
 type=text/css href="../style.css">
-<META name=GENERATOR content="MSHTML 9.00.8112.16447"></HEAD>
-<BODY>
-<H1>RPG::Troop::Page::Condition</H1>
-<P>战斗事件的「条件」数据类。</P>
-<H2>超类</H2>
-<UL>
-  <LI><A href="sc_object.html">Object</A> </LI></UL>
-<H2>调用者</H2>
-<UL>
-  <LI><A href="gc_rpg_troop_page.html">RPG::Troop::Page</A> </LI></UL>
-<H2>属性</H2>
-<DL>
-  <DT>turn_ending 
-  <DD>
-  <P>「回合结束时」条件是否有效的复选框。</P>
-  <DT>turn_valid 
-  <DD>
-  <P>「回合数」条件是否有效的复选框。</P>
-  <DT>enemy_valid 
-  <DD>
-  <P>「敌人」条件是否有效的复选框。</P>
-  <DT>actor_valid 
-  <DD>
-  <P>「角色」条件是否有效的复选框。</P>
-  <DT>switch_valid 
-  <DD>
-  <P>「开关」条件是否有效的复选框。</P>
-  <DT>turn_a 
-  <DT>turn_b 
-  <DD>
-  <P>指定「回合数」条件的 a b 值，输入为 a + bx 的形式。</P>
-  <DT>enemy_index 
-  <DD>
-  <P>「敌人」条件的敌人队员索引（0～7）。</P>
-  <DT>enemy_hp 
-  <DD>
-  <P>指定「敌人」条件的敌人HP值百分比。</P>
-  <DT>actor_id 
-  <DD>
-  <P>「角色」条件的角色 ID 编号。</P>
-  <DT>actor_hp 
-  <DD>
-  <P>指定「角色」条件的角色HP值百分比。</P>
-  <DT>switch_id 
-  <DD>
-  <P>指定「开关」条件的开关 ID 编号。</P></DD></DL>
-<H2>定义</H2><PRE>class RPG::Troop::Page::Condition
+<meta name=GENERATOR content="MSHTML 9.00.8112.16447"></head>
+<body>
+<h1>RPG::Troop::Page::Condition</h1>
+<p>战斗事件的「条件」数据类。</p>
+<h2>超类</h2>
+<ul>
+  <li><a href="sc_object.html">Object</a> </li></ul>
+<h2>调用者</h2>
+<ul>
+  <li><a href="gc_rpg_troop_page.html">RPG::Troop::Page</a> </li></ul>
+<h2>属性</h2>
+<dl>
+  <dt>turn_ending 
+  <dd>
+  <p>「回合结束时」条件是否有效的复选框。</p>
+  <dt>turn_valid 
+  <dd>
+  <p>「回合数」条件是否有效的复选框。</p>
+  <dt>enemy_valid 
+  <dd>
+  <p>「敌人」条件是否有效的复选框。</p>
+  <dt>actor_valid 
+  <dd>
+  <p>「角色」条件是否有效的复选框。</p>
+  <dt>switch_valid 
+  <dd>
+  <p>「开关」条件是否有效的复选框。</p>
+  <dt>turn_a 
+  <dt>turn_b 
+  <dd>
+  <p>指定「回合数」条件的 a b 值，输入为 a + bx 的形式。</p>
+  <dt>enemy_index 
+  <dd>
+  <p>「敌人」条件的敌人队员索引（0～7）。</p>
+  <dt>enemy_hp 
+  <dd>
+  <p>指定「敌人」条件的敌人HP值百分比。</p>
+  <dt>actor_id 
+  <dd>
+  <p>「角色」条件的角色 ID 编号。</p>
+  <dt>actor_hp 
+  <dd>
+  <p>指定「角色」条件的角色HP值百分比。</p>
+  <dt>switch_id 
+  <dd>
+  <p>指定「开关」条件的开关 ID 编号。</p></dd></dl>
+<h2>定义</h2><pre>class RPG::Troop::Page::Condition
   def initialize
     @turn_ending = false
     @turn_valid = false
@@ -77,5 +77,5 @@ type=text/css href="../style.css">
   attr_accessor :actor_hp
   attr_accessor :switch_id
 end
-</PRE>
-<H6></H6></BODY></HTML>
+</pre>
+<h6></h6></body></html>

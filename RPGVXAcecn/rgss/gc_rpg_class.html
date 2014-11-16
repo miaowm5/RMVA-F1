@@ -1,52 +1,52 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
-<HTML lang=zh><HEAD><TITLE>RPG::Class</TITLE>
-<META content="text/html; charset=GBK" http-equiv=Content-Type>
-<META content=text/css http-equiv=Content-Style-Type><LINK rel=stylesheet
+<html lang=zh><head><title>RPG::Class</title>
+<meta content="text/html; charset=GBK" http-equiv=Content-Type>
+<meta content=text/css http-equiv=Content-Style-Type><link rel=stylesheet
 type=text/css href="../style.css">
-<META name=GENERATOR content="MSHTML 9.00.8112.16447"></HEAD>
-<BODY>
-<H1>RPG::Class</H1>
-<P>职业的数据类。</P>
-<H2>超类</H2>
-<UL>
-  <LI><A href="gc_rpg_baseitem.html">RPG::BaseItem</A> </LI></UL>
-<H2>属性</H2>
-<DL>
-  <DT>exp_params
-  <DD>
-  <P>存储经验值曲线的数组，格式如下:</P>
-  <UL>
-    <LI>0: 基础值
-    <LI>1:&nbsp;修正值
-    <LI>2:&nbsp;增加度 A
-    <LI>3:&nbsp;增加度 B </LI></UL>
-  <DT>params
-  <DD>
-  <P>能力值成长曲线，记录每一等级基本属性的二维数组 （<A href="gc_table.html">Table</A>）。</P>
-  <P>其数据结构为[<VAR>param_id</VAR>, <VAR>level</VAR>]，param_id 代表属性类型，level
-  则代表等级，属性类型的代号如下:</P>
-  <UL>
-    <LI>0: 体力上限
-    <LI>1: 魔力上限
-    <LI>2:&nbsp;物理攻击
-    <LI>3:&nbsp;物理防御
-    <LI>4:&nbsp;魔法攻击
-    <LI>5:&nbsp;魔法防御
-    <LI>6:&nbsp;敏捷值
-    <LI>7:&nbsp;幸运值 </LI></UL>
-  <DT>learnings
-  <DD>
-  <P>技能学习列表 <A
-  href="gc_rpg_class_learning.html">RPG::Class::Learning</A>&nbsp;。</P></DD></DL>
-<H2>方法</H2>
-<DL>
-  <DT>exp_for_level(<VAR>level</VAR>)
-  <DD>
-  <P>计算并返回当前等级到参数设置等级，所需经验的总和。</P></DD></DL>
-<H2>内部类</H2>
-<UL>
-  <LI><A href="gc_rpg_class_learning.html">RPG::Class::Learning</A> </LI></UL>
-<H2>定义</H2><PRE>class RPG::Class &lt; RPG::BaseItem
+<meta name=GENERATOR content="MSHTML 9.00.8112.16447"></head>
+<body>
+<h1>RPG::Class</h1>
+<p>职业的数据类。</p>
+<h2>超类</h2>
+<ul>
+  <li><a href="gc_rpg_baseitem.html">RPG::BaseItem</a> </li></ul>
+<h2>属性</h2>
+<dl>
+  <dt>exp_params
+  <dd>
+  <p>存储经验值曲线的数组，格式如下:</p>
+  <ul>
+    <li>0: 基础值
+    <li>1:&nbsp;修正值
+    <li>2:&nbsp;增加度 A
+    <li>3:&nbsp;增加度 B </li></ul>
+  <dt>params
+  <dd>
+  <p>能力值成长曲线，记录每一等级基本属性的二维数组 （<a href="gc_table.html">Table</a>）。</p>
+  <p>其数据结构为[<var>param_id</var>, <var>level</var>]，param_id 代表属性类型，level
+  则代表等级，属性类型的代号如下:</p>
+  <ul>
+    <li>0: 体力上限
+    <li>1: 魔力上限
+    <li>2:&nbsp;物理攻击
+    <li>3:&nbsp;物理防御
+    <li>4:&nbsp;魔法攻击
+    <li>5:&nbsp;魔法防御
+    <li>6:&nbsp;敏捷值
+    <li>7:&nbsp;幸运值 </li></ul>
+  <dt>learnings
+  <dd>
+  <p>技能学习列表 <a
+  href="gc_rpg_class_learning.html">RPG::Class::Learning</a>&nbsp;。</p></dd></dl>
+<h2>方法</h2>
+<dl>
+  <dt>exp_for_level(<var>level</var>)
+  <dd>
+  <p>计算并返回当前等级到参数设置等级，所需经验的总和。</p></dd></dl>
+<h2>内部类</h2>
+<ul>
+  <li><a href="gc_rpg_class_learning.html">RPG::Class::Learning</a> </li></ul>
+<h2>定义</h2><pre>class RPG::Class &lt; RPG::BaseItem
   def initialize
     super
     @exp_params = [30,20,30,30]
@@ -79,5 +79,5 @@ type=text/css href="../style.css">
   attr_accessor :params
   attr_accessor :learnings
 end
-</PRE>
-<H6></H6></BODY></HTML>
+</pre>
+<h6></h6></body></html>

@@ -1,60 +1,60 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
-<HTML lang=zh><HEAD><TITLE>RPG::Event::Page::Condition</TITLE>
-<META content="text/html; charset=GBK" http-equiv=Content-Type>
-<META content=text/css http-equiv=Content-Style-Type><LINK rel=stylesheet 
+<html lang=zh><head><title>RPG::Event::Page::Condition</title>
+<meta content="text/html; charset=GBK" http-equiv=Content-Type>
+<meta content=text/css http-equiv=Content-Style-Type><link rel=stylesheet 
 type=text/css href="../style.css">
-<META name=GENERATOR content="MSHTML 9.00.8112.16447"></HEAD>
-<BODY>
-<H1>RPG::Event::Page::Condition</H1>
-<P>地图事件块事件页条件的数据类。</P>
-<H2>超类</H2>
-<UL>
-  <LI><A href="sc_object.html">Object</A> </LI></UL>
-<H2>调用者</H2>
-<UL>
-  <LI><A href="gc_rpg_event_page.html">RPG::Event::Page</A> </LI></UL>
-<H2>属性</H2>
-<DL>
-  <DT>switch1_valid 
-  <DD>
-  <P>是否勾选第一个「开关」条件选项的复选框。</P>
-  <DT>switch2_valid 
-  <DD>
-  <P>是否勾选第二个「开关」条件选项的复选框。</P>
-  <DT>variable_valid 
-  <DD>
-  <P>是否勾选「变量」条件选项的复选框。</P>
-  <DT>self_switch_valid 
-  <DD>
-  <P>是否勾选「独立开关」条件选项的复选框。</P>
-  <DT>item_valid 
-  <DD>
-  <P>是否勾选「物品」条件选项的复选框。</P>
-  <DT>actor_valid 
-  <DD>
-  <P>是否勾选「主角同伴」条件选项的复选框。</P>
-  <DT>switch1_id 
-  <DD>
-  <P>当勾选第一个「开关」条件选项，所使用的开关 ID 编号。</P>
-  <DT>switch2_id 
-  <DD>
-  <P>当勾选第二个「开关」条件选项，所使用的开关 ID 编号。</P>
-  <DT>variable_id 
-  <DD>
-  <P>当勾选「变量」条件选项，所使用的变量 ID 编号。</P>
-  <DT>variable_value 
-  <DD>
-  <P>当勾选「物品」条件选项，所使用的变量基准值（大于或等于此值）</P>
-  <DT>self_switch_ch 
-  <DD>
-  <P>当勾选「独立开关」条件选项，所使用的独立开关字母编号（A~D）。</P>
-  <DT>item_id 
-  <DD>
-  <P>当勾选「物品」条件选项，所使用的物品 ID 编号。</P>
-  <DT>actor_id 
-  <DD>
-  <P>当勾选「物品」条件选项，所使用的角色 ID 编号。</P></DD></DL>
-<H2>定义</H2><PRE>class RPG::Event::Page::Condition
+<meta name=GENERATOR content="MSHTML 9.00.8112.16447"></head>
+<body>
+<h1>RPG::Event::Page::Condition</h1>
+<p>地图事件块事件页条件的数据类。</p>
+<h2>超类</h2>
+<ul>
+  <li><a href="sc_object.html">Object</a> </li></ul>
+<h2>调用者</h2>
+<ul>
+  <li><a href="gc_rpg_event_page.html">RPG::Event::Page</a> </li></ul>
+<h2>属性</h2>
+<dl>
+  <dt>switch1_valid 
+  <dd>
+  <p>是否勾选第一个「开关」条件选项的复选框。</p>
+  <dt>switch2_valid 
+  <dd>
+  <p>是否勾选第二个「开关」条件选项的复选框。</p>
+  <dt>variable_valid 
+  <dd>
+  <p>是否勾选「变量」条件选项的复选框。</p>
+  <dt>self_switch_valid 
+  <dd>
+  <p>是否勾选「独立开关」条件选项的复选框。</p>
+  <dt>item_valid 
+  <dd>
+  <p>是否勾选「物品」条件选项的复选框。</p>
+  <dt>actor_valid 
+  <dd>
+  <p>是否勾选「主角同伴」条件选项的复选框。</p>
+  <dt>switch1_id 
+  <dd>
+  <p>当勾选第一个「开关」条件选项，所使用的开关 ID 编号。</p>
+  <dt>switch2_id 
+  <dd>
+  <p>当勾选第二个「开关」条件选项，所使用的开关 ID 编号。</p>
+  <dt>variable_id 
+  <dd>
+  <p>当勾选「变量」条件选项，所使用的变量 ID 编号。</p>
+  <dt>variable_value 
+  <dd>
+  <p>当勾选「物品」条件选项，所使用的变量基准值（大于或等于此值）</p>
+  <dt>self_switch_ch 
+  <dd>
+  <p>当勾选「独立开关」条件选项，所使用的独立开关字母编号（A~D）。</p>
+  <dt>item_id 
+  <dd>
+  <p>当勾选「物品」条件选项，所使用的物品 ID 编号。</p>
+  <dt>actor_id 
+  <dd>
+  <p>当勾选「物品」条件选项，所使用的角色 ID 编号。</p></dd></dl>
+<h2>定义</h2><pre>class RPG::Event::Page::Condition
   def initialize
     @switch1_valid = false
     @switch2_valid = false
@@ -84,5 +84,5 @@ type=text/css href="../style.css">
   attr_accessor :item_id
   attr_accessor :actor_id
 end
-</PRE>
-<H6></H6></BODY></HTML>
+</pre>
+<h6></h6></body></html>

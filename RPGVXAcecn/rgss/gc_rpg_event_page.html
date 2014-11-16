@@ -1,70 +1,70 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
-<HTML lang=zh><HEAD><TITLE>RPG::Event::Page</TITLE>
-<META content="text/html; charset=GBK" http-equiv=Content-Type>
-<META content=text/css http-equiv=Content-Style-Type><LINK rel=stylesheet
+<html lang=zh><head><title>RPG::Event::Page</title>
+<meta content="text/html; charset=GBK" http-equiv=Content-Type>
+<meta content=text/css http-equiv=Content-Style-Type><link rel=stylesheet
 type=text/css href="../style.css">
-<META name=GENERATOR content="MSHTML 9.00.8112.16447"></HEAD>
-<BODY>
-<H1>RPG::Event::Page</H1>
-<P>地图事件块事件页资料。</P>
-<H2>超类</H2>
-<UL>
-  <LI><A href="sc_object.html">Object</A> </LI></UL>
-<H2>调用者</H2>
-<UL>
-  <LI><A href="gc_rpg_event.html">RPG::Event</A> </LI></UL>
-<H2>属性</H2>
-<DL>
-  <DT>condition
-  <DD>
-  <P>事件指令的执行条件（<A
-  href="gc_rpg_event_page_condition.html">RPG::Event::Page::Condition</A>）。</P>
-  <DT>graphic
-  <DD>
-  <P>事件页指定事件块的图片（<A
-  href="gc_rpg_event_page_graphic.html">RPG::Event::Page::Graphic</A>）。</P>
-  <DT>move_type
-  <DD>
-  <P>移动类型（0：固定、1：随机、2：接近、3：自定义）。</P>
-  <DT>move_speed
-  <DD>
-  <P>移动速度（1：1/8 倍速、2：1/4 倍速、3：1/2 倍速、4：正常、5：2 倍速、6：4 倍速）。 </P>
-  <DT>move_frequency
-  <DD>
-  <P>移动频率：（1：最低、2：低、3：正常、4：高、5：最高）。</P>
-  <DT>move_route
-  <DD>
-  <P>移动路线（<A
-  href="rgss/gc_rpg_moveroute.html">RPG::MoveRoute</A>）。只有当移动类型为「自定义」时才会调用。</P>
-  <DT>walk_anime
-  <DD>
-  <P>步行动画的开关。</P>
-  <DT>step_anime
-  <DD>
-  <P>踏步动画的开关。</P>
-  <DT>direction_fix
-  <DD>
-  <P>方向锁定的开关。</P>
-  <DT>through
-  <DD>
-  <P>允许穿透的开关。</P>
-  <DT>priority_type
-  <DD>
-  <P>优先级（0：在普通角色下方、1：与普通角色同层、2：在普通角色上方）。</P>
-  <DT>trigger
-  <DD>
-  <P>触发条件（0：按确定键、1：玩家接触、2：事件接触、3：自动执行、4：并行处理）。 </P>
-  <DT>list
-  <DD>
-  <P>执行内容。<A
-  href="rgss/gc_rpg_eventcommand.html">RPG::EventCommand</A> 的数组。</P></DD></DL>
-<H2>内部类</H2>
-<UL>
-  <LI><A href="gc_rpg_event_page_condition.html">RPG::Event::Page::Condition</A>
+<meta name=GENERATOR content="MSHTML 9.00.8112.16447"></head>
+<body>
+<h1>RPG::Event::Page</h1>
+<p>地图事件块事件页资料。</p>
+<h2>超类</h2>
+<ul>
+  <li><a href="sc_object.html">Object</a> </li></ul>
+<h2>调用者</h2>
+<ul>
+  <li><a href="gc_rpg_event.html">RPG::Event</a> </li></ul>
+<h2>属性</h2>
+<dl>
+  <dt>condition
+  <dd>
+  <p>事件指令的执行条件（<a
+  href="gc_rpg_event_page_condition.html">RPG::Event::Page::Condition</a>）。</p>
+  <dt>graphic
+  <dd>
+  <p>事件页指定事件块的图片（<a
+  href="gc_rpg_event_page_graphic.html">RPG::Event::Page::Graphic</a>）。</p>
+  <dt>move_type
+  <dd>
+  <p>移动类型（0：固定、1：随机、2：接近、3：自定义）。</p>
+  <dt>move_speed
+  <dd>
+  <p>移动速度（1：1/8 倍速、2：1/4 倍速、3：1/2 倍速、4：正常、5：2 倍速、6：4 倍速）。 </p>
+  <dt>move_frequency
+  <dd>
+  <p>移动频率：（1：最低、2：低、3：正常、4：高、5：最高）。</p>
+  <dt>move_route
+  <dd>
+  <p>移动路线（<a
+  href="rgss/gc_rpg_moveroute.html">RPG::MoveRoute</a>）。只有当移动类型为「自定义」时才会调用。</p>
+  <dt>walk_anime
+  <dd>
+  <p>步行动画的开关。</p>
+  <dt>step_anime
+  <dd>
+  <p>踏步动画的开关。</p>
+  <dt>direction_fix
+  <dd>
+  <p>方向锁定的开关。</p>
+  <dt>through
+  <dd>
+  <p>允许穿透的开关。</p>
+  <dt>priority_type
+  <dd>
+  <p>优先级（0：在普通角色下方、1：与普通角色同层、2：在普通角色上方）。</p>
+  <dt>trigger
+  <dd>
+  <p>触发条件（0：按确定键、1：玩家接触、2：事件接触、3：自动执行、4：并行处理）。 </p>
+  <dt>list
+  <dd>
+  <p>执行内容。<a
+  href="rgss/gc_rpg_eventcommand.html">RPG::EventCommand</a> 的数组。</p></dd></dl>
+<h2>内部类</h2>
+<ul>
+  <li><a href="gc_rpg_event_page_condition.html">RPG::Event::Page::Condition</a>
 
-  <LI><A href="gc_rpg_event_page_graphic.html">RPG::Event::Page::Graphic</A>
-  </LI></UL>
-<H2>定义</H2><PRE>class RPG::Event::Page
+  <li><a href="gc_rpg_event_page_graphic.html">RPG::Event::Page::Graphic</a>
+  </li></ul>
+<h2>定义</h2><pre>class RPG::Event::Page
   def initialize
     @condition = RPG::Event::Page::Condition.new
     @graphic = RPG::Event::Page::Graphic.new
@@ -94,5 +94,5 @@ type=text/css href="../style.css">
   attr_accessor :trigger
   attr_accessor :list
 end
-</PRE>
-<H6></H6></BODY></HTML>
+</pre>
+<h6></h6></body></html>

@@ -1,27 +1,27 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
-<HTML lang=zh><HEAD><TITLE>RPG::MoveRoute</TITLE>
-<META content="text/html; charset=GBK" http-equiv=Content-Type>
-<META content=text/css http-equiv=Content-Style-Type><LINK rel=stylesheet
+<html lang=zh><head><title>RPG::MoveRoute</title>
+<meta content="text/html; charset=GBK" http-equiv=Content-Type>
+<meta content=text/css http-equiv=Content-Style-Type><link rel=stylesheet
 type=text/css href="../style.css">
-<META name=GENERATOR content="MSHTML 9.00.8112.16447"></HEAD>
-<BODY>
-<H1>RPG::MoveCommand</H1>
-<P>移动路线指令的数据类。</P>
-<H2>超类</H2>
-<UL>
-  <LI><A href="sc_object.html">Object</A> </LI></UL>
-<H2>调用者</H2>
-<UL>
-  <LI><A href="gc_rpg_moveroute.html">RPG::MoveRoute</A> </LI></UL>
-<H2>属性</H2>
-<DL>
-  <DT>code
-  <DD>
-  <P>移动路线指令代码。</P>
-  <DT>parameters
-  <DD>
-  <P>包含移动路线指令各项参数的数组，不同移动路线指令有不同内容。</P></DD></DL>
-<H2>定义</H2><PRE>class RPG::MoveCommand
+<meta name=GENERATOR content="MSHTML 9.00.8112.16447"></head>
+<body>
+<h1>RPG::MoveCommand</h1>
+<p>移动路线指令的数据类。</p>
+<h2>超类</h2>
+<ul>
+  <li><a href="sc_object.html">Object</a> </li></ul>
+<h2>调用者</h2>
+<ul>
+  <li><a href="gc_rpg_moveroute.html">RPG::MoveRoute</a> </li></ul>
+<h2>属性</h2>
+<dl>
+  <dt>code
+  <dd>
+  <p>移动路线指令代码。</p>
+  <dt>parameters
+  <dd>
+  <p>包含移动路线指令各项参数的数组，不同移动路线指令有不同内容。</p></dd></dl>
+<h2>定义</h2><pre>class RPG::MoveCommand
   def initialize(code = 0, parameters = [])
     @code = code
     @parameters = parameters
@@ -29,5 +29,5 @@ type=text/css href="../style.css">
   attr_accessor :code
   attr_accessor :parameters
 end
-</PRE>
-<H6></H6></BODY></HTML>
+</pre>
+<h6></h6></body></html>

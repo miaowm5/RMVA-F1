@@ -1,42 +1,42 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
-<HTML lang=zh><HEAD><TITLE>RPG::CommonEvent</TITLE>
-<META content="text/html; charset=GBK" http-equiv=Content-Type>
-<META content=text/css http-equiv=Content-Style-Type><LINK rel=stylesheet 
+<html lang=zh><head><title>RPG::CommonEvent</title>
+<meta content="text/html; charset=GBK" http-equiv=Content-Type>
+<meta content=text/css http-equiv=Content-Style-Type><link rel=stylesheet 
 type=text/css href="../style.css">
-<META name=GENERATOR content="MSHTML 9.00.8112.16447"></HEAD>
-<BODY>
-<H1>RPG::CommonEvent</H1>
-<P>公共事件的数据类。</P>
-<H2>超类</H2>
-<UL>
-  <LI><A href="sc_object.html">Object</A> </LI></UL>
-<H2>属性</H2>
-<DL>
-  <DT>id 
-  <DD>
-  <P>事件编号。</P>
-  <DT>name 
-  <DD>
-  <P>事件名称。</P>
-  <DT>trigger 
-  <DD>
-  <P>触发条件（0：正常执行，1：自动执行，2：并行处理）。</P>
-  <DT>switch_id 
-  <DD>
-  <P>条件开关编号。</P>
-  <DT>list 
-  <DD>
-  <P>事件指令集（<A 
-href="gc_rpg_eventcommand.html">RPG::EventCommand</A>）。</P></DD></DL>
-<H2>方法</H2>
-<DL>
-  <DT>autorun? 
-  <DD>
-  <P>判断事件是否是自动执行，当触发条件是 1 时返回true。</P>
-  <DT>parallel? 
-  <DD>
-  <P>判断事件是否是并行处理，当触发条件是&nbsp;2 时返回true。</P></DD></DL>
-<H2>定义</H2><PRE>class RPG::CommonEvent
+<meta name=GENERATOR content="MSHTML 9.00.8112.16447"></head>
+<body>
+<h1>RPG::CommonEvent</h1>
+<p>公共事件的数据类。</p>
+<h2>超类</h2>
+<ul>
+  <li><a href="sc_object.html">Object</a> </li></ul>
+<h2>属性</h2>
+<dl>
+  <dt>id 
+  <dd>
+  <p>事件编号。</p>
+  <dt>name 
+  <dd>
+  <p>事件名称。</p>
+  <dt>trigger 
+  <dd>
+  <p>触发条件（0：正常执行，1：自动执行，2：并行处理）。</p>
+  <dt>switch_id 
+  <dd>
+  <p>条件开关编号。</p>
+  <dt>list 
+  <dd>
+  <p>事件指令集（<a 
+href="gc_rpg_eventcommand.html">RPG::EventCommand</a>）。</p></dd></dl>
+<h2>方法</h2>
+<dl>
+  <dt>autorun? 
+  <dd>
+  <p>判断事件是否是自动执行，当触发条件是 1 时返回true。</p>
+  <dt>parallel? 
+  <dd>
+  <p>判断事件是否是并行处理，当触发条件是&nbsp;2 时返回true。</p></dd></dl>
+<h2>定义</h2><pre>class RPG::CommonEvent
   def initialize
     @id = 0
     @name = ''
@@ -56,5 +56,5 @@ href="gc_rpg_eventcommand.html">RPG::EventCommand</A>）。</P></DD></DL>
   attr_accessor :switch_id
   attr_accessor :list
 end
-</PRE>
-<H6></H6></BODY></HTML>
+</pre>
+<h6></h6></body></html>

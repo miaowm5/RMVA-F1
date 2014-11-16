@@ -1,36 +1,36 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
-<HTML lang=zh><HEAD><TITLE>Table</TITLE>
-<META content="text/html; charset=GBK" http-equiv=Content-Type>
-<META content=text/css http-equiv=Content-Style-Type><LINK rel=stylesheet
+<html lang=zh><head><title>Table</title>
+<meta content="text/html; charset=GBK" http-equiv=Content-Type>
+<meta content=text/css http-equiv=Content-Style-Type><link rel=stylesheet
 type=text/css href="../style.css">
-<META name=GENERATOR content="MSHTML 9.00.8112.16447"></HEAD>
-<BODY>
-<H1>Table</H1>
-<P>多维数组的类，每个元素容纳两个带符号位，范围是 -32,768～32,767。</P>
-<P>Ruby <A href="sc_array.html">Array</A> 类在处理大量信息时效率很差，因此使用了此类。</P>
-<H2>超类</H2>
-<UL>
-  <LI><A href="sc_object.html">Object</A> </LI></UL>
-<H2>类方法</H2>
-<DL>
-  <DT>Table.new(<VAR>xsize</VAR>[, <VAR>ysize</VAR>[, <VAR>zsize</VAR>]])
-  <DD>
-  <P>生成表格对象。指定多维数组各维的尺寸。可以生成一维、二维和三维的数组。生成没有元素的数组也可以。</P></DD></DL>
-<H2>方法</H2>
-<DL>
-  <DT>resize(<VAR>xsize</VAR>[, <VAR>ysize</VAR>[, <VAR>zsize</VAR>]])
-  <DD>
-  <P>变更数组的尺寸。变更前的所有数据都会被保留。</P>
-  <DT>xsize
-  <DT>ysize
-  <DT>zsize
-  <DD>
-  <P>获取数组各维的尺寸。</P></DD></DL>
-<H2>属性</H2>
-<DL>
-  <DT>self[<VAR>x</VAR>]
-  <DT>self[<VAR>x</VAR>, <VAR>y</VAR>]
-  <DT>self[<VAR>x</VAR>, <VAR>y</VAR>, <VAR>z</VAR>]
-  <DD>
-  <P>存取数组的元素。所生成的数组有几维，就可以使用几个参数。若指定的元素不存在就返回 nil。</P></DD></DL>
-<H6></H6></BODY></HTML>
+<meta name=GENERATOR content="MSHTML 9.00.8112.16447"></head>
+<body>
+<h1>Table</h1>
+<p>多维数组的类，每个元素容纳两个带符号位，范围是 -32,768～32,767。</p>
+<p>Ruby <a href="sc_array.html">Array</a> 类在处理大量信息时效率很差，因此使用了此类。</p>
+<h2>超类</h2>
+<ul>
+  <li><a href="sc_object.html">Object</a> </li></ul>
+<h2>类方法</h2>
+<dl>
+  <dt>Table.new(<var>xsize</var>[, <var>ysize</var>[, <var>zsize</var>]])
+  <dd>
+  <p>生成表格对象。指定多维数组各维的尺寸。可以生成一维、二维和三维的数组。生成没有元素的数组也可以。</p></dd></dl>
+<h2>方法</h2>
+<dl>
+  <dt>resize(<var>xsize</var>[, <var>ysize</var>[, <var>zsize</var>]])
+  <dd>
+  <p>变更数组的尺寸。变更前的所有数据都会被保留。</p>
+  <dt>xsize
+  <dt>ysize
+  <dt>zsize
+  <dd>
+  <p>获取数组各维的尺寸。</p></dd></dl>
+<h2>属性</h2>
+<dl>
+  <dt>self[<var>x</var>]
+  <dt>self[<var>x</var>, <var>y</var>]
+  <dt>self[<var>x</var>, <var>y</var>, <var>z</var>]
+  <dd>
+  <p>存取数组的元素。所生成的数组有几维，就可以使用几个参数。若指定的元素不存在就返回 nil。</p></dd></dl>
+<h6></h6></body></html>

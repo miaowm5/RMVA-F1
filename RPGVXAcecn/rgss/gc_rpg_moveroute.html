@@ -1,35 +1,35 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
-<HTML lang=zh><HEAD><TITLE>RPG::MoveRoute</TITLE>
-<META content="text/html; charset=GBK" http-equiv=Content-Type>
-<META content=text/css http-equiv=Content-Style-Type><LINK rel=stylesheet
+<html lang=zh><head><title>RPG::MoveRoute</title>
+<meta content="text/html; charset=GBK" http-equiv=Content-Type>
+<meta content=text/css http-equiv=Content-Style-Type><link rel=stylesheet
 type=text/css href="../style.css">
-<META name=GENERATOR content="MSHTML 9.00.8112.16447"></HEAD>
-<BODY>
-<H1>RPG::MoveRoute</H1>
-<P>移动路线的数据类。</P>
-<H2>超类</H2>
-<UL>
-  <LI><A href="sc_object.html">Object</A> </LI></UL>
-<H2>调用者</H2>
-<UL>
-  <LI><A href="gc_rpg_eventpage.html">RPG::EventPage</A> </LI></UL>
-<H2>属性</H2>
-<DL>
-  <DT>repeat
-  <DD>
-  <P>是否勾选「循环执行」选项的复选框。</P>
-  <DT>skippable
-  <DD>
-  <P>是否勾选「忽略障碍」选项的复选框。</P>
-  <DT>wait
-  <DD>
-  <P>是否勾选「等待至移动结束」选项的复选框。</P>
-  <DT>list
-  <DD>
-  <P>移动路线内容，<A
-  href="rgss/gc_rpg_movecommand.html">RPG::MoveCommand</A>
-  对象的数组。</P></DD></DL>
-<H2>定义</H2><PRE>class RPG::MoveRoute
+<meta name=GENERATOR content="MSHTML 9.00.8112.16447"></head>
+<body>
+<h1>RPG::MoveRoute</h1>
+<p>移动路线的数据类。</p>
+<h2>超类</h2>
+<ul>
+  <li><a href="sc_object.html">Object</a> </li></ul>
+<h2>调用者</h2>
+<ul>
+  <li><a href="gc_rpg_eventpage.html">RPG::EventPage</a> </li></ul>
+<h2>属性</h2>
+<dl>
+  <dt>repeat
+  <dd>
+  <p>是否勾选「循环执行」选项的复选框。</p>
+  <dt>skippable
+  <dd>
+  <p>是否勾选「忽略障碍」选项的复选框。</p>
+  <dt>wait
+  <dd>
+  <p>是否勾选「等待至移动结束」选项的复选框。</p>
+  <dt>list
+  <dd>
+  <p>移动路线内容，<a
+  href="rgss/gc_rpg_movecommand.html">RPG::MoveCommand</a>
+  对象的数组。</p></dd></dl>
+<h2>定义</h2><pre>class RPG::MoveRoute
   def initialize
     @repeat = true
     @skippable = false
@@ -41,5 +41,5 @@ type=text/css href="../style.css">
   attr_accessor :wait
   attr_accessor :list
 end
-</PRE>
-<H6></H6></BODY></HTML>
+</pre>
+<h6></h6></body></html>

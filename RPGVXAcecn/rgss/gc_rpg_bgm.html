@@ -1,44 +1,44 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
-<HTML lang=zh><HEAD><TITLE>RPG::BGM</TITLE>
-<META content="text/html; charset=GBK" http-equiv=Content-Type>
-<META content=text/css http-equiv=Content-Style-Type><LINK rel=stylesheet 
+<html lang=zh><head><title>RPG::BGM</title>
+<meta content="text/html; charset=GBK" http-equiv=Content-Type>
+<meta content=text/css http-equiv=Content-Style-Type><link rel=stylesheet 
 type=text/css href="../style.css">
-<META name=GENERATOR content="MSHTML 9.00.8112.16447"></HEAD>
-<BODY>
-<H1>RPG::BGM</H1>
-<P>背景音乐的数据类。此类有一个利用 <A href="gm_audio.html">Audio</A> 模块播放自身的方法。</P>
-<H2>超类</H2>
-<UL>
-  <LI><A href="gc_rpg_audiofile.html">RPG::AudioFile</A> </LI></UL>
-<H2>调用者</H2>
-<UL>
-  <LI><A href="gc_rpg_map.html">RPG::Map</A> 
-  <LI><A href="gc_rpg_system.html">RPG::System</A> 
-  <LI><A href="gc_rpg_system_vehicle.html">RPG::System::Vehicle</A> 
-  <LI><A href="gc_rpg_eventcommand.html">RPG::EventCommand</A> </LI></UL>
-<H2>类方法</H2>
-<DL>
-  <DT>RPG::BGM.last 
-  <DD>
-  <P>返回正在播放背景音乐（RPG::BGM）。若是没有播放背景音乐，则返回 nil。</P>
-  <P>还可以存储当前播放的背景音乐播放到的位置。 <SPAN class=rgss3>(RGSS3)</SPAN></P>
-  <DT>RPG::BGM.stop 
-  <DD>
-  <P>停止播放背景音乐。</P>
-  <DT>RPG::BGM.fade(<VAR>time</VAR>) 
-  <DD>
-  <P>开始淡出背景音乐。<VAR>time</VAR> 是以毫秒计算的淡出时间长度。</P></DD></DL>
-<H2>Methods</H2>
-<DL>
-  <DT>play([<VAR>pos</VAR>]) <SPAN class=rgss3>(RGSS3)</SPAN> 
-  <DD>
-  <P>开始播放背景音乐。</P>
-  <P>如果音乐文件是 ogg 或 wav 格式，可以用 pos 参数指定播放的开始时间点。 <SPAN 
-  class=rgss3>(RGSS3)</SPAN></P>
-  <DT>replay <SPAN class=rgss3>(RGSS3)</SPAN> 
-  <DD>
-  <P>重放 RPG::BGM.last 所存储的背景音乐。</P></DD></DL>
-<H2>定义</H2><PRE>class RPG::BGM &lt; RPG::AudioFile
+<meta name=GENERATOR content="MSHTML 9.00.8112.16447"></head>
+<body>
+<h1>RPG::BGM</h1>
+<p>背景音乐的数据类。此类有一个利用 <a href="gm_audio.html">Audio</a> 模块播放自身的方法。</p>
+<h2>超类</h2>
+<ul>
+  <li><a href="gc_rpg_audiofile.html">RPG::AudioFile</a> </li></ul>
+<h2>调用者</h2>
+<ul>
+  <li><a href="gc_rpg_map.html">RPG::Map</a> 
+  <li><a href="gc_rpg_system.html">RPG::System</a> 
+  <li><a href="gc_rpg_system_vehicle.html">RPG::System::Vehicle</a> 
+  <li><a href="gc_rpg_eventcommand.html">RPG::EventCommand</a> </li></ul>
+<h2>类方法</h2>
+<dl>
+  <dt>RPG::BGM.last 
+  <dd>
+  <p>返回正在播放背景音乐（RPG::BGM）。若是没有播放背景音乐，则返回 nil。</p>
+  <p>还可以存储当前播放的背景音乐播放到的位置。 <span class=rgss3>(RGSS3)</span></p>
+  <dt>RPG::BGM.stop 
+  <dd>
+  <p>停止播放背景音乐。</p>
+  <dt>RPG::BGM.fade(<var>time</var>) 
+  <dd>
+  <p>开始淡出背景音乐。<var>time</var> 是以毫秒计算的淡出时间长度。</p></dd></dl>
+<h2>Methods</h2>
+<dl>
+  <dt>play([<var>pos</var>]) <span class=rgss3>(RGSS3)</span> 
+  <dd>
+  <p>开始播放背景音乐。</p>
+  <p>如果音乐文件是 ogg 或 wav 格式，可以用 pos 参数指定播放的开始时间点。 <span 
+  class=rgss3>(RGSS3)</span></p>
+  <dt>replay <span class=rgss3>(RGSS3)</span> 
+  <dd>
+  <p>重放 RPG::BGM.last 所存储的背景音乐。</p></dd></dl>
+<h2>定义</h2><pre>class RPG::BGM &lt; RPG::AudioFile
   @@last = RPG::BGM.new
   def play(pos = 0)
     if @name.empty?
@@ -66,5 +66,5 @@ type=text/css href="../style.css">
   end
   attr_accessor :pos
 end
-</PRE>
-<H6></H6></BODY></HTML>
+</pre>
+<h6></h6></body></html>

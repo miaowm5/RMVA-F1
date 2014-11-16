@@ -1,39 +1,39 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
-<HTML lang=zh><HEAD><TITLE>RPG::System::Vehicle</TITLE>
-<META content="text/html; charset=GBK" http-equiv=Content-Type>
-<META content=text/css http-equiv=Content-Style-Type><LINK rel=stylesheet 
+<html lang=zh><head><title>RPG::System::Vehicle</title>
+<meta content="text/html; charset=GBK" http-equiv=Content-Type>
+<meta content=text/css http-equiv=Content-Style-Type><link rel=stylesheet 
 type=text/css href="../style.css">
-<META name=GENERATOR content="MSHTML 9.00.8112.16447"></HEAD>
-<BODY>
-<H1>RPG::System::Vehicle</H1>
-<P>交通工具的数据类。</P>
-<H2>超类</H2>
-<UL>
-  <LI><A href="sc_object.html">Object</A> </LI></UL>
-<H2>调用者</H2>
-<UL>
-  <LI><A href="gc_rpg_system.html">RPG::System</A> </LI></UL>
-<H2>属性</H2>
-<DL>
-  <DT>character_name 
-  <DD>
-  <P>交通工具的行走图文件名。</P>
-  <DT>character_index 
-  <DD>
-  <P>交通工具的行走图索引（0～7）</P>
-  <DT>bgm 
-  <DD>
-  <P>交通工具背景音乐（<A href="gc_rpg_bgm.html">RPG::BGM</A>&nbsp;）。</P>
-  <DT>start_map_id 
-  <DD>
-  <P>交通工具初始位置所在的地图 ID 编号。</P>
-  <DT>start_x 
-  <DD>
-  <P>交通工具初始位置的 X 坐标。</P>
-  <DT>start_y 
-  <DD>
-  <P>交通工具初始位置的 Y 坐标。</P></DD></DL>
-<H2>定义</H2><PRE>class RPG::System::Vehicle
+<meta name=GENERATOR content="MSHTML 9.00.8112.16447"></head>
+<body>
+<h1>RPG::System::Vehicle</h1>
+<p>交通工具的数据类。</p>
+<h2>超类</h2>
+<ul>
+  <li><a href="sc_object.html">Object</a> </li></ul>
+<h2>调用者</h2>
+<ul>
+  <li><a href="gc_rpg_system.html">RPG::System</a> </li></ul>
+<h2>属性</h2>
+<dl>
+  <dt>character_name 
+  <dd>
+  <p>交通工具的行走图文件名。</p>
+  <dt>character_index 
+  <dd>
+  <p>交通工具的行走图索引（0～7）</p>
+  <dt>bgm 
+  <dd>
+  <p>交通工具背景音乐（<a href="gc_rpg_bgm.html">RPG::BGM</a>&nbsp;）。</p>
+  <dt>start_map_id 
+  <dd>
+  <p>交通工具初始位置所在的地图 ID 编号。</p>
+  <dt>start_x 
+  <dd>
+  <p>交通工具初始位置的 X 坐标。</p>
+  <dt>start_y 
+  <dd>
+  <p>交通工具初始位置的 Y 坐标。</p></dd></dl>
+<h2>定义</h2><pre>class RPG::System::Vehicle
   def initialize
     @character_name = ''
     @character_index = 0
@@ -49,5 +49,5 @@ type=text/css href="../style.css">
   attr_accessor :start_x
   attr_accessor :start_y
 end
-</PRE>
-<H6></H6></BODY></HTML>
+</pre>
+<h6></h6></body></html>

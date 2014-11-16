@@ -1,95 +1,95 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
-<HTML lang=zh><HEAD><TITLE>RPG::Map</TITLE>
-<META content="text/html; charset=GBK" http-equiv=Content-Type>
-<META content=text/css http-equiv=Content-Style-Type><LINK rel=stylesheet
+<html lang=zh><head><title>RPG::Map</title>
+<meta content="text/html; charset=GBK" http-equiv=Content-Type>
+<meta content=text/css http-equiv=Content-Style-Type><link rel=stylesheet
 type=text/css href="../style.css">
-<META name=GENERATOR content="MSHTML 9.00.8112.16447"></HEAD>
-<BODY>
-<H1>RPG::Map</H1>
-<P>地图数据类。</P>
-<H2>超类</H2>
-<UL>
-  <LI><A href="sc_object.html">Object</A></LI></UL>
-<H2>属性</H2>
-<DL>
-  <DT>display_name
-  <DD>
-  <P>地图显示名。</P>
-  <DT>tileset_id
-  <DD>
-  <P>地图图块组 ID。</P>
-  <DT>width
-  <DD>
-  <P>地图宽度。</P>
-  <DT>height
-  <DD>
-  <P>地图高度。</P>
-  <DT>scroll_type
-  <DD>
-  <P>循环方式（0：不循环、1：纵向循环、2：横向循环、3：纵横循环）。</P>
-  <DT>specify_battleback
-  <DD>
-  <P>是否使用战斗背景图像。</P>
-  <DT>battleback1_name
-  <DD>
-  <P>使用战斗背景图像时地板图像的文件名。</P>
-  <DT>battleback2_name
-  <DD>
-  <P>使用战斗背景图像时墙壁图像的文件名。</P>
-  <DT>autoplay_bgm
-  <DD>
-  <P>是否自动切换背景音乐。</P>
-  <DT>bgm
-  <DD>
-  <P>自动切换背景音乐时对应的背景音乐（<A href="gc_rpg_bgm.html">RPG::BGM</A>）。</P>
-  <DT>autoplay_bgs
-  <DD>
-  <P>自动切换背景声音的开关。</P>
-  <DT>bgs
-  <DD>
-  <P>自动切换背景声音时对应的背景声音（<A href="gc_rpg_bgs.html">RPG::BGS</A>&nbsp;）。</P>
-  <DT>disable_dashing
-  <DD>
-  <P>是否禁止跑步。</P>
-  <DT>encounter_list
-  <DD>
-  <P>遇敌列表。<A
-  href="gc_rpg_map_encounter.html">RPG::Map::Encounter</A> 的数组。</P>
-  <DT>encounter_step
-  <DD>
-  <P>平均遇敌步数。</P>
-  <DT>parallax_name
-  <DD>
-  <P>远景图像的文件名。</P>
-  <DT>parallax_loop_x
-  <DD>
-  <P>横向循环的开关。</P>
-  <DT>parallax_loop_y
-  <DD>
-  <P>纵向循环的开关。</P>
-  <DT>parallax_sx
-  <DD>
-  <P>横向自动卷动的速度。</P>
-  <DT>parallax_sy
-  <DD>
-  <P>纵向自动卷动的速度。</P>
-  <DT>parallax_show
-  <DD>
-  <P>在地图编辑器显示的开关。</P>
-  <DT>note
-  <DD>
-  <P>备注。</P>
-  <DT>data
-  <DD>
-  <P>地图数据。地图元件 ID 及其数据的三维数组。（<A href="gc_table.html">Table</A>）。</P>
-  <DT>events
-  <DD>
-  <P>地图事件。以事件 ID 为主键，<A
-  href="rgss/gc_rpg_event.html">RPG::Event</A> 的实例为值的哈希表。</P></DD></DL>
-<H2>内部类</H2>
-<UL>
-  <LI><A href="gc_rpg_map_encounter.html">RPG::Map::Encounter</A> </LI></UL>
-<H2>定义</H2><PRE>class RPG::Map
+<meta name=GENERATOR content="MSHTML 9.00.8112.16447"></head>
+<body>
+<h1>RPG::Map</h1>
+<p>地图数据类。</p>
+<h2>超类</h2>
+<ul>
+  <li><a href="sc_object.html">Object</a></li></ul>
+<h2>属性</h2>
+<dl>
+  <dt>display_name
+  <dd>
+  <p>地图显示名。</p>
+  <dt>tileset_id
+  <dd>
+  <p>地图图块组 ID。</p>
+  <dt>width
+  <dd>
+  <p>地图宽度。</p>
+  <dt>height
+  <dd>
+  <p>地图高度。</p>
+  <dt>scroll_type
+  <dd>
+  <p>循环方式（0：不循环、1：纵向循环、2：横向循环、3：纵横循环）。</p>
+  <dt>specify_battleback
+  <dd>
+  <p>是否使用战斗背景图像。</p>
+  <dt>battleback1_name
+  <dd>
+  <p>使用战斗背景图像时地板图像的文件名。</p>
+  <dt>battleback2_name
+  <dd>
+  <p>使用战斗背景图像时墙壁图像的文件名。</p>
+  <dt>autoplay_bgm
+  <dd>
+  <p>是否自动切换背景音乐。</p>
+  <dt>bgm
+  <dd>
+  <p>自动切换背景音乐时对应的背景音乐（<a href="gc_rpg_bgm.html">RPG::BGM</a>）。</p>
+  <dt>autoplay_bgs
+  <dd>
+  <p>自动切换背景声音的开关。</p>
+  <dt>bgs
+  <dd>
+  <p>自动切换背景声音时对应的背景声音（<a href="gc_rpg_bgs.html">RPG::BGS</a>&nbsp;）。</p>
+  <dt>disable_dashing
+  <dd>
+  <p>是否禁止跑步。</p>
+  <dt>encounter_list
+  <dd>
+  <p>遇敌列表。<a
+  href="gc_rpg_map_encounter.html">RPG::Map::Encounter</a> 的数组。</p>
+  <dt>encounter_step
+  <dd>
+  <p>平均遇敌步数。</p>
+  <dt>parallax_name
+  <dd>
+  <p>远景图像的文件名。</p>
+  <dt>parallax_loop_x
+  <dd>
+  <p>横向循环的开关。</p>
+  <dt>parallax_loop_y
+  <dd>
+  <p>纵向循环的开关。</p>
+  <dt>parallax_sx
+  <dd>
+  <p>横向自动卷动的速度。</p>
+  <dt>parallax_sy
+  <dd>
+  <p>纵向自动卷动的速度。</p>
+  <dt>parallax_show
+  <dd>
+  <p>在地图编辑器显示的开关。</p>
+  <dt>note
+  <dd>
+  <p>备注。</p>
+  <dt>data
+  <dd>
+  <p>地图数据。地图元件 ID 及其数据的三维数组。（<a href="gc_table.html">Table</a>）。</p>
+  <dt>events
+  <dd>
+  <p>地图事件。以事件 ID 为主键，<a
+  href="rgss/gc_rpg_event.html">RPG::Event</a> 的实例为值的哈希表。</p></dd></dl>
+<h2>内部类</h2>
+<ul>
+  <li><a href="gc_rpg_map_encounter.html">RPG::Map::Encounter</a> </li></ul>
+<h2>定义</h2><pre>class RPG::Map
   def initialize(width, height)
     @display_name = ''
     @tileset_id = 1
@@ -141,5 +141,5 @@ type=text/css href="../style.css">
   attr_accessor :data
   attr_accessor :events
 end
-</PRE>
-<H6></H6></BODY></HTML>
+</pre>
+<h6></h6></body></html>

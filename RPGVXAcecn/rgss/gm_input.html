@@ -1,58 +1,58 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
-<HTML lang=zh><HEAD><TITLE>Input</TITLE>
-<META content="text/html; charset=GBK" http-equiv=Content-Type>
-<META content=text/css http-equiv=Content-Style-Type><LINK rel=stylesheet
+<html lang=zh><head><title>Input</title>
+<meta content="text/html; charset=GBK" http-equiv=Content-Type>
+<meta content=text/css http-equiv=Content-Style-Type><link rel=stylesheet
 type=text/css href="../style.css">
-<META name=GENERATOR content="MSHTML 8.00.7601.17785"></HEAD>
-<BODY>
-<H1>Input</H1>
-<P>处理遥控器/游戏杆或键盘输入信息的模块。</P>
-<P>在RGSS3中，使用符号而非按键序号来控制数据输入。 <SPAN class=rgss3>(RGSS3)</SPAN></P>
-<H2>模块方法</H2>
-<DL>
-  <DT>Input.update
-  <DD>
-  <P>更新输入信息。原则上是每一帧调用此方法一次。</P>
-  <DT>Input.press?(<VAR>sym</VAR>) <SPAN class=rgss3>(RGSS3)</SPAN>
-  <DD>
-  <P>检测与被参数 sym 指定的符号相对应的按键是否被按下。</P>
-  <P>如果按键被按下，则返回 true ，否则返回 false 。</P><PRE>if Input.press?(:C)
+<meta name=GENERATOR content="MSHTML 8.00.7601.17785"></head>
+<body>
+<h1>Input</h1>
+<p>处理遥控器/游戏杆或键盘输入信息的模块。</p>
+<p>在RGSS3中，使用符号而非按键序号来控制数据输入。 <span class=rgss3>(RGSS3)</span></p>
+<h2>模块方法</h2>
+<dl>
+  <dt>Input.update
+  <dd>
+  <p>更新输入信息。原则上是每一帧调用此方法一次。</p>
+  <dt>Input.press?(<var>sym</var>) <span class=rgss3>(RGSS3)</span>
+  <dd>
+  <p>检测与被参数 sym 指定的符号相对应的按键是否被按下。</p>
+  <p>如果按键被按下，则返回 true ，否则返回 false 。</p><pre>if Input.press?(:C)
   do_something
 end
-</PRE>
-  <DT>Input.trigger?(<VAR>sym</VAR>) <SPAN class=rgss3>(RGSS3)</SPAN>
-  <DD>
-  <P>检测被参数 sym 指定的符号相对应的按键是否被重新按下。</P>
-  <P>从没有按下的状态转变为按下的瞬间才被视为「重新按下」。</P>
-  <P>如果按钮被重新按下，则返回 true，如果不是，返回 false 。</P>
-  <DT>Input.repeat?(<VAR>sym</VAR>) <SPAN class=rgss3>(RGSS3)</SPAN>
-  <DD>
-  <P>检测被参数 sym 指定的符号相对应的按键是否被重新按下。</P>
-  <P>不同于 trigger? ，按住按键时会考虑按键的重复。</P>
-  <P>如果按钮被按下，则返回 true，如果不是，返回 false 。</P>
-  <DT>Input.dir4
-  <DD>
-  <P>判断箭头键的状态，将信息转换成特殊的 4 方向形式，并返回与数字键盘方向对应的数字（2、4、6、8）。</P>
-  <P>若无任何箭头键（或等价于没有箭头键按下的情况时）按下，则返回 0。</P>
-  <DT>Input.dir8
-  <DD>
-  <P>判断箭头键的状态，将信息转换成特殊的 8 方向形式，并返回与数字键盘方向对应的数字（1、2、3、4、6、7、8、9）。</P>
-  <DD>
-  <P>若无任何箭头键（或等价于没有箭头键按下的情况时）按下，则返回 0。</P></DD></DL>
-<H2>常量</H2>
-<DL>
-  <P>这些被指定的名字被用于符号的名称。比如，方向键中的右键可以被表示为 :RIGHT。 <SPAN
-  class=rgss3>(RGSS3)</SPAN></P>
-  <DT>DOWN LEFT RIGHT UP
-  <DD>
-  <P>分别对应方向键中的下、左、右、上。</P>
-  <DT>A B C X Y Z L R
-  <DD>
-  <P>分别对应与之相对应的按键。</P>
-  <DT>SHIFT CTRL ALT
-  <DD>
-  <P>直接对应键盘上面的 Shift、CTRL 和 ALT 按键。</P>
-  <DT>F5 F6 F7 F8 F9
-  <DD>
-  <P>对应与之相对应的键盘上的功能键，其他的功能键被系统保留，无法被用为其他用途。</P></DD></DL>
-<H6></H6></BODY></HTML>
+</pre>
+  <dt>Input.trigger?(<var>sym</var>) <span class=rgss3>(RGSS3)</span>
+  <dd>
+  <p>检测被参数 sym 指定的符号相对应的按键是否被重新按下。</p>
+  <p>从没有按下的状态转变为按下的瞬间才被视为「重新按下」。</p>
+  <p>如果按钮被重新按下，则返回 true，如果不是，返回 false 。</p>
+  <dt>Input.repeat?(<var>sym</var>) <span class=rgss3>(RGSS3)</span>
+  <dd>
+  <p>检测被参数 sym 指定的符号相对应的按键是否被重新按下。</p>
+  <p>不同于 trigger? ，按住按键时会考虑按键的重复。</p>
+  <p>如果按钮被按下，则返回 true，如果不是，返回 false 。</p>
+  <dt>Input.dir4
+  <dd>
+  <p>判断箭头键的状态，将信息转换成特殊的 4 方向形式，并返回与数字键盘方向对应的数字（2、4、6、8）。</p>
+  <p>若无任何箭头键（或等价于没有箭头键按下的情况时）按下，则返回 0。</p>
+  <dt>Input.dir8
+  <dd>
+  <p>判断箭头键的状态，将信息转换成特殊的 8 方向形式，并返回与数字键盘方向对应的数字（1、2、3、4、6、7、8、9）。</p>
+  <dd>
+  <p>若无任何箭头键（或等价于没有箭头键按下的情况时）按下，则返回 0。</p></dd></dl>
+<h2>常量</h2>
+<dl>
+  <p>这些被指定的名字被用于符号的名称。比如，方向键中的右键可以被表示为 :RIGHT。 <span
+  class=rgss3>(RGSS3)</span></p>
+  <dt>DOWN LEFT RIGHT UP
+  <dd>
+  <p>分别对应方向键中的下、左、右、上。</p>
+  <dt>A B C X Y Z L R
+  <dd>
+  <p>分别对应与之相对应的按键。</p>
+  <dt>SHIFT CTRL ALT
+  <dd>
+  <p>直接对应键盘上面的 Shift、CTRL 和 ALT 按键。</p>
+  <dt>F5 F6 F7 F8 F9
+  <dd>
+  <p>对应与之相对应的键盘上的功能键，其他的功能键被系统保留，无法被用为其他用途。</p></dd></dl>
+<h6></h6></body></html>
