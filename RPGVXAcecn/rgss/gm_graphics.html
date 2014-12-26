@@ -1,81 +1,84 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
-<html lang=zh><head><title>Graphics</title>
-<meta content="text/html; charset=GBK" http-equiv=Content-Type>
-<meta content=text/css http-equiv=Content-Style-Type><link rel=stylesheet
-type=text/css href="../style.css">
-<meta name=GENERATOR content="MSHTML 8.00.7601.17785"></head>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=GBK">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<title>Graphics</title>
+<link href="../style.css" type="text/css" rel="stylesheet">
+</head>
 <body>
 <h1>Graphics</h1>
-<p>该模块负责进行图像处理工作。</p>
+<p>该模块负责画面整体的处理。</p>
 <h2>模块方法</h2>
 <dl>
-  <dt>Graphics.update
-  <dd>
-  <p>用一帧的时间刷新游戏画面和游戏对象调用该方法需要进行时间间隔设置。</p><pre>loop do
+<dt>Graphics.update
+<dd>
+<p>更新游戏画面，推进一帧。该方法需要定期调用。</p><pre>
+loop do
   Graphics.update
   Input.update
   do_something
 end
 </pre>
-  <dt>Graphics.wait(<var>duration</var>)
-  <dd>
-  <p>等待指定的帧数，其效果和下面的代码一样：</p><pre>duration.times do
+<dt>Graphics.wait(<var>duration</var>)
+<dd>
+<p>等待指定的帧数，与下面的代码等效：</p>
+<pre>
+duration.times do
   Graphics.update
 end
 </pre>
-  <dt><a name=fadeout>Graphics.fadeout(<var>duration</var>)</a>
-  <dd>
-  <p>执行淡出操作。</p>
-  <p><var>duration</var> 是指定的淡出过程需要进行的时间。</p>
-  <dt><a name=fadein>Graphics.fadein(<var>duration</var>)</a>
-  <dd>
-  <p>执行淡入操作。</p>
-  <p><var>duration</var> 是指定的淡入过程需要进行的时间。</p>
-  <dt>Graphics.freeze
-  <dd>
-  <p>冻结目前的图像显示过程。</p>
-  <p>在解除冻结之前，一切屏幕重写过程都会被禁止。</p>
-  <dt><a name=transition>Graphics.transition([<var>duration</var>[,
-  <var>filename</var>[, <var>vague</var>]]])</a>
-  <dd>
-  <p>执行由 Graphics.freeze 所固定的画面到当前画面的渐变。</p>
-  <p><var>duration</var> 是渐变进行的帧数，默认值为 10 。</p>
-  <p><var>filename</var> 是指定的渐变图形文件名，未指定时则执行标准淡出。也会自动搜索包含在 <a
-  href="rgss.html#rgss_rtp">RGSS-RTP</a> 和加密档案中的文件。 扩展名可以省略。</p>
-  <p><var>vague</var> 是设置图像的起始点和终结点之间边界的模糊度，数值愈大则愈模糊。省略时预设为 40。</p>
-  <dt><a name=snap_to_bitmap>Graphics.snap_to_bitmap</a>
-  <dd>
-  <p>将当前游戏画面截图存为位图对象。 </p>
-  <p>所指向的是显现出来的图像，与调用 freeze 方法没有关联。</p>
-  <p>所生成的位图在不使用时必须被释放掉。</p>
-  <dt>Graphics.frame_reset
-  <dd>
-  <p>将画面更新时间归零。在执行十分消耗时间的进程之后，调用此方法可以避免严重的画格跳跃现象。</p>
-  <dt><a name=width>Graphics.width</a>
-  <dt><a name=height>Graphics.height</a>
-  <dd>
-  <p>获取画面的宽度和高度。</p>
-  <p>一般为 544 和 416 。</p>
-  <dt>Graphics.resize_screen(<var>width</var>, <var>height</var>)
-  <dd>
-  <p>修改画面的尺寸。</p>
-  <p>宽度和高度的指定值最大到 640480 。</p>
-  <dt><a name=play_movie>Graphics.play_movie(<var>filename</var>)</a> <span
-  class=rgss3>(RGSS3)</span>
-  <dd>
-  <p>从文件名为 <var>filename </var>的文件中播放视频。</p>
-  <dd>
-  <p>在播放结束后，过程才会被返回。</p></dd></dl>
+<dt><a name="fadeout">Graphics.fadeout(<var>duration</var>)</a>
+<dd>
+<p>执行画面的淡出。</p>
+<p><var>duration</var> 是淡出花费的帧数。</p>
+<dt><a name="fadein">Graphics.fadein(<var>duration</var>)</a>
+<dd>
+<p>执行画面的淡入。</p>
+<p><var>duration</var> 是淡入花费的帧数。</p>
+<dt>Graphics.freeze
+<dd>
+<p>固定当前画面以准备渐变。</p>
+<p>在调用 transition 方法之前，禁止一切画面的重绘。</p>
+<dt><a name="transition">Graphics.transition([<var>duration</var>[,
+<var>filename</var>[, <var>vague</var>]]])</a>
+<dd>
+<p>执行由 Graphics.freeze 方法固定的画面到当前画面的渐变。</p>
+<p><var>duration</var> 是渐变花费的帧数，默认值为 10 。</p>
+<p><var>filename</var> 指定渐变图像的文件名（未指定时则执行普通的淡出）。<a href="rgss.html#rgss_rtp">RGSS-RTP</a>、<a href="rgss.html#encryption_archive">加密档案</a>中的文件都会被查找。 扩展名可以省略。</p>
+<p><var>vague</var> 是设置图像的起始点和终结点之间边界的模糊度，数值愈大则愈模糊。默认值为 40。</p>
+<dt><a name="snap_to_bitmap">Graphics.snap_to_bitmap</a>
+<dd>
+<p>以位图对象的形式获取当前的游戏画面。 </p>
+<p>即使以 freeze 方法固定图像，该方法也会获取当前本来应该显示的图像。</p>
+<p>生成的位图不再需要时，必须立刻释放位图。</p>
+<dt>Graphics.frame_reset
+<dd>
+<p>重置画面的更新时间。在执行耗时的处理之后，调用此方法可以避免严重的跳帧。</p>
+<dt><a name="width">Graphics.width</a>
+<dt><a name="height">Graphics.height</a>
+<dd>
+<p>获取画面的宽度和高度。</p>
+<p>一般为 544、416。</p>
+<dt>Graphics.resize_screen(<var>width</var>, <var>height</var>)
+<dd>
+<p>修改画面的尺寸。</p>
+<p>width、height 指定宽度和高度，范围为 640&times;480。</p>
+<dt><a name="play_movie">Graphics.play_movie(<var>filename</var>)</a> <span class="rgss3">(RGSS3)</span>
+<dd>
+<p>从文件名为 <var>filename </var> 的文件中播放视频。</p>
+<dd>
+<p>在播放结束后，才会返回。</p></dd></dl>
 <h2>模块属性</h2>
 <dl>
-  <dt><a name=frame_rate>Graphics.frame_rate</a>
-  <dd>
-  <p>每秒钟刷新画面的次数(FPS)。数值愈大就需求愈多的CPU资源。一般设置为 60。</p>
-  <p>不建议修改此数值；然而此属性可以修改为 10～120范围内的任何数值，超出范围的数值会自动修正。</p>
-  <dt>Graphics.frame_count
-  <dd>
-  <p>画面刷新次数的计数。游戏开始时将此属性设为 0，游戏的时间（秒）可以由 此数值 / 刷新率 计算出来。</p>
-  <dt>Graphics.brightness
-  <dd>
-  <p>画面的亮度。取 0～255 范围间的数值。在淡出、淡入和渐变方法中需要在内部修改此数值。</p></dd></dl>
+<dt><a name="frame_rate">Graphics.frame_rate</a>
+<dd>
+<p>每秒更新画面的次数。数值越大就需要越多的 CPU 资源。一般设置为 60。</p>
+<p>不建议更改此数值，更改时指定范围 10~120 中的数值。超出范围的数值会自动修正。</p>
+<dt>Graphics.frame_count
+<dd>
+<p>画面更新次数的计数。游戏开始时将该属性设为 0，游戏时间（秒）就可以通过该属性除以 frame_rate 的值而算出。</p>
+<dt>Graphics.brightness
+<dd>
+<p>画面的亮度。取范围 0~255 中的数值。fadeout、fadein、transition 方法内部会根据需要修改此数值。</p></dd></dl>
 <h6></h6></body></html>
