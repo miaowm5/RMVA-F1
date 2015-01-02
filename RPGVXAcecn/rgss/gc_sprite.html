@@ -8,7 +8,7 @@
 </head>
 <body>
 <h1>Sprite</h1>
-<p>精灵的类。精灵是在游戏画面上显示角色等的基本概念。</p>
+<p>精灵的类。精灵是为了在游戏画面上显示角色等图像的基本概念。</p>
 <h2>超类</h2>
 <ul>
 <li><a href="sc_object.html">Object</a> </li></ul>
@@ -21,7 +21,7 @@
 <dl>
 <dt>dispose
 <dd>
-<p>释放精灵。若是已经若显示端口已释放则什么都不做。</p>
+<p>释放精灵。若是已释放则什么都不做。</p>
 <dt>disposed?
 <dd>
 <p>当精灵已释放则返回 true。</p>
@@ -43,13 +43,13 @@
 <dl>
 <dt>bitmap
 <dd>
-<p>引用作为精灵传输元的位图（<a href="gc_bitmap.html">Bitmap</a>）。</p>
+<p>精灵传输元位图（<a href="gc_bitmap.html">Bitmap</a>）的引用。</p>
 <dt>src_rect
 <dd>
-<p>位图的需要传输的矩形（<a href="gc_rect.html">Rect</a>）。</p>
+<p>从位图传输的矩形（<a href="gc_rect.html">Rect</a>）。</p>
 <dt>viewport
 <dd>
-<p>引用与精灵相关联的显示端口（<a href="gc_viewport.html">Viewport</a>）。</p>
+<p>与精灵关联的显示端口（<a href="gc_viewport.html">Viewport</a>）的引用。</p>
 <dt>visible
 <dd>
 <p>精灵的可见状态，true 代表可见。默认为 true。</p>
@@ -61,15 +61,14 @@
 <p>精灵的 Y 坐标。</p>
 <dt>z
 <dd>
-<p>精灵 Z 坐标。数值愈大的平面显示在愈前方。</p>
-<dd>
-<p>Z 坐标相同的精灵，Y 坐标愈大的显示在愈前方。若 Y 坐标也相同，最后生成的对象显示在前方。</p></dd>
+<p>平面的 Z 坐标。数值越大的精灵显示在越前方。</p>
+<p>Z 坐标相同时，Y 坐标越大的精灵显示在越前方。Y 坐标也相同时，越晚生成的精灵显示在越前方。</p>
 <dt>ox
 <dd>
-<p>精灵传输元原点的 X 坐标。</p>
+<p>精灵原点的 X 坐标。</p>
 <dt>oy
 <dd>
-<p>精灵传输元原点的 Y 坐标。</p>
+<p>精灵原点的 Y 坐标。</p>
 <dt>zoom_x
 <dd>
 <p>精灵的横向放大率，1.0 代表原始大小。</p>
@@ -78,19 +77,19 @@
 <p>精灵的纵向放大率，1.0 代表原始大小。</p>
 <dt>angle
 <dd>
-<p>精灵的旋转角度。以逆时钟方向指定角度数。绘制旋转效果需要时间，所以请避免过量使用。</p>
+<p>精灵的旋转角度。以逆时针方向指定角度数。绘制旋转效果需要时间，所以请避免过量使用。</p>
 <dt>wave_amp
 <dt>wave_length
 <dt>wave_speed
 <dt>wave_phase
 <dd>
-<p>定义波的振幅、周期、速度、相位。波动效果是根据正弦波函数，使每行产生横向的偏移，也就是像光栅一样的效果。</p>
+<p>波的振幅、周期、速度、相位。波动效果是根据正弦波函数，使每行产生横向的偏移，也就是像光栅一样的效果。</p>
 <p>wave_amp 是波的振幅、 wave_length 是波浪的周期，分别以像素数来指定。</p>
 <p>wave_speed 是波浪效果动画的速度，默认为 360，数值愈大速度愈快。</p>
 <p>wave_phase 使用角度制指定精灵最上面一行的相位。每次调用 update 方法会更新一次。一般情况下不需要使用此属性，除非需要同步两个精灵的波动效果。</p></dd>
 <dt>mirror
 <dd>
-<p>精灵是否横向翻转，true 代表翻转。默认值为 false。</p>
+<p>精灵是否左右翻转。设为 true 时会左右反转绘制。默认值为 false。</p>
 <dt>bush_depth
 <dt>bush_opacity
 <dd>
@@ -101,7 +100,7 @@
 <p>bush_opacity 的值会与 opacity 相乘。举例来说，opacity 和 bush_opacity 都设为 128，就会视为半透明再加上半透明，实际的不透明度为 64。</p></dd>
 <dt>opacity
 <dd>
-<p>精灵的不透明度，范围是 0～255。超出范围的数值会自动修正。</p>
+<p>精灵的不透明度，范围是 0~255。超出范围的数值会自动修正。</p>
 <dt>blend_type
 <dd>
 <p>精灵的合成方式（0：正常、1：加法、2：减法）。</p>
