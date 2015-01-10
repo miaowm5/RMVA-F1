@@ -1,71 +1,71 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
-<html lang=zh><head><title>Audio</title>
-<meta content="text/html; charset=GBK" http-equiv=Content-Type>
-<meta content=text/css http-equiv=Content-Style-Type><link rel=stylesheet
-type=text/css href="../style.css">
-<meta name=GENERATOR content="MSHTML 8.00.7601.17785"></head>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=GBK">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<title>Audio</title>
+<link href="../style.css" type="text/css" rel="stylesheet">
+</head>
 <body>
 <h1>Audio</h1>
 <p>执行音乐和声音处理的模块。</p>
 <h2>模块方法</h2>
 <dl>
-  <dt>Audio.setup_midi <span class=rgss3>(RGSS3)</span>
-  <dd>
-  <p>利用DirectMusic加载MIDI播放功能。</p>
-  <p>原本是RGSS2中默认加载的功能，但是在RGSS3中需要手动加载，当然，任何时候都可以执行此语句。</p>
-  <p>在本语句没有被调用的情况下，MIDI文件也是可以被播放的，但是在Windows Vista及其后续版本的环境下，将会导致一到两秒的延迟。</p>
-  <dt><a name=bgm_play>Audio.bgm_play(<var>filename</var>[, <var>volume</var>[,
-  <var>pitch</var>[, <var>pos</var>]]])</a> <span class=rgss3>(RGSS3)</span>
-  <dd>
-  <p>开始播放背景音乐（BGM）。可以在参数中指定文件名、音量、频率和起始时间。</p>
-  <p>但是只有ogg格式和wav格式的音频文件支持设置起始时间功能。 <span class=rgss3>(RGSS3)</span></p>
-  <p>也会自动搜索包含在 <a href="rgss.html#rgss_rtp">RGSS-RTP</a> 内的文件。扩展名可以省略。</p>
-  <dt>Audio.bgm_stop
-  <dd>
-  <p>停止播放背景音乐（BGM）。</p>
-  <dt>Audio.bgm_fade(<var>time</var>)
-  <dd>
-  <p>开始淡出背景音乐（BGM）。<var>time</var> 是以毫秒计算的淡出时间。</p>
-  <dt>Audio.bgm_pos <span class=rgss3>(RGSS3)</span>
-  <dd>
-  <p>获取当前播放的背景音乐（BGM）在文件中的进行到的时间位置（仅支持ogg格式和wav格式的音频文件）。如果参数无效，则返回0。</p>
-  <dt><a name=bgs_play>Audio.bgs_play(<var>filename</var>[, <var>volume</var>[,
-  <var>pitch</var>[, <var>pos</var>]]])</a> <span class=rgss3>(RGSS3)</span>
-  <dd>
-  <p>开始播放背景音效（BGS）。可以在参数中指定文件名、音量、频率和起始时间。</p>
-  <p>但是只有ogg格式和wav格式的音频文件支持设置起始时间功能。 <span class=rgss3>(RGSS3)</span></p>
-  <p>也会自动搜索包含在 <a
-  href="ata/Local/Temp/RPGVXAce/rgss/rgss.html#rgss_rtp">RGSS-RTP</a>
-  内的文件。扩展名可以省略。</p></dd>
-  <dt>Audio.bgs_stop
-  <dd>
-  <p>停止播放背景音效（BGS）。</p>
-  <dt>Audio.bgs_fade(<var>time</var>)
-  <dd>
-  <p>开始淡出背景音效（BGS）。<var>time</var> 是以毫秒计算的淡出时间。</p>
-  <dt>Audio.bgs_pos <span class=rgss3>(RGSS3)</span>
-  <dd>
-  <p>获取当前播放的背景音效（BGS）在文件中的进行到的时间位置（仅支持ogg格式和wav格式的音频文件）。如果参数无效，则返回0。</p>
-  <dt><a name=me_play>Audio.me_play(<var>filename</var>[, <var>volume</var>[,
-  <var>pitch</var>]])</a>
-  <dd>
-  <p>开始播放事件音乐（ME），依次设置文件名、音量和音调。</p>
-  <dd>
-  <p>也会自动搜索包含在 <a href="rgss.html#rgss_rtp">RGSS-RTP</a> 内的文件。扩展名可以省略。</p>
-  <p>播放事件音乐时，会将背景音乐暂停。背景音乐重新开始的时机与 RGSS1 稍微不同。</p>
-  <dt>Audio.me_stop
-  <dd>
-  <p>停止播放事件音乐（ME）。</p>
-  <dt>Audio.me_fade(<var>time</var>)
-  <dd>
-  <p>开始淡出事件音乐（ME）。<var>time</var> 是以毫秒计算的淡出时间。</p>
-  <dt><a name=se_play>Audio.se_play(<var>filename</var>[, <var>volume</var>[,
-  <var>pitch</var>]])</a>
-  <dd>
-  <p>开始播放事件音效（SE），依次设置文件名、音量和音调。</p>
-  <p>也会自动搜索包含在 <a href="rgss.html#rgss_rtp">RGSS-RTP</a> 内的文件。扩展名可以省略。</p>
-  <p>若是在极短时间内重复播放同一个事件音效，会进行过渡处理，以防出现声音撕裂现象。</p>
-  <dt>Audio.se_stop
-  <dd>
-  <p>停止播放事件音效（SE）。</p></dd></dl>
+<dt>Audio.setup_midi <span class="rgss3">(RGSS3)</span>
+<dd>
+<p>执行 DirectMusic 播放 MIDI 的准备。</p>
+<p>方法化后，可以将 RGSS2 启动时执行的处理放在任意时机执行。</p>
+<p>不调用本方法也可以播放 MIDI，但是在 Windows Vista 之后的版本中，初次播放会有 1~2 秒的延迟。</p>
+<dt><a name="bgm_play">Audio.bgm_play(<var>filename</var>[, <var>volume</var>[,
+<var>pitch</var>[, <var>pos</var>]]])</a> <span class="rgss3">(RGSS3)</span>
+<dd>
+<p>开始播放 BGM。依次指定文件名、音量、音调和起始位置。</p>
+<p>起始位置 <span class="rgss3">(RGSS3)</span> 只对 ogg 和 wav 有效。 </p>
+<p><a href="rgss.html#rgss_rtp">RGSS-RTP</a> 内的文件也会自动搜索。扩展名可以省略。</p>
+<dt>Audio.bgm_stop
+<dd>
+<p>停止播放 BGM。</p>
+<dt>Audio.bgm_fade(<var>time</var>)
+<dd>
+<p>开始淡出 BGM。<var>time</var> 以毫秒为单位指定淡出需要的时间。</p>
+<dt>Audio.bgm_pos <span class="rgss3">(RGSS3)</span>
+<dd>
+<p>获取 BGM 的播放位置。只对 ogg 和 wav 有效。无效时返回 0。</p>
+<dt><a name="bgs_play">Audio.bgs_play(<var>filename</var>[, <var>volume</var>[,
+<var>pitch</var>[, <var>pos</var>]]])</a> <span class="rgss3">(RGSS3)</span>
+<dd>
+<p>开始播放 BGS。依次指定文件名、音量、音调和起始位置。</p>
+<p>起始位置 <span class="rgss3">(RGSS3)</span> 只对 ogg 和 wav 有效。 </p>
+<p><a href="rgss.html#rgss_rtp">RGSS-RTP</a> 内的文件也会自动搜索。扩展名可以省略。</p></dd>
+<dt>Audio.bgs_stop
+<dd>
+<p>停止播放 BGS。</p>
+<dt>Audio.bgs_fade(<var>time</var>)
+<dd>
+<p>开始淡出 BGS。<var>time</var> 以毫秒为单位指定淡出需要的时间。</p>
+<dt>Audio.bgs_pos <span class="rgss3">(RGSS3)</span>
+<dd>
+<p>获取 BGS 的播放位置。只对 ogg 和 wav 有效。无效时返回 0。</p>
+<dt><a name="me_play">Audio.me_play(<var>filename</var>[, <var>volume</var>[,
+<var>pitch</var>]])</a>
+<dd>
+<p>开始播放 ME，依次指定文件名、音量和音调。</p>
+<dd>
+<p><a href="rgss.html#rgss_rtp">RGSS-RTP</a> 内的文件也会自动搜索。扩展名可以省略。</p>
+<p>播放 ME 时会暂停 BGM。BGM 重新开始的时机与 RGSS1 稍有不同。</p>
+<dt>Audio.me_stop
+<dd>
+<p>停止播放 ME。</p>
+<dt>Audio.me_fade(<var>time</var>)
+<dd>
+<p>开始淡出 ME。<var>time</var> 以毫秒为单位指定淡出需要的时间。</p>
+<dt><a name="se_play">Audio.se_play(<var>filename</var>[, <var>volume</var>[,
+<var>pitch</var>]])</a>
+<dd>
+<p>开始播放 SE，依次指定文件名、音量和音调。</p>
+<p><a href="rgss.html#rgss_rtp">RGSS-RTP</a> 内的文件也会自动搜索。扩展名可以省略。</p>
+<p>若是在极短时间内重复播放同一个 SE，会自动延长间隔以防出现爆音。</p></dd>
+<dt>Audio.se_stop
+<dd>
+<p>停止播放 SE。</p></dd></dl>
 <h6></h6></body></html>
