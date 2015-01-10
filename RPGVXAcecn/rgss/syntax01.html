@@ -1,9 +1,11 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
-<html lang=zh><head><title>语法与表达式</title>
-<meta content="text/html; charset=GBK" http-equiv=Content-Type>
-<meta content=text/css http-equiv=Content-Style-Type><link rel=stylesheet
-type=text/css href="../style.css">
-<meta name=GENERATOR content="MSHTML 8.00.7601.17744"></head>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=GBK">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<title>语法与表达式</title>
+<link href="../style.css" type="text/css" rel="stylesheet">
+</head>
 <body>
 <h1>语法与表达式</h1>
 <ul>
@@ -20,17 +22,19 @@ ruby_is_simple</pre>
 <h2>注释</h2>
 <p>例如：</p><pre># 这是一行注释<br></pre>
 <p>除了内嵌表达式，在井号（#）后面的文字一概视为注释。</p>
-<h2><a name=L000216>保留字</a></h2>
-<p>具体的保留字如下：</p><pre>BEGIN    class      ensure   nil         self         when
-END       def        false      not        super     while
-alias       defined  for         or         then       yield
-and        do          if           redo     true
-begin     else        in           rescue  undef
-break     elsif       module   retry     unless
-case      end        next       return   until</pre>
+<h2><a name="L000216">保留字</a></h2>
+<p>具体的保留字如下：</p><pre>
+BEGIN    class    ensure   nil      self     when
+END      def      false    not      super    while
+alias    defined? for      or       then     yield
+and      do       if       redo     true
+begin    else     in       rescue   undef
+break    elsif    module   retry    unless
+case     end      next     return   until
+</pre>
 <p>保留字无法用来当作类、变量之类的名称，然而若以 $ 或 @
 开头则不视为保留字。此外，这些字可以被写在"def"后面作为函数名，或是在"."后面作为被调用的方法，或是任何表明该字是作为方法使用的情况下，也可以作为方法的名称。</p>
-<h2><a name=L000219>表达式</a></h2>
+<h2><a name="L000219">表达式</a></h2>
 <p>例如：</p><pre>true
 (1+2)*3
 foo()
