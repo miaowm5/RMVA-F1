@@ -1,40 +1,41 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
-<html lang=zh><head><title>RPG::BaseItem</title>
-<meta content="text/html; charset=GBK" http-equiv=Content-Type>
-<meta content=text/css http-equiv=Content-Style-Type><link rel=stylesheet
-type=text/css href="../style.css">
-<meta name=GENERATOR content="MSHTML 9.00.8112.16447"></head>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=GBK">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<title>RPG::BaseItem</title>
+<link href="../style.css" type="text/css" rel="stylesheet">
+</head>
 <body>
 <h1>RPG::BaseItem</h1>
 <p>角色、职业、技能、物品、武器、护甲、敌人和状态的超类。</p>
-<p>有些物品可能没有必要用这种数据类型存储，但为了方便，它们也包含了进来。</p>
+<p>有些数据并不需要所有的属性，但为了方便，它们也包含了进来。</p>
 <h2>超类</h2>
 <ul>
-  <li><a href="sc_object.html">Object</a> </li></ul>
+<li><a href="sc_object.html">Object</a></li></ul>
 <h2>属性</h2>
 <dl>
-  <dt>id
-  <dd>
-  <p>物品编号。</p>
-  <dt>name
-  <dd>
-  <p>物品名称。</p>
-  <dt>icon_index
-  <dd>
-  <p>物品图标索引号。</p>
-  <dt>description
-  <dd>
-  <p>物品的说明.</p>
-  <dt>features
-  <dd>
-  <p>特征列表，一个 <a href="gc_rpg_baseitem_feature.html">RPG::BaseItem::Feature</a>
-  数组。</p>
-  <dt>note
-  <dd>
-  <p>物品的备注。</p></dd></dl>
+<dt>id
+<dd>
+<p>ID。</p>
+<dt>name
+<dd>
+<p>名称。</p>
+<dt>icon_index
+<dd>
+<p>图标编号。</p>
+<dt>description
+<dd>
+<p>说明。</p>
+<dt>features
+<dd>
+<p>特性列表。<a href="gc_rpg_baseitem_feature.html">RPG::BaseItem::Feature</a> 的数组。</p>
+<dt>note
+<dd>
+<p>备注。</p></dd></dl>
 <h2>内部类</h2>
 <ul>
-  <li><a href="gc_rpg_baseitem_feature.html">RPG::BaseItem::Feature</a> </li></ul>
+<li><a href="gc_rpg_baseitem_feature.html">RPG::BaseItem::Feature</a> </li></ul>
 <h2>定义</h2><pre>class RPG::BaseItem
   def initialize
     @id = 0

@@ -1,65 +1,69 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
-<html lang=zh><head><title>RPG::State</title>
-<meta content="text/html; charset=GBK" http-equiv=Content-Type>
-<meta content=text/css http-equiv=Content-Style-Type><link rel=stylesheet
-type=text/css href="../style.css">
-<meta name=GENERATOR content="MSHTML 9.00.8112.16447"></head>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=GBK">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<title>RPG::State</title>
+<link href="../style.css" type="text/css" rel="stylesheet">
+</head>
 <body>
 <h1>RPG::State</h1>
 <p>状态的数据类。</p>
 <h2>超类</h2>
 <ul>
-  <li><a href="gc_rpg_baseitem.html">RPG::BaseItem</a> </li></ul>
+<li><a href="gc_rpg_baseitem.html">RPG::BaseItem</a> </li></ul>
 <h2>属性</h2>
 <dl>
-  <dt>restriction
-  <dd>
-  <p>限制。</p>
-  <ul>
-    <li>0: 无
-    <li>1: 攻击敌人
-    <li>2: 攻击双方
-    <li>3: 攻击队友
-    <li>4: 无法行动</li></ul>
-  <dt>priority
-  <dd>
-  <p>显示优先级（0..100）。</p>
-  <dt>remove_at_battle_end
-  <dd>
-  <p>战斗结束时解除（true/false）。</p>
-  <dt>remove_by_restriction
-  <dd>
-  <p>获得其他限制性状态时解除（true/false）。</p>
-  <dt>auto_removal_timing
-  <dd>
-  <p>自动解除的时机。</p>
-  <ul>
-    <li>0: 无
-    <li>1: 行动结束时
-    <li>2: 回合结束时</li></ul>
-  <dt>min_turns
-  <dt>max_turns
-  <dd>
-  <p>状态持续回合数的最小最大值。</p>
-  <dt>remove_by_damage
-  <dd>
-  <p>受到伤害时解除（true/false）。</p>
-  <dt>chance_by_damage
-  <dd>
-  <p>受到伤害时解除的概率（%）。</p>
-  <dt>remove_by_walking
-  <dd>
-  <p>一定步数后解除（true/false）。</p>
-  <dt>steps_to_remove
-  <dd>
-  <p>解除状态所需要经过的步数。</p>
-  <dt>message1
-  <dt>message2
-  <dt>message3
-  <dt>message4
-  <dd>
-  <p>状态提示信息，分别代表:&nbsp;附加到队友、附加到敌人、状态持续、状态解除</p></dd></dl>
-<h2>定义</h2><pre>class RPG::State &lt; RPG::BaseItem
+<dt>restriction
+<dd>
+<p>限制。</p>
+<ul>
+<li>0: 无
+<li>1: 攻击敌人
+<li>2: 攻击双方
+<li>3: 攻击队友
+<li>4: 无法行动</li></ul>
+<dt>priority
+<dd>
+<p>显示优先级（0..100）。</p>
+<dt>remove_at_battle_end
+<dd>
+<p>战斗结束时解除（true / false）。</p>
+<dt>remove_by_restriction
+<dd>
+<p>获得其他限制性状态时解除（true / false）。</p>
+<dt>auto_removal_timing
+<dd>
+<p>自动解除的时机。</p>
+<ul>
+<li>0: 无
+<li>1: 行动结束时
+<li>2: 回合结束时</li></ul>
+<dt>min_turns
+<dt>max_turns
+<dd>
+<p>状态持续回合数的最小最大值。</p>
+<dt>remove_by_damage
+<dd>
+<p>受到伤害时解除（true / false）。</p>
+<dt>chance_by_damage
+<dd>
+<p>受到伤害时解除的概率（%）。</p>
+<dt>remove_by_walking
+<dd>
+<p>一定步数后解除（true / false）。</p>
+<dt>steps_to_remove
+<dd>
+<p>解除状态所需要经过的步数。</p>
+<dt>message1
+<dt>message2
+<dt>message3
+<dt>message4
+<dd>
+<p>状态提示信息。从上到下依次为：附加到队友、附加到敌人、状态持续、状态解除。</p></dd></dl>
+<h2>定義</h2>
+<pre>
+class RPG::State &lt; RPG::BaseItem
   def initialize
     super
     @restriction = 0

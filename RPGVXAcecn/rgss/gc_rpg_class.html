@@ -1,52 +1,53 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
-<html lang=zh><head><title>RPG::Class</title>
-<meta content="text/html; charset=GBK" http-equiv=Content-Type>
-<meta content=text/css http-equiv=Content-Style-Type><link rel=stylesheet
-type=text/css href="../style.css">
-<meta name=GENERATOR content="MSHTML 9.00.8112.16447"></head>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=GBK">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<title>RPG::Class</title>
+<link href="../style.css" type="text/css" rel="stylesheet">
+</head>
 <body>
 <h1>RPG::Class</h1>
 <p>职业的数据类。</p>
 <h2>超类</h2>
 <ul>
-  <li><a href="gc_rpg_baseitem.html">RPG::BaseItem</a> </li></ul>
+<li><a href="gc_rpg_baseitem.html">RPG::BaseItem</a> </li></ul>
 <h2>属性</h2>
 <dl>
-  <dt>exp_params
-  <dd>
-  <p>存储经验值曲线的数组，格式如下:</p>
-  <ul>
-    <li>0: 基础值
-    <li>1:&nbsp;修正值
-    <li>2:&nbsp;增加度 A
-    <li>3:&nbsp;增加度 B </li></ul>
-  <dt>params
-  <dd>
-  <p>能力值成长曲线，记录每一等级基本属性的二维数组 （<a href="gc_table.html">Table</a>）。</p>
-  <p>其数据结构为[<var>param_id</var>, <var>level</var>]，param_id 代表属性类型，level
-  则代表等级，属性类型的代号如下:</p>
-  <ul>
-    <li>0: 体力上限
-    <li>1: 魔力上限
-    <li>2:&nbsp;物理攻击
-    <li>3:&nbsp;物理防御
-    <li>4:&nbsp;魔法攻击
-    <li>5:&nbsp;魔法防御
-    <li>6:&nbsp;敏捷值
-    <li>7:&nbsp;幸运值 </li></ul>
-  <dt>learnings
-  <dd>
-  <p>技能学习列表 <a
-  href="gc_rpg_class_learning.html">RPG::Class::Learning</a>&nbsp;。</p></dd></dl>
+<dt>exp_params
+<dd>
+<p>决定经验值曲线的数值数组，下标如下，</p>
+<ul>
+<li>0: 基础值
+<li>1: 修正值
+<li>2: 增加度 A
+<li>3: 增加度 B</li></ul>
+<dt>params
+<dd>
+<p>能力值成长曲线。包含每一等级对应普通能力的二维数组（<a href="gc_table.html">Table</a>）。</p>
+<p>形式为 params[<var>param_id</var>, <var>level</var>]，<var>param_id</var> 按如下方式分配。</p>
+<ul>
+<li>0: 体力上限
+<li>1: 魔力上限
+<li>2: 物理攻击
+<li>3: 物理防御
+<li>4: 魔法攻击
+<li>5: 魔法防御
+<li>6: 敏捷值
+<li>7: 幸运值</li></ul>
+<dt>learnings
+<dd>
+<p>习得技能。<a href="gc_rpg_class_learning.html">RPG::Class::Learning</a> 的数组。</p></dd></dl>
 <h2>方法</h2>
 <dl>
-  <dt>exp_for_level(<var>level</var>)
-  <dd>
-  <p>计算并返回当前等级到参数设置等级，所需经验的总和。</p></dd></dl>
+<dt>exp_for_level(<var>level</var>)
+<dd>
+<p>计算并返回升到 <var>level</var> 所需经验的总和。</p></dd></dl>
 <h2>内部类</h2>
 <ul>
-  <li><a href="gc_rpg_class_learning.html">RPG::Class::Learning</a> </li></ul>
-<h2>定义</h2><pre>class RPG::Class &lt; RPG::BaseItem
+<li><a href="gc_rpg_class_learning.html">RPG::Class::Learning</a> </li></ul>
+<h2>定义</h2><pre>
+class RPG::Class &lt; RPG::BaseItem
   def initialize
     super
     @exp_params = [30,20,30,30]

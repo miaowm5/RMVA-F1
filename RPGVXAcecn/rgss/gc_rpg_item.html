@@ -1,35 +1,38 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
-<html lang=zh><head><title>RPG::Item</title>
-<meta content="text/html; charset=GBK" http-equiv=Content-Type>
-<meta content=text/css http-equiv=Content-Style-Type><link rel=stylesheet 
-type=text/css href="../style.css">
-<meta name=GENERATOR content="MSHTML 9.00.8112.16447"></head>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=GBK">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<title>RPG::Item</title>
+<link href="../style.css" type="text/css" rel="stylesheet">
+</head>
 <body>
 <h1>RPG::Item</h1>
 <p>物品的数据类。</p>
 <h2>超类</h2>
 <ul>
-  <li><a href="gc_rpg_usableitem.html">RPG::UsableItem</a> </li></ul>
+<li><a href="gc_rpg_usableitem.html">RPG::UsableItem</a></li></ul>
 <h2>属性</h2>
 <dl>
-  <dt>itype_id 
-  <dd>
-  <p>物品类型编号。</p>
-  <ul>
-    <li>1: 普通物品
-    <li>2: 贵重物品</li></ul>
-  <dt>price 
-  <dd>
-  <p>价格。</p>
-  <dt>consumable 
-  <dd>
-  <p>消耗品开关。</p></dd></dl>
+<dt>itype_id
+<dd>
+<p>物品类型 ID。</p>
+<ul>
+<li>1: 普通物品
+<li>2: 贵重物品</li></ul>
+<dt>price
+<dd>
+<p>价格。</p>
+<dt>consumable
+<dd>
+<p>是否为消耗品。</p></dd></dl>
 <h2>方法</h2>
 <dl>
-  <dt>key_item? 
-  <dd>
-  <p>判断物品是否为贵重物品，当物品类型编号为2时返回true。</p></dd></dl>
-<h2>定义</h2><pre>class RPG::Item &lt; RPG::UsableItem
+<dt>key_item?
+<dd>
+<p>判断物品是否为[贵重物品]，当 itype_id 值为 2 时返回 true。</p></dd></dl>
+<h2>定义</h2><pre>
+class RPG::Item &lt; RPG::UsableItem
   def initialize
     super
     @scope = 7
