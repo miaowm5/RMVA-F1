@@ -1,27 +1,29 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
-<html lang=zh><head><title>RPG::AudioFile</title>
-<meta content="text/html; charset=GBK" http-equiv=Content-Type>
-<meta content=text/css http-equiv=Content-Style-Type><link rel=stylesheet
-type=text/css href="../style.css">
-<meta name=GENERATOR content="MSHTML 9.00.8112.16447"></head>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=GBK">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<title>RPG::AudioFile</title>
+<link href="../style.css" type="text/css" rel="stylesheet">
+</head>
 <body>
 <h1>RPG::AudioFile</h1>
-<p>背景音乐、背景音效、音乐、音效的超类。 </p>
+<p>BGM、BGS、ME、SE的超类。</p>
 <h2>超类</h2>
 <ul>
-  <li><a href="sc_object.html">Object</a> </li></ul>
+<li><a href="sc_object.html">Object</a> </li></ul>
 <h2>属性</h2>
 <dl>
-  <dt>name
-  <dd>
-  <p>音频档名称。</p>
-  <dt>volume
-  <dd>
-  <p>音量（0～100）。背景音乐和音乐的默认值是 100 、背景音效和音效的默认值是 80。</p></dd></dl>
+<dt>name
+<dd>
+<p>文件名。</p>
+<dt>volume
+<dd>
+<p>音量（0..100）。BGM 和 ME 的默认值是 100，BGS 和 SE 的默认值是 80。</p></dd></dl>
 <dl>
-  <dt>pitch
-  <dd>
-  <p>音调（50～150）。默认值是 100。</p></dd></dl>
+<dt>pitch
+<dd>
+<p>音调（50..150）。默认值是 100。</p></dd></dl>
 <h2>定义</h2><pre>class RPG::AudioFile
   def initialize(name = '', volume = 100, pitch = 100)
     @name = name
