@@ -1,4 +1,4 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
 <html lang=zh><head><title>RPG::Tileset</title>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta content=text/css http-equiv=Content-Style-Type><link rel=stylesheet
@@ -6,25 +6,25 @@ type=text/css href="../style.css">
 <meta name=GENERATOR content="MSHTML 9.00.8112.16447"></head>
 <body>
 <h1>RPG::Tileset</h1>
-<p>ͼ��������ࡣ</p>
-<h2>����</h2>
+<p>图块的数据类。</p>
+<h2>超类</h2>
 <ul>
   <li><a href="sc_object.html">Object</a> </li></ul>
-<h2>����</h2>
+<h2>属性</h2>
 <dl>
   <dt>id
   <dd>
-  <p>ͼ��ҳ��š�</p>
+  <p>图块页编号。</p>
   <dt>name
   <dd>
-  <p>ͼ��ҳ���ơ�</p>
+  <p>图块页名称。</p>
   <dt>mode
   <dd>
-  <p>ͼ��ҳģʽ��0�������ͼ���ͣ�1�������ͼ���ͣ�2������VX�����ͣ���</p>
+  <p>图块页模式（0：世界地图类型，1：区域地图类型，2：兼容VX的类型）。</p>
   <dt>tileset_names[<var>index</var>]
   <dd>
-  <p>ͼ��������0-8������ʹ�õ��ز��ļ�����</p>
-  <p>���в�����ʹ�õı�Ŵ���֮�����£�</p>
+  <p>图块索引（0-8）中所使用的素材文件名。</p>
+  <p>其中参数所使用的编号代表之意如下：</p>
   <table class=sys border=1 cellSpacing=0 cellPadding=4>
     <tbody>
     <tr>
@@ -50,27 +50,27 @@ type=text/css href="../style.css">
       <td>TileE</td></tr></tbody></table>
   <dt>flags
   <dd>
-  <p>��־�ı�������һά���鴢���Ÿ����־��<a href="gc_table.html">Table</a>����</p>
-  <p>����ͼ�� ID �Ĳ��䡣ÿһλ��ʾ���������¡�</p>
+  <p>标志的表格。利用一维数组储存着各类标志（<a href="gc_table.html">Table</a>）。</p>
+  <p>这是图块 ID 的补充。每一位表示的内容如下。</p>
   <ul>
-    <li>0x0001: ��������ͨ��
-    <li>0x0002: ��������ͨ��
-    <li>0x0004: ��������ͨ��
-    <li>0x0008: ��������ͨ��
-    <li>0x0010: ��ʾ���ȶ��ڽ�ɫ֮��
-    <li>0x0020: ��������
-    <li>0x0040: ��������
-    <li>0x0080: ��̨����
-    <li>0x0100: �к�����
-    <li>0x0200: С���޷�ͨ��
-    <li>0x0400: ���޷�ͨ��
-    <li>0x0800: ��ͧ�޷���½
-    <li>0xF000: ���α�־</li></ul>
-  <p>���ܱ��ֲ��в�������λ���㣬������C���Եȶ��ǹ�ͨ�ġ���Ҫʱ�����ǽ������ڻ������������йء�ʮ������λ���㡹����Ϣ��</p>
+    <li>0x0001: 不可向下通行
+    <li>0x0002: 不可向左通行
+    <li>0x0004: 不可向右通行
+    <li>0x0008: 不可向上通行
+    <li>0x0010: 显示优先度在角色之上
+    <li>0x0020: 梯子属性
+    <li>0x0040: 流体属性
+    <li>0x0080: 柜台属性
+    <li>0x0100: 有害地形
+    <li>0x0200: 小舟无法通行
+    <li>0x0400: 大船无法通行
+    <li>0x0800: 飞艇无法着陆
+    <li>0xF000: 地形标志</li></ul>
+  <p>尽管本手册中并不讨论位运算，但这与C语言等都是共通的。需要时，我们建议您在互联网上搜索有关「十六进制位运算」的信息。</p>
   <dt>note
   <dd>
-  <p>��ע��</p></dd></dl>
-<h2>����</h2><pre>class RPG::Tileset
+  <p>备注。</p></dd></dl>
+<h2>定义</h2><pre>class RPG::Tileset
   def initialize
     @id = 0
     @mode = 1

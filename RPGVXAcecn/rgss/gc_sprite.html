@@ -1,4 +1,4 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html lang="zh">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -8,107 +8,107 @@
 </head>
 <body>
 <h1>Sprite</h1>
-<p>������ࡣ������Ϊ������Ϸ��������ʾ��ɫ��ͼ��Ļ������</p>
-<h2>����</h2>
+<p>精灵的类。精灵是为了在游戏画面上显示角色等图像的基本概念。</p>
+<h2>超类</h2>
 <ul>
 <li><a href="sc_object.html">Object</a> </li></ul>
-<h2>�෽��</h2>
+<h2>类方法</h2>
 <dl>
 <dt>Sprite.new([<var>viewport</var>])
 <dd>
-<p>����һ��������󡣱�Ҫʱָ��һ����ʾ�˿ڣ�<a href="gc_viewport.html">Viewport</a>����</p></dd></dl>
-<h2>����</h2>
+<p>生成一个精灵对象。必要时指定一个显示端口（<a href="gc_viewport.html">Viewport</a>）。</p></dd></dl>
+<h2>方法</h2>
 <dl>
 <dt>dispose
 <dd>
-<p>�ͷž��顣�������ͷ���ʲô��������</p>
+<p>释放精灵。若是已释放则什么都不做。</p>
 <dt>disposed?
 <dd>
-<p>���������ͷ��򷵻� true��</p>
+<p>当精灵已释放则返回 true。</p>
 <dt><a name="flash">flash(<var>color</var>, <var>duration</var>)</a>
 <dd>
-<p>��ʼ������˸��<var>duration</var> ��ָ����˸��֡����</p>
-<p>�� <var>color</var> ��Ϊ nil����˸ʱ�������ʧ��</p>
+<p>开始精灵闪烁。<var>duration</var> 是指定闪烁的帧数。</p>
+<p>若 <var>color</var> 设为 nil，闪烁时精灵会消失。</p>
 <dt>update
 <dd>
-<p>���¾������˸�򲨵���λ��ԭ���ϣ��˷���һ֡����һ�Ρ�</p>
-<p>����û��ʹ����˸�򲨶�Ч������������ô˷�����</p>
+<p>更新精灵的闪烁或波的相位。原则上，此方法一帧调用一次。</p>
+<p>若是没有使用闪烁或波动效果，则无须调用此方法。</p>
 <dt>width
 <dd>
-<p>��ȡ����Ŀ��ȣ��൱�� src_rect.width��</p>
+<p>获取精灵的宽度，相当于 src_rect.width。</p>
 <dt>height
 <dd>
-<p>��ȡ����ĸ߶ȣ��൱�� src_rect.height��</p></dd></dl>
-<h2>����</h2>
+<p>获取精灵的高度，相当于 src_rect.height。</p></dd></dl>
+<h2>属性</h2>
 <dl>
 <dt>bitmap
 <dd>
-<p>���鴫��Ԫλͼ��<a href="gc_bitmap.html">Bitmap</a>�������á�</p>
+<p>精灵传输元位图（<a href="gc_bitmap.html">Bitmap</a>）的引用。</p>
 <dt>src_rect
 <dd>
-<p>��λͼ����ľ��Σ�<a href="gc_rect.html">Rect</a>����</p>
+<p>从位图传输的矩形（<a href="gc_rect.html">Rect</a>）。</p>
 <dt>viewport
 <dd>
-<p>�뾫���������ʾ�˿ڣ�<a href="gc_viewport.html">Viewport</a>�������á�</p>
+<p>与精灵关联的显示端口（<a href="gc_viewport.html">Viewport</a>）的引用。</p>
 <dt>visible
 <dd>
-<p>����Ŀɼ�״̬��true �����ɼ���Ĭ��Ϊ true��</p>
+<p>精灵的可见状态，true 代表可见。默认为 true。</p>
 <dt><a name="x">x</a>
 <dd>
-<p>����� X ���ꡣ</p>
+<p>精灵的 X 坐标。</p>
 <dt>y
 <dd>
-<p>����� Y ���ꡣ</p>
+<p>精灵的 Y 坐标。</p>
 <dt>z
 <dd>
-<p>����� Z ���ꡣ��ֵԽ�����ʾ��Խǰ����</p>
-<p>Z ������ͬʱ��Y ����Խ�����ʾ��Խǰ����Y ����Ҳ��ͬʱ��Խ�����ɵĶ�����ʾ��Խǰ����</p>
+<p>精灵的 Z 坐标。数值越大的显示在越前方。</p>
+<p>Z 坐标相同时，Y 坐标越大的显示在越前方。Y 坐标也相同时，越晚生成的对象显示在越前方。</p>
 <dt>ox
 <dd>
-<p>����ԭ��� X ���ꡣ</p>
+<p>精灵原点的 X 坐标。</p>
 <dt>oy
 <dd>
-<p>����ԭ��� Y ���ꡣ</p>
+<p>精灵原点的 Y 坐标。</p>
 <dt>zoom_x
 <dd>
-<p>����ĺ���Ŵ��ʣ�1.0 ����ԭʼ��С��</p>
+<p>精灵的横向放大率，1.0 代表原始大小。</p>
 <dt>zoom_y
 <dd>
-<p>���������Ŵ��ʣ�1.0 ����ԭʼ��С��</p>
+<p>精灵的纵向放大率，1.0 代表原始大小。</p>
 <dt>angle
 <dd>
-<p>�������ת�Ƕȡ�����ʱ�뷽��ָ���Ƕ�����������תЧ����Ҫʱ�䣬������������ʹ�á�</p>
+<p>精灵的旋转角度。以逆时针方向指定角度数。绘制旋转效果需要时间，所以请避免过量使用。</p>
 <dt>wave_amp
 <dt>wave_length
 <dt>wave_speed
 <dt>wave_phase
 <dd>
-<p>������������ڡ��ٶȡ���λ������Ч���Ǹ������Ҳ�������ʹÿ�в��������ƫ�ƣ�Ҳ�������դһ����Ч����</p>
-<p>wave_amp �ǲ�������� wave_length �ǲ��˵����ڣ��ֱ�����������ָ����</p>
-<p>wave_speed �ǲ���Ч���������ٶȣ�Ĭ��Ϊ 360����ֵ�����ٶ����졣</p>
-<p>wave_phase ʹ�ýǶ���ָ������������һ�е���λ��ÿ�ε��� update ���������һ�Ρ�һ������²���Ҫʹ�ô����ԣ�������Ҫͬ����������Ĳ���Ч����</p></dd>
+<p>波的振幅、周期、速度、相位。波动效果是根据正弦波函数，使每行产生横向的偏移，也就是像光栅一样的效果。</p>
+<p>wave_amp 是波的振幅、 wave_length 是波浪的周期，分别以像素数来指定。</p>
+<p>wave_speed 是波浪效果动画的速度，默认为 360，数值愈大速度愈快。</p>
+<p>wave_phase 使用角度制指定精灵最上面一行的相位。每次调用 update 方法会更新一次。一般情况下不需要使用此属性，除非需要同步两个精灵的波动效果。</p></dd>
 <dt>mirror
 <dd>
-<p>�����Ƿ����ҷ�ת����Ϊ true ʱ�����ҷ�ת���ơ�Ĭ��Ϊ false��</p>
+<p>精灵是否左右翻转。设为 true 时会左右反转绘制。默认为 false。</p>
 <dt>bush_depth
 <dt>bush_opacity
 <dd>
-<p>�����ڲ�ľ��ï������ȺͲ�͸���ȡ�����������ʾ��ɫ�Ľ������ڲݴ��еȵȵ�Ч����</p>
-<p>bush_depth ָ����ľ��ï������������Ĭ��Ϊ 0��</p>
-<p>bush_opacity ָ����ľ��ï���Ĳ�͸���ȣ���Χ�� 0��255��������Χ����ֵ���Զ�������Ĭ��Ϊ 128��</p>
+<p>精灵在草木繁茂处的深度和不透明度。可以用来表示角色的脚隐藏在草丛中等等的效果。</p>
+<p>bush_depth 指定草木繁茂处的像素数。默认为 0。</p>
+<p>bush_opacity 指定草木繁茂处的不透明度，范围是 0～255。超出范围的数值会自动修正。默认为 128。</p>
 <dd>
-<p>bush_opacity ��ֵ���� opacity ��ˡ�������˵��opacity �� bush_opacity ����Ϊ 128���ͻ���Ϊ��͸���ټ��ϰ�͸����ʵ�ʵĲ�͸����Ϊ 64��</p></dd>
+<p>bush_opacity 的值会与 opacity 相乘。举例来说，opacity 和 bush_opacity 都设为 128，就会视为半透明再加上半透明，实际的不透明度为 64。</p></dd>
 <dt>opacity
 <dd>
-<p>����Ĳ�͸���ȣ���Χ�� 0~255��������Χ����ֵ���Զ�������</p>
+<p>精灵的不透明度，范围是 0~255。超出范围的数值会自动修正。</p>
 <dt>blend_type
 <dd>
-<p>����ĺϳɷ�ʽ��0��������1���ӷ���2����������</p>
+<p>精灵的合成方式（0：正常、1：加法、2：减法）。</p>
 <dt>color
 <dd>
-<p>�뾫��ϳɵ���ɫ��<a href="gc_color.html">Color</a>����ɫ�ʵ� alpha ֵ��Ϊ�ϳɵı�����</p>
-<p>����ɫ�� <a href="#flash">flash</a> ����ɫ�ֿ�������Ȼ����alpha ֵ�ϸߵ���ɫ�����Ⱥϳɡ�</p>
+<p>与精灵合成的颜色（<a href="gc_color.html">Color</a>）。色彩的 alpha 值作为合成的比例。</p>
+<p>此颜色与 <a href="#flash">flash</a> 的颜色分开处理。然而，alpha 值较高的颜色会优先合成。</p>
 <dt>tone
 <dd>
-<p>�����ɫ����<a href="gc_tone.html">Tone</a>����</p></dd></dl>
+<p>精灵的色调（<a href="gc_tone.html">Tone</a>）。</p></dd></dl>
 <h6></h6></body></html>

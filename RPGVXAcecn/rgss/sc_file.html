@@ -1,4 +1,4 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+ï»¿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
 <html lang=zh><head><title>File</title>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta content=text/css http-equiv=Content-Style-Type><link rel=stylesheet
@@ -6,59 +6,59 @@ type=text/css href="../style.css">
 <meta name=GENERATOR content="MSHTML 9.00.8112.16447"></head>
 <body>
 <h1>File</h1>
-<p>·ÃÎÊÎÄ¼şµÄÀà£¬ÊµÀıÍ¨³£ÓÉ <a
+<p>è®¿é—®æ–‡ä»¶çš„ç±»ï¼Œå®ä¾‹é€šå¸¸ç”± <a
 href="s_functions.html#L000379">open</a>
-»ò <a href="#L000976">File.open</a> ´´½¨¡£</p>
-<p>Ò»¸öÎÄ¼ş¶ÔÏó´ò¿ª²¢ÇÒÃ»ÓĞ½¨Á¢ÈÎºÎÒıÓÃµÄ»°£¬¸Ã¶ÔÏó»á±»À¬»ø»ØÊÕ¹Ø±Õ²¢¶ªÆú¡£</p>
-<h2>³¬Àà</h2>
+æˆ– <a href="#L000976">File.open</a> åˆ›å»ºã€‚</p>
+<p>ä¸€ä¸ªæ–‡ä»¶å¯¹è±¡æ‰“å¼€å¹¶ä¸”æ²¡æœ‰å»ºç«‹ä»»ä½•å¼•ç”¨çš„è¯ï¼Œè¯¥å¯¹è±¡ä¼šè¢«åƒåœ¾å›æ”¶å…³é—­å¹¶ä¸¢å¼ƒã€‚</p>
+<h2>è¶…ç±»</h2>
 <ul>
   <li><a href="sc_io.html">IO</a>
   </li></ul>
-<h2>Àà·½·¨</h2>
+<h2>ç±»æ–¹æ³•</h2>
 <dl>
   <dt>File.mtime(<var>filename</var>)
   <dd>
-  <p>·µ»ØÉÏ´ÎĞŞ¸ÄÊ±¼ä £¨<a href="sc_time.html">Time</a> ¶ÔÏó£©¡£</p>
-  <p>ÈôÊÇ¶ÁÈ¡Ê§°Ü£¬Å×³ö <a href="s_exceptions.html#Errno">Errno::EXXX</a> Òì³£¡£</p>
+  <p>è¿”å›ä¸Šæ¬¡ä¿®æ”¹æ—¶é—´ ï¼ˆ<a href="sc_time.html">Time</a> å¯¹è±¡ï¼‰ã€‚</p>
+  <p>è‹¥æ˜¯è¯»å–å¤±è´¥ï¼ŒæŠ›å‡º <a href="s_exceptions.html#Errno">Errno::EXXX</a> å¼‚å¸¸ã€‚</p>
   <dt><a name=L000960>File.basename(<var>filename</var>[,
   <var>suffix</var>])</a>
   <dd>
-  <p>·µ»Ø <var>filename </var>×îºóÒ»¸öĞ±ÏßºóÃæµÄ²¿·Ö¡£ÈôÊÇÌá¹©ÁË <var>suffix</var>
-  ²ÎÊı£¬²¢ÇÒÓë <var>filename</var> µÄºó×ºÒ»ÖÂÊ±£¬Ôò»á·µ»Ø²»°üº¬ºó×ºµÄ <var>filename</var>¡£</p><pre>p File.basename("ruby/ruby.c")        # =&gt; "ruby.c"
+  <p>è¿”å› <var>filename </var>æœ€åä¸€ä¸ªæ–œçº¿åé¢çš„éƒ¨åˆ†ã€‚è‹¥æ˜¯æä¾›äº† <var>suffix</var>
+  å‚æ•°ï¼Œå¹¶ä¸”ä¸ <var>filename</var> çš„åç¼€ä¸€è‡´æ—¶ï¼Œåˆ™ä¼šè¿”å›ä¸åŒ…å«åç¼€çš„ <var>filename</var>ã€‚</p><pre>p File.basename("ruby/ruby.c")        # =&gt; "ruby.c"
 p File.basename("ruby/ruby.c", ".c")  # =&gt; "ruby"
 p File.basename("ruby/ruby.c", ".*")  # =&gt; "ruby"
 p File.basename("ruby/ruby.exe", ".*")  # =&gt; "ruby"
 </pre>
-  <p>²Î¿´&nbsp;<a href="#L000967">File.dirname</a>&nbsp;ºÍ <a
-  href="#L000969">File.extname</a>&nbsp;¡£</p>
+  <p>å‚çœ‹&nbsp;<a href="#L000967">File.dirname</a>&nbsp;å’Œ <a
+  href="#L000969">File.extname</a>&nbsp;ã€‚</p>
   <dt>File.delete(<var>filename</var> ... )
   <dd>
-  <p>É¾³ıÎÄ¼ş£¬²¢·µ»ØËùÉ¾³ıµÄÎÄ¼şÊıÄ¿¡£ÈôÉ¾³ıÊ§°Ü£¬ÔòÅ×³ö <a
-  href="s_exceptions.html#Errno">Errno::EXXX</a> Òì³£¡£</p>
-  <p>´Ë·½·¨ÊÇÓÃÀ´É¾³ıÎÄ¼şµÄ£¬ÎŞ·¨É¾³ıÄ¿Â¼¡£</p>
+  <p>åˆ é™¤æ–‡ä»¶ï¼Œå¹¶è¿”å›æ‰€åˆ é™¤çš„æ–‡ä»¶æ•°ç›®ã€‚è‹¥åˆ é™¤å¤±è´¥ï¼Œåˆ™æŠ›å‡º <a
+  href="s_exceptions.html#Errno">Errno::EXXX</a> å¼‚å¸¸ã€‚</p>
+  <p>æ­¤æ–¹æ³•æ˜¯ç”¨æ¥åˆ é™¤æ–‡ä»¶çš„ï¼Œæ— æ³•åˆ é™¤ç›®å½•ã€‚</p>
   <dt><a name=L000967>File.dirname(<var>filename</var>)</a>
   <dd>
-  <p>·µ»Ø <var>filename </var>×îºóÒ»¸öĞ±ÏßÇ°ÃæµÄ²¿·Ö¡£Èô <var>filename
-  </var>²»°üº¬Ğ±Ïß£¬Ôò·µ»Ø¡¸.¡¹£¨¼´Êä³öµ±Ç°Ä¿Â¼£©¡£</p><pre>p File.dirname("dir/file.ext")    # =&gt; "dir"
+  <p>è¿”å› <var>filename </var>æœ€åä¸€ä¸ªæ–œçº¿å‰é¢çš„éƒ¨åˆ†ã€‚è‹¥ <var>filename
+  </var>ä¸åŒ…å«æ–œçº¿ï¼Œåˆ™è¿”å›ã€Œ.ã€ï¼ˆå³è¾“å‡ºå½“å‰ç›®å½•ï¼‰ã€‚</p><pre>p File.dirname("dir/file.ext")    # =&gt; "dir"
 p File.dirname("file.ext")        # =&gt; "."
 p File.dirname("foo/bar/")        # =&gt; "foo"
 p File.dirname("foo//bar")        # =&gt; "foo"
 </pre>
-  <p>²Î¼û <a href="#L000960">File.basename</a>&nbsp;ºÍ <a
-  href="#L000969">File.extname</a>&nbsp;¡£</p>
+  <p>å‚è§ <a href="#L000960">File.basename</a>&nbsp;å’Œ <a
+  href="#L000969">File.extname</a>&nbsp;ã€‚</p>
   <dt>File.expand_path(<var>path</var>[,
   <var>default_dir</var>])
   <dd>
-  <p>ÒÔ×Ö·û´®ĞÎÊ½·µ»Ø°üº¬ <var>path</var> Õ¹¿ªµÄ¾ø¶ÔÂ·¾¶¡£Èô <var>path</var>
-  ÊÇÏà¶ÔÂ·¾¶£¬Ôò½« <var>default_dir</var> ÉèÎª»ù×¼Ä¿Â¼¡£ÈôÊ¡ÂÔÁË <var>default_dir</var> »òÆäÖÊÎª nil
-  £¬ÔòÊ¹ÓÃµ±Ç°Ä¿Â¼¡£</p><pre>p File.expand_path("..")         # =&gt; "/home/matz/work"
+  <p>ä»¥å­—ç¬¦ä¸²å½¢å¼è¿”å›åŒ…å« <var>path</var> å±•å¼€çš„ç»å¯¹è·¯å¾„ã€‚è‹¥ <var>path</var>
+  æ˜¯ç›¸å¯¹è·¯å¾„ï¼Œåˆ™å°† <var>default_dir</var> è®¾ä¸ºåŸºå‡†ç›®å½•ã€‚è‹¥çœç•¥äº† <var>default_dir</var> æˆ–å…¶è´¨ä¸º nil
+  ï¼Œåˆ™ä½¿ç”¨å½“å‰ç›®å½•ã€‚</p><pre>p File.expand_path("..")         # =&gt; "/home/matz/work"
 p File.expand_path("..", "/tmp") # =&gt; "/"
 </pre>
   <dt><a name=L000969>File.extname(<var>filename</var>)</a>
   <dd>
-  <p>·µ»Ø <var>filename</var>
-  µÄÀ©Õ¹Ãû£¨×îºóÒ»¸ö.ºóÃæµÄ×Ö·û´®£©ÔÚÄ¿Â¼Ãû³Æ»òÎÄ¼şÃû¿ªÍ·µÄ.²¢²»»á±»¿´×öÊÇÀ©Õ¹ÃûµÄÒ»²¿·İ¡£Èô <var>filename</var>
-  ²»°üº¬À©Õ¹Ãû£¬Ôò·µ»Ø¿Õ×Ö·û´®¡£&nbsp;</p>
+  <p>è¿”å› <var>filename</var>
+  çš„æ‰©å±•åï¼ˆæœ€åä¸€ä¸ª.åé¢çš„å­—ç¬¦ä¸²ï¼‰åœ¨ç›®å½•åç§°æˆ–æ–‡ä»¶åå¼€å¤´çš„.å¹¶ä¸ä¼šè¢«çœ‹åšæ˜¯æ‰©å±•åçš„ä¸€éƒ¨ä»½ã€‚è‹¥ <var>filename</var>
+  ä¸åŒ…å«æ‰©å±•åï¼Œåˆ™è¿”å›ç©ºå­—ç¬¦ä¸²ã€‚&nbsp;</p>
   <dd><pre>p File.extname("foo/foo.txt")     # =&gt; ".txt"
 p File.extname("foo/foo.tar.gz")  # =&gt; ".gz"
 p File.extname("foo/bar")         # =&gt; ""
@@ -66,31 +66,31 @@ p File.extname("foo/.bar")        # =&gt; ""
 p File.extname("foo.txt/bar")     # =&gt; ""
 p File.extname(".foo")            # =&gt; ""
 </pre>
-  <p>²Î¼û <a href="#L000960">File.basename</a>&nbsp;ºÍ <a
-  href="#L000967">File.dirname</a>&nbsp;¡£</p>
+  <p>å‚è§ <a href="#L000960">File.basename</a>&nbsp;å’Œ <a
+  href="#L000967">File.dirname</a>&nbsp;ã€‚</p>
   <dt><a name=L000976>File.open(<var>path</var>[,
   <var>mode</var>])</a>
   <dt>File.open(<var>path</var>[, <var>mode</var>])
   {|<var>file</var>| ... }
   <dd>
-  <p>¿ªÆôÓÉ <var>path</var> Ö¸¶¨µÄÎÄ¼ş£¬²¢·µ»ØÎÄ¼ş¶ÔÏó¡£Èô¿ªÆôÎÄ¼şÊ§°Ü£¬ÔòÅ×³ö <a
-  href="s_exceptions.html#Errno">Errno::EXXX</a> Òì³£¡£</p>
-  <p>²ÎÊı mode µÄÓÃ·¨ÓëÄÚ½¨º¯Êı
-  <a href="rgss/s_functions.html#L000379">open</a> ÏàÍ¬¡£</p>
-  <p>open º¯Êı¿ÉÒÔ´øÇø¿é£¬´ËÊ±ÒÔÖ¸¶¨µÄÎÄ¼ş¶ÔÏóÔËĞĞÇø¿é¡£Çø¿éÔÆĞĞ½áÊøÔò×Ô¶¯¹Ø±ÕÎÄ¼ş¡£</p>
-  <p>´øÇø¿éÊ±£¬·µ»ØÖµÎªÇø¿éµÄ¼ÆËã½á¹û¡£ </p>
+  <p>å¼€å¯ç”± <var>path</var> æŒ‡å®šçš„æ–‡ä»¶ï¼Œå¹¶è¿”å›æ–‡ä»¶å¯¹è±¡ã€‚è‹¥å¼€å¯æ–‡ä»¶å¤±è´¥ï¼Œåˆ™æŠ›å‡º <a
+  href="s_exceptions.html#Errno">Errno::EXXX</a> å¼‚å¸¸ã€‚</p>
+  <p>å‚æ•° mode çš„ç”¨æ³•ä¸å†…å»ºå‡½æ•°
+  <a href="rgss/s_functions.html#L000379">open</a> ç›¸åŒã€‚</p>
+  <p>open å‡½æ•°å¯ä»¥å¸¦åŒºå—ï¼Œæ­¤æ—¶ä»¥æŒ‡å®šçš„æ–‡ä»¶å¯¹è±¡è¿è¡ŒåŒºå—ã€‚åŒºå—äº‘è¡Œç»“æŸåˆ™è‡ªåŠ¨å…³é—­æ–‡ä»¶ã€‚</p>
+  <p>å¸¦åŒºå—æ—¶ï¼Œè¿”å›å€¼ä¸ºåŒºå—çš„è®¡ç®—ç»“æœã€‚ </p>
   <dt>File.rename(<var>from</var>, <var>to</var>)
   <dd>
-  <p>ÖØĞÂÃüÃûÎÄ¼ş£¬ÈôÊÇÄ¿Â¼²»Í¬Ôò»á½«ÎÄ¼şÒÆ¶¯ÖÁÖ¸¶¨ÎÄ¼ş¼Ğ¡£ÈôÊÇÄ¿±êÎÄ¼ş¼ĞÒÑÓĞÍ¬ÃûÎÄ¼ş£¬Ôò»áÓèÒÔ¸²¸Ç¡£</p>
-  <p>ÒÆ¶¯³É¹¦Ê±£¬·µ»Ø 0£¬Ê§°ÜÔòÅ×³ö <a
-  href="s_exceptions.html#Errno">Errno::EXXX</a> Òì³£¡£</p></dd></dl>
-<h2>·½·¨</h2>
+  <p>é‡æ–°å‘½åæ–‡ä»¶ï¼Œè‹¥æ˜¯ç›®å½•ä¸åŒåˆ™ä¼šå°†æ–‡ä»¶ç§»åŠ¨è‡³æŒ‡å®šæ–‡ä»¶å¤¹ã€‚è‹¥æ˜¯ç›®æ ‡æ–‡ä»¶å¤¹å·²æœ‰åŒåæ–‡ä»¶ï¼Œåˆ™ä¼šäºˆä»¥è¦†ç›–ã€‚</p>
+  <p>ç§»åŠ¨æˆåŠŸæ—¶ï¼Œè¿”å› 0ï¼Œå¤±è´¥åˆ™æŠ›å‡º <a
+  href="s_exceptions.html#Errno">Errno::EXXX</a> å¼‚å¸¸ã€‚</p></dd></dl>
+<h2>æ–¹æ³•</h2>
 <dl>
   <dt>mtime
   <dd>
-  <p>·µ»ØÉÏ´ÎĞŞ¸ÄÊ±¼ä£¨<a href="sc_time.html">Time</a> ¶ÔÏó£©¡£</p>
-  <p>ÈôÊÇ¶ÁÈ¡Ê§°Ü£¬Å×³ö <a href="s_exceptions.html#Errno">Errno::EXXX</a> Òì³£¡£</p>
+  <p>è¿”å›ä¸Šæ¬¡ä¿®æ”¹æ—¶é—´ï¼ˆ<a href="sc_time.html">Time</a> å¯¹è±¡ï¼‰ã€‚</p>
+  <p>è‹¥æ˜¯è¯»å–å¤±è´¥ï¼ŒæŠ›å‡º <a href="s_exceptions.html#Errno">Errno::EXXX</a> å¼‚å¸¸ã€‚</p>
   <dt>path
   <dd>
-  <p>·µ»ØËù´ò¿ªµÄÎÄ¼şÂ·¾¶¡£</p></dd></dl>
+  <p>è¿”å›æ‰€æ‰“å¼€çš„æ–‡ä»¶è·¯å¾„ã€‚</p></dd></dl>
 <h6></h6></body></html>

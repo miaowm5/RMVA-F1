@@ -1,4 +1,4 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html lang="zh">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -8,25 +8,25 @@
 </head>
 <body>
 <h1>RPG::Animation::Frame</h1>
-<p>����֡�������ࡣ</p>
-<h2>����</h2>
+<p>动画帧的数据类。</p>
+<h2>超类</h2>
 <ul>
 <li><a href="sc_object.html">Object</a></li></ul>
-<h2>������</h2>
+<h2>调用者</h2>
 <ul>
 <li><a href="gc_rpg_animation.html">RPG::Animation</a></li></ul>
-<h2>����</h2>
+<h2>属性</h2>
 <dl>
 <dt>cell_max
 <dd>
-<p>��Ԫ����������֡�е�Ԫ������š�</p>
+<p>单元个数。等于帧中单元的最大编号。</p>
 <dt>cell_data
 <dd>
-<p>������Ԫ���ݵĶ�ά���飨<a href="gc_table.html">Table</a>����</p>
-<p>ʹ�� cell_data[<var>cell_index</var>, <var>data_index</var>] ����ʽ��</p>
-<p><var>data_index</var> �ķ�Χ�Ǵ� 0 �� 7 ��������Ԫ�ĸ�����Ϣ����0��ͼ����1��X ���꣬2��Y
-���꣬3�����Ŷȣ�4����ת�Ƕȣ�5�����ҷ�ת��6����͸���ȣ�7���ϳɷ�ʽ��ͼ���Ǳ༭���е���ʾ�ı�ż� 1��-1 ��ʾ�����ڸõ�Ԫ��</p></dd></dl>
-<h2>����</h2><pre>
+<p>包含单元内容的二维数组（<a href="gc_table.html">Table</a>）。</p>
+<p>使用 cell_data[<var>cell_index</var>, <var>data_index</var>] 的形式。</p>
+<p><var>data_index</var> 的范围是从 0 到 7 ，代表单元的各项信息。（0：图案，1：X 坐标，2：Y
+坐标，3：缩放度，4：旋转角度，5：左右翻转，6：不透明度，7：合成方式。图案是编辑器中的显示的编号减 1。-1 表示不存在该单元。</p></dd></dl>
+<h2>定义</h2><pre>
 class RPG::Animation::Frame
   def initialize
     @cell_max = 0

@@ -1,4 +1,4 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html lang="zh">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -8,88 +8,88 @@
 </head>
 <body>
 <h1>RPG::Map</h1>
-<p>��ͼ�����ࡣ</p>
-<h2>����</h2>
+<p>地图数据类。</p>
+<h2>超类</h2>
 <ul>
 <li><a href="sc_object.html">Object</a></li></ul>
-<h2>����</h2>
+<h2>属性</h2>
 <dl>
 <dt>display_name
 <dd>
-<p>��ͼ��ʾ����</p>
+<p>地图显示名。</p>
 <dt>tileset_id
 <dd>
-<p>��ͼʹ�õ�ͼ���� ID��</p>
+<p>地图使用的图块组 ID。</p>
 <dt>width
 <dd>
-<p>��ͼ���ȡ�</p>
+<p>地图宽度。</p>
 <dt>height
 <dd>
-<p>��ͼ�߶ȡ�</p>
+<p>地图高度。</p>
 <dt>scroll_type
 <dd>
-<p>ѭ����ʽ��0����ѭ����1������ѭ����2������ѭ����3���ݺ�ѭ������</p>
+<p>循环方式（0：不循环、1：纵向循环、2：横向循环、3：纵横循环）。</p>
 <dt>specify_battleback
 <dd>
-<p>�Ƿ�ʹ��ս������ͼ��</p>
+<p>是否使用战斗背景图像。</p>
 <dt>battleback1_name
 <dd>
-<p>ʹ��ս������ͼ��ʱ�ذ�ͼ����ļ�����</p>
+<p>使用战斗背景图像时地板图像的文件名。</p>
 <dt>battleback2_name
 <dd>
-<p>ʹ��ս������ͼ��ʱǽ��ͼ����ļ�����</p>
+<p>使用战斗背景图像时墙壁图像的文件名。</p>
 <dt>autoplay_bgm
 <dd>
-<p>�Ƿ��Զ��л��������֡�</p>
+<p>是否自动切换背景音乐。</p>
 <dt>bgm
 <dd>
-<p>�Զ��л���������ʱ��Ӧ�ı������֣�<a href="gc_rpg_bgm.html">RPG::BGM</a>����</p>
+<p>自动切换背景音乐时对应的背景音乐（<a href="gc_rpg_bgm.html">RPG::BGM</a>）。</p>
 <dt>autoplay_bgs
 <dd>
-<p>�Ƿ��Զ��л�����������</p>
+<p>是否自动切换背景声音。</p>
 <dt>bgs
 <dd>
-<p>�Զ��л���������ʱ��Ӧ�ı���������<a href="gc_rpg_bgs.html">RPG::BGS</a>����</p>
+<p>自动切换背景声音时对应的背景声音（<a href="gc_rpg_bgs.html">RPG::BGS</a>）。</p>
 <dt>disable_dashing
 <dd>
-<p>�Ƿ��ֹ�ܲ���</p>
+<p>是否禁止跑步。</p>
 <dt>encounter_list
 <dd>
-<p>�����б���<a href="gc_rpg_map_encounter.html">RPG::Map::Encounter</a> �����顣</p>
+<p>遇敌列表。<a href="gc_rpg_map_encounter.html">RPG::Map::Encounter</a> 的数组。</p>
 <dt>encounter_step
 <dd>
-<p>ƽ�����в�����</p>
+<p>平均遇敌步数。</p>
 <dt>parallax_name
 <dd>
-<p>Զ��ͼ���ļ�����</p>
+<p>远景图像文件名。</p>
 <dt>parallax_loop_x
 <dd>
-<p>Զ���Ƿ�������[����ѭ��]ѡ�</p>
+<p>远景是否启用了[横向循环]选项。</p>
 <dt>parallax_loop_y
 <dd>
-<p>Զ���Ƿ�������[����ѭ��]ѡ�</p>
+<p>远景是否启用了[纵向循环]选项。</p>
 <dt>parallax_sx
 <dd>
-<p>Զ�������Զ��������ٶȡ�</p>
+<p>远景横向自动卷动的速度。</p>
 <dt>parallax_sy
 <dd>
-<p>Զ�������Զ��������ٶȡ�</p>
+<p>远景纵向自动卷动的速度。</p>
 <dt>parallax_show
 <dd>
-<p>Զ���Ƿ�������[�ڵ�ͼ�༭������ʾ]ѡ�</p>
+<p>远景是否启用了[在地图编辑器中显示]选项。</p>
 <dt>note
 <dd>
-<p>��ע��</p>
+<p>备注。</p>
 <dt>data
 <dd>
-<p>��ͼ���ݡ�ͼ�� ID ���丽�����ݵ���ά���顣��<a href="gc_table.html">Table</a>����</p>
+<p>地图数据。图块 ID 及其附属数据的三维数组。（<a href="gc_table.html">Table</a>）。</p>
 <dt>events
 <dd>
-<p>��ͼ�¼������¼� ID Ϊ������<a href="rgss/gc_rpg_event.html">RPG::Event</a> ��ʵ��Ϊֵ�Ĺ�ϣ����</p></dd></dl>
-<h2>�ڲ���</h2>
+<p>地图事件。以事件 ID 为主键，<a href="rgss/gc_rpg_event.html">RPG::Event</a> 的实例为值的哈希表。</p></dd></dl>
+<h2>内部类</h2>
 <ul>
 <li><a href="gc_rpg_map_encounter.html">RPG::Map::Encounter</a></li></ul>
-<h2>����</h2><pre>
+<h2>定义</h2><pre>
 class RPG::Map
   def initialize(width, height)
     @display_name = ''

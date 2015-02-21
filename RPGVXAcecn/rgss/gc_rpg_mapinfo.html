@@ -1,4 +1,4 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
 <html lang=zh><head><title>RPG::MapInfo</title>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta content=text/css http-equiv=Content-Style-Type><link rel=stylesheet
@@ -6,31 +6,31 @@ type=text/css href="../style.css">
 <meta name=GENERATOR content="MSHTML 9.00.8112.16447"></head>
 <body>
 <h1>RPG::MapInfo</h1>
-<p>��ͼ��Ϣ�������ࡣ</p>
-<h2>����</h2>
+<p>地图信息的数据类。</p>
+<h2>超类</h2>
 <ul>
   <li><a href="sc_object.html">Object</a> </li></ul>
-<h2>����</h2>
+<h2>属性</h2>
 <dl>
   <dt>name
   <dd>
-  <p>��ͼ���ơ�</p>
+  <p>地图名称。</p>
   <dt>parent_id
   <dd>
-  <p>����ͼ��š�</p>
+  <p>父地图编号。</p>
   <dt>order
   <dd>
-  <p>�༭���ڲ�ʹ�ã���ͼ��״��ʾ��˳��</p>
+  <p>编辑器内部使用，地图树状显示的顺序。</p>
   <dt>expanded
   <dd>
-  <p>�༭���ڲ�ʹ�ã���ͼ��״��ʾ��չ���ı�ǡ�</p>
+  <p>编辑器内部使用，地图树状显示已展开的标记。</p>
   <dt>scroll_x
   <dd>
-  <p>�༭���ڲ�ʹ�ã����������λ�á�</p>
+  <p>编辑器内部使用，横向滚动的位置。</p>
   <dt>scroll_y
   <dd>
-  <p>�༭���ڲ�ʹ�ã����������λ�á�</p></dd></dl>
-<h2>����</h2><pre>class RPG::MapInfo
+  <p>编辑器内部使用，纵向滚动的位置。</p></dd></dl>
+<h2>定义</h2><pre>class RPG::MapInfo
   def initialize
     @name = ''
     @parent_id = 0

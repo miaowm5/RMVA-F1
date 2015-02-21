@@ -1,4 +1,4 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+ï»¿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html lang="zh">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -8,27 +8,27 @@
 </head>
 <body>
 <h1>RPG::SE</h1>
-<p>SE µÄÊı¾İÀà¡£ÓµÓĞÍ¨¹ı <a href="gm_audio.html">Audio</a> Ä£¿é²¥·Å×ÔÉíµÄ¹¦ÄÜ¡£</p>
-<h2>³¬Àà</h2>
+<p>SE çš„æ•°æ®ç±»ã€‚æ‹¥æœ‰é€šè¿‡ <a href="gm_audio.html">Audio</a> æ¨¡å—æ’­æ”¾è‡ªèº«çš„åŠŸèƒ½ã€‚</p>
+<h2>è¶…ç±»</h2>
 <ul>
 <li><a href="gc_rpg_audiofile.html">RPG::AudioFile</a></li></ul>
-<h2>µ÷ÓÃÕß</h2>
+<h2>è°ƒç”¨è€…</h2>
 <ul>
 <li><a href="gc_rpg_animation_timing.html">RPG::Animation::Timing</a>
 <li><a href="gc_rpg_system.html">RPG::System</a>
 <li><a href="gc_rpg_eventcommand.html">RPG::EventCommand</a>
 <li><a href="gc_rpg_movecommand.html">RPG::MoveCommand</a></li></ul>
-<h2>Àà·½·¨</h2>
+<h2>ç±»æ–¹æ³•</h2>
 <dl>
 <dt>RPG::SE.stop
 <dd>
-<p>Í£Ö¹²¥·Å SE¡£</p></dd></dl>
-<h2>·½·¨</h2>
+<p>åœæ­¢æ’­æ”¾ SEã€‚</p></dd></dl>
+<h2>æ–¹æ³•</h2>
 <dl>
 <dt>play
 <dd>
-<p>¿ªÊ¼²¥·Å SE¡£</p></dd></dl>
-<h2>¶¨Òå</h2><pre>class RPG::SE &lt; RPG::AudioFile
+<p>å¼€å§‹æ’­æ”¾ SEã€‚</p></dd></dl>
+<h2>å®šä¹‰</h2><pre>class RPG::SE &lt; RPG::AudioFile
   def play
     unless @name.empty?
       Audio.se_play('Audio/SE/' + @name, @volume, @pitch)

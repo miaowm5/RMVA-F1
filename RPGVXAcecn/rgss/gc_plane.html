@@ -1,4 +1,4 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html lang="zh">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -8,61 +8,61 @@
 </head>
 <body>
 <h1>Plane</h1>
-<p>ƽ����ࡣƽ���ǽ�λͼ��ͼ��������������ƽ����ʾ�����⾫�飬������ʾԶ��ͼ�ȡ�</p>
-<h2>����</h2>
+<p>平面的类。平面是将位图的图案在整个画面上平铺显示的特殊精灵，用于显示远景图等。</p>
+<h2>超类</h2>
 <ul>
 <li><a href="sc_object.html">Object</a> </li></ul>
-<h2>�෽��</h2>
+<h2>类方法</h2>
 <dl>
 <dt>Plane.new([<var>viewport</var>])
 <dd>
-<p>����һ�� Plane ���󡣱�Ҫʱָ��һ����ʾ�˿ڣ�<a href="gc_viewport.html">Viewport</a>����</p></dd></dl>
-<h2>����</h2>
+<p>生成一个 Plane 对象。必要时指定一个显示端口（<a href="gc_viewport.html">Viewport</a>）。</p></dd></dl>
+<h2>方法</h2>
 <dl>
 <dt>dispose
 <dd>
-<p>�ͷ�ƽ�档�����Ѿ��ͷ���ʲô��������</p>
+<p>释放平面。若是已经释放则什么都不做。</p>
 <dt>disposed?
 <dd>
-<p>��ƽ�����ͷ��򷵻� true��</p></dd></dl>
-<h2>����</h2>
+<p>当平面已释放则返回 true。</p></dd></dl>
+<h2>属性</h2>
 <dl>
 <dt>bitmap
 <dd>
-<p>ƽ����ʹ�õ�λͼ��<a href="gc_bitmap.html">Bitmap</a>�������á�</p>
+<p>平面所使用的位图（<a href="gc_bitmap.html">Bitmap</a>）的引用。</p>
 <dt>viewport
 <dd>
-<p>��ƽ���������ʾ�˿ڣ�<a href="gc_viewport.html">Viewport</a>�������á�</p>
+<p>与平面关联的显示端口（<a href="gc_viewport.html">Viewport</a>）的引用。</p>
 <dt>visible
 <dd>
-<p>ƽ��ɼ���״̬��true ��ʾ�ɼ���Ĭ��Ϊ true��</p>
+<p>平面可见的状态。true 表示可见。默认为 true。</p>
 <dt>z
 <dd>
-<p>ƽ��� Z ���ꡣ��ֵԽ�����ʾ��Խǰ����</p>
-<p>Z ������ͬ�ģ�Խ�����ɵĶ�����ʾ��Խǰ����</p>
+<p>平面的 Z 坐标。数值越大的显示在越前方。</p>
+<p>Z 坐标相同的，越晚生成的对象显示在越前方。</p>
 <dt>ox
 <dd>
-<p>ƽ��ԭ��� X ���ꡣ�޸Ĵ���ֵ���Թ���ƽ�档</p>
+<p>平面原点的 X 坐标。修改此数值可以滚动平面。</p>
 <dt>oy
 <dd>
-<p>ƽ��ԭ��� Y ���ꡣ�޸Ĵ���ֵ���Թ���ƽ�档</p>
+<p>平面原点的 Y 坐标。修改此数值可以滚动平面。</p>
 <dt>zoom_x
 <dd>
-<p>ƽ��ĺ���Ŵ��ʣ�1.0 ����ԭʼ��С��</p>
+<p>平面的横向放大率，1.0 代表原始大小。</p>
 <dt>zoom_y
 <dd>
-<p>ƽ�������Ŵ��ʣ�1.0 ����ԭʼ��С��</p>
+<p>平面的纵向放大率，1.0 代表原始大小。</p>
 <dt>opacity
 <dd>
-<p>ƽ��Ĳ�͸���ȣ�0~255����������Χ����ֵ���Զ�������</p>
+<p>平面的不透明度（0~255）。超出范围的数值会自动修正。</p>
 <dt>blend_type
 <dd>
-<p>ƽ��ĺϳɷ�ʽ��0��������1���ӷ���2����������</p>
+<p>平面的合成方式（0：正常、1：加法、2：减法）。</p>
 <dt>color
 <dd>
-<p>��ƽ��ϳɵ���ɫ��<a href="gc_color.html">Color</a>��ɫ�ʵ� alpha
-ֵ��Ϊ�ϳɵı�����</p>
+<p>与平面合成的颜色（<a href="gc_color.html">Color</a>）色彩的 alpha
+值作为合成的比例。</p>
 <dt>tone
 <dd>
-<p>ƽ���ɫ����<a href="gc_tone.html">Tone</a>����</p></dd></dl>
+<p>平面的色调（<a href="gc_tone.html">Tone</a>）。</p></dd></dl>
 <h6></h6></body></html>

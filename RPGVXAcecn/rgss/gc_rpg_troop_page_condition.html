@@ -1,4 +1,4 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
 <html lang=zh><head><title>RPG::Troop::Page::Condition</title>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta content=text/css http-equiv=Content-Style-Type><link rel=stylesheet
@@ -6,50 +6,50 @@ type=text/css href="../style.css">
 <meta name=GENERATOR content="MSHTML 9.00.8112.16447"></head>
 <body>
 <h1>RPG::Troop::Page::Condition</h1>
-<p>ս���¼��ġ������������ࡣ</p>
-<h2>����</h2>
+<p>战斗事件的「条件」数据类。</p>
+<h2>超类</h2>
 <ul>
   <li><a href="sc_object.html">Object</a> </li></ul>
-<h2>������</h2>
+<h2>调用者</h2>
 <ul>
   <li><a href="gc_rpg_troop_page.html">RPG::Troop::Page</a> </li></ul>
-<h2>����</h2>
+<h2>属性</h2>
 <dl>
   <dt>turn_ending
   <dd>
-  <p>���غϽ���ʱ�������Ƿ���Ч�ĸ�ѡ��</p>
+  <p>「回合结束时」条件是否有效的复选框。</p>
   <dt>turn_valid
   <dd>
-  <p>���غ����������Ƿ���Ч�ĸ�ѡ��</p>
+  <p>「回合数」条件是否有效的复选框。</p>
   <dt>enemy_valid
   <dd>
-  <p>�����ˡ������Ƿ���Ч�ĸ�ѡ��</p>
+  <p>「敌人」条件是否有效的复选框。</p>
   <dt>actor_valid
   <dd>
-  <p>����ɫ�������Ƿ���Ч�ĸ�ѡ��</p>
+  <p>「角色」条件是否有效的复选框。</p>
   <dt>switch_valid
   <dd>
-  <p>�����ء������Ƿ���Ч�ĸ�ѡ��</p>
+  <p>「开关」条件是否有效的复选框。</p>
   <dt>turn_a
   <dt>turn_b
   <dd>
-  <p>ָ�����غ����������� a b ֵ������Ϊ a + bx ����ʽ��</p>
+  <p>指定「回合数」条件的 a b 值，输入为 a + bx 的形式。</p>
   <dt>enemy_index
   <dd>
-  <p>�����ˡ������ĵ��˶�Ա������0��7����</p>
+  <p>「敌人」条件的敌人队员索引（0～7）。</p>
   <dt>enemy_hp
   <dd>
-  <p>ָ�������ˡ������ĵ���HPֵ�ٷֱȡ�</p>
+  <p>指定「敌人」条件的敌人HP值百分比。</p>
   <dt>actor_id
   <dd>
-  <p>����ɫ�������Ľ�ɫ ID ��š�</p>
+  <p>「角色」条件的角色 ID 编号。</p>
   <dt>actor_hp
   <dd>
-  <p>ָ������ɫ�������Ľ�ɫHPֵ�ٷֱȡ�</p>
+  <p>指定「角色」条件的角色HP值百分比。</p>
   <dt>switch_id
   <dd>
-  <p>ָ�������ء������Ŀ��� ID ��š�</p></dd></dl>
-<h2>����</h2><pre>class RPG::Troop::Page::Condition
+  <p>指定「开关」条件的开关 ID 编号。</p></dd></dl>
+<h2>定义</h2><pre>class RPG::Troop::Page::Condition
   def initialize
     @turn_ending = false
     @turn_valid = false

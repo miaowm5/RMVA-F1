@@ -1,40 +1,40 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+ï»¿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html lang="zh">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta http-equiv="Content-Style-Type" content="text/css">
-<title>RGSS ÄÚ½¨º¯Êı</title>
+<title>RGSS å†…å»ºå‡½æ•°</title>
 <link href="../style.css" type="text/css" rel="stylesheet">
 </head>
 <body>
-<h1>RGSS ÄÚ½¨º¯Êı</h1>
-<p>RGSSÖĞ¶¨ÒåÁËÏÂÃæµÄÄÚ½¨º¯Êı£º</p>
+<h1>RGSS å†…å»ºå‡½æ•°</h1>
+<p>RGSSä¸­å®šä¹‰äº†ä¸‹é¢çš„å†…å»ºå‡½æ•°ï¼š</p>
 <dl>
 <dt><a name="rgss_main">rgss_main { ... }</a> <span class="rgss3">(RGSS3)</span>
 <p></p>
 <dd>
-<p>½ö½øĞĞÒ»´Î¼ÓÔØµÄº¯Êı¡£</p>
-<p>µ±¼ì²âµ½ÓÃ»§°´ÏÂF12µÄÊ±ºò£¬Õâ¸öº¯Êı»á±»ÖØÖÃ¡£</p><pre>rgss_main { SceneManager.run }
+<p>ä»…è¿›è¡Œä¸€æ¬¡åŠ è½½çš„å‡½æ•°ã€‚</p>
+<p>å½“æ£€æµ‹åˆ°ç”¨æˆ·æŒ‰ä¸‹F12çš„æ—¶å€™ï¼Œè¿™ä¸ªå‡½æ•°ä¼šè¢«é‡ç½®ã€‚</p><pre>rgss_main { SceneManager.run }
 </pre>
 <dt><a name="rgss_stop">rgss_stop</a> <span class="rgss3">(RGSS3)</span>
 <p></p>
 <dd>
-<p>Í£Ö¹½Å±¾µÄÖ´ĞĞ£¬Ö»±£Áô»­ÃæµÄË¢ĞÂ¡£¹ØÓÚÊ¹ÓÃµÄ¶¨ÒåÇë²éÔÄ <a href="../intro/index.html">½Å±¾ÈëÃÅ</a></p>
-<p>µÈĞ§ÓÚÏÂÃæÕâÒ»¾ä£º</p><pre>loop { Graphics.update }
+<p>åœæ­¢è„šæœ¬çš„æ‰§è¡Œï¼Œåªä¿ç•™ç”»é¢çš„åˆ·æ–°ã€‚å…³äºä½¿ç”¨çš„å®šä¹‰è¯·æŸ¥é˜… <a href="../intro/index.html">è„šæœ¬å…¥é—¨</a></p>
+<p>ç­‰æ•ˆäºä¸‹é¢è¿™ä¸€å¥ï¼š</p><pre>loop { Graphics.update }
 </pre>
 <dt><a name="load_data">load_data(<var>filename</var>)</a>
 <dd>
-<p>¼ÓÔØÓÉ <var>filename</var> Ö¸¶¨µÄÊı¾İÎÄ¼ş²¢»¹Ô­³É¶ÔÏó¡£</p><pre>$data_actors = load_data("Data/Actors.rvdata2")
-</pre>Õâ¸öº¯Êı»ù±¾ÉÏÓëÏÂÃæµÄÓï¾äÏàÍ¬£º<pre>
+<p>åŠ è½½ç”± <var>filename</var> æŒ‡å®šçš„æ•°æ®æ–‡ä»¶å¹¶è¿˜åŸæˆå¯¹è±¡ã€‚</p><pre>$data_actors = load_data("Data/Actors.rvdata2")
+</pre>è¿™ä¸ªå‡½æ•°åŸºæœ¬ä¸Šä¸ä¸‹é¢çš„è¯­å¥ç›¸åŒï¼š<pre>
 File.open(filename, "rb") { |f|
   obj = Marshal.load(f)
 }
 </pre>
-<p>²»Í¬Ö®´¦ÔÚÓÚ£¬±¾º¯Êı¿ÉÒÔ´Ó<a href="rgss.html#encryption_archive">¼ÓÃÜµµ°¸</a>ÄÚ¼ÓÔØÊı¾İÎÄ¼ş¡£</p>
+<p>ä¸åŒä¹‹å¤„åœ¨äºï¼Œæœ¬å‡½æ•°å¯ä»¥ä»<a href="rgss.html#encryption_archive">åŠ å¯†æ¡£æ¡ˆ</a>å†…åŠ è½½æ•°æ®æ–‡ä»¶ã€‚</p>
 <dt><a name="save_data">save_data(<var>obj</var>, <var>filename</var>)</a>
 <dd>
-<p>½«¶ÔÏó <var>obj</var> Ğ´ÈëÃûÎª <var>filename</var> µÄÊı¾İÎÄ¼ş¡£</p><pre>save_data($data_actors, "Data/Actors.rvdata2")
-</pre>Õâ¸öº¯ÊıµÈ¼ÛÓÚ£º <pre>
+<p>å°†å¯¹è±¡ <var>obj</var> å†™å…¥åä¸º <var>filename</var> çš„æ•°æ®æ–‡ä»¶ã€‚</p><pre>save_data($data_actors, "Data/Actors.rvdata2")
+</pre>è¿™ä¸ªå‡½æ•°ç­‰ä»·äºï¼š <pre>
 File.open(filename, "wb") { |f|
   Marshal.dump(obj, f)
 }
@@ -42,12 +42,12 @@ File.open(filename, "wb") { |f|
 <dt><a name="msgbox">msgbox(<var>arg</var>[, ...])</a> <span
 class="rgss3">(RGSS3)</span>
 <dd>
-<p>½«²ÎÊıÊä³öµ½¶Ô»°¿ò¡£Èç¹û²ÎÊı²¢²»ÊÇ×Ö·û´®£¬Ôò»áÊ¹ÓÃ to_s ·½·¨×ª»»Îª×Ö·û´®ºóÔÙ½øĞĞÊä³ö¡£</p>
-<p>·µ»Ø nil ¡£</p>
+<p>å°†å‚æ•°è¾“å‡ºåˆ°å¯¹è¯æ¡†ã€‚å¦‚æœå‚æ•°å¹¶ä¸æ˜¯å­—ç¬¦ä¸²ï¼Œåˆ™ä¼šä½¿ç”¨ to_s æ–¹æ³•è½¬æ¢ä¸ºå­—ç¬¦ä¸²åå†è¿›è¡Œè¾“å‡ºã€‚</p>
+<p>è¿”å› nil ã€‚</p>
 <dt><a name="msgbox_p">msgbox_p(<var>obj</var>, [<var>obj2</var>, ...])</a>
 <span class="rgss3">(RGSS3)</span>
 <dd>
-<p>½« obj ÒÔÈËÀà¿É¶ÁµÄ¸ñÊ½Êä³öµ½¶Ô»°¿ò£¬Ïàµ±ÓÚÏÂÃæµÄ´úÂë£¨²Î¿¼ <a href="sc_object.html#L000572">Object#inspect</a>£©¡£</p><pre>msgbox obj.inspect, "\n", obj2.inspect, "\n", ...
+<p>å°† obj ä»¥äººç±»å¯è¯»çš„æ ¼å¼è¾“å‡ºåˆ°å¯¹è¯æ¡†ï¼Œç›¸å½“äºä¸‹é¢çš„ä»£ç ï¼ˆå‚è€ƒ <a href="sc_object.html#L000572">Object#inspect</a>ï¼‰ã€‚</p><pre>msgbox obj.inspect, "\n", obj2.inspect, "\n", ...
 </pre>
-<p>·µ»Ø nil ¡£</p></dd></dl>
+<p>è¿”å› nil ã€‚</p></dd></dl>
 <h6></h6></body></html>

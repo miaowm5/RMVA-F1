@@ -1,4 +1,4 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
 <html lang=zh><head><title>IO</title>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta content=text/css http-equiv=Content-Style-Type><link rel=stylesheet
@@ -6,63 +6,63 @@ type=text/css href="../style.css">
 <meta name=GENERATOR content="MSHTML 9.00.8112.16447"></head>
 <body>
 <h1>IO</h1>
-<p>�ṩ��������/������ܵ� IO �ࡣ</p>
-<h2>����</h2>
+<p>提供基本输入/输出功能的 IO 类。</p>
+<h2>超类</h2>
 <ul>
   <li><a href="sc_object.html">Object</a> </li></ul>
-<h2>����ģ��</h2>
+<h2>包含模块</h2>
 <ul>
   <li><a href="sm_enumerable.html">Enumerable</a> </li></ul>
-<h2>����</h2>
+<h2>方法</h2>
 <dl>
   <dt>binmode
   <dd>
-  <p>������ת���ɶ�����ģʽ���ָ���һ��ģʽ��Ψһ���������´򿪴�����</p>
-  <p>����&nbsp;self��</p>
+  <p>将串流转换成二进制模式。恢复成一般模式的唯一方法是重新打开串流。</p>
+  <p>返回&nbsp;self。</p>
   <dt>close
   <dd>
-  <p>�ر���������˿ڡ��ر�ʧ�ܻ��׳� <a
-  href="s_exceptions.html#Errno">Errno::EXXX</a> �쳣��</p>
-  <p>����&nbsp;nil��</p>
+  <p>关闭输入输出端口。关闭失败会抛出 <a
+  href="s_exceptions.html#Errno">Errno::EXXX</a> 异常。</p>
+  <p>返回&nbsp;nil。</p>
   <dt>each_line {|<var>line</var>| ... }
   <dd>
-  <p>������������˿ڣ����ж�ȡ��</p>
+  <p>经过输入输出端口，逐行读取。</p>
   <dd>
-  <p>����&nbsp;self��</p>
+  <p>返回&nbsp;self。</p>
   <dt>each_byte {|<var>ch</var>| ... }
   <dd>
-  <p>������������˿ڣ����ֽڶ�ȡ��</p>
-  <p>����&nbsp;self��</p>
+  <p>经过输入输出端口，逐字节读取。</p>
+  <p>返回&nbsp;self。</p>
   <dt>eof?
   <dd>
-  <p>����������������ļ�ĩ��ʱ������ true��</p>
+  <p>当输入输出流到达文件末端时，返回 true。</p>
   <dt>pos
   <dd>
-  <p>�����ļ�ָ��ĵ�ǰλ�á�</p>
+  <p>返回文件指针的当前位置。</p>
   <dt>pos=<var>n</var>
   <dd>
-  <p>���ļ�ָ������ָ��λ�á�</p>
+  <p>将文件指针移至指定位置。</p>
   <dt>read([<var>length</var>])
   <dd>
-  <p>��ȡ������ <var>length</var> ���ȵ��ֽڵ��ַ�������ʡ�� <var>length</var>
-  ����ȡֱ���ļ�ĩ�˵��������ݡ�</p>
+  <p>读取并返回 <var>length</var> 长度的字节的字符串。若省略 <var>length</var>
+  则会读取直至文件末端的所有数据。</p>
   <dd>
-  <p>���� IO �Ѿ������ļ�ĩ�ˣ��ͷ��� nil ��</p>
+  <p>若是 IO 已经到达文件末端，就返回 nil 。</p>
   <dd>
-  <p>��ȡ����ʧ�ܻ��׳� <a href="s_exceptions.html#Errno">Errno::EXXX</a> �쳣�� <var>length</var>
-  Ϊ��ֵ����׳�&nbsp;<a href="s_exceptions.html#ArgumentError">ArgumentError</a>&nbsp;�쳣��</p>
+  <p>读取数据失败会抛出 <a href="s_exceptions.html#Errno">Errno::EXXX</a> 异常， <var>length</var>
+  为负值则会抛出&nbsp;<a href="s_exceptions.html#ArgumentError">ArgumentError</a>&nbsp;异常。</p>
   <dt>readlines([<var>rs</var>])
   <dd>
-  <p>��ȡ�������ݣ�������һ���� һ�� ������ɵ����顣���� IO �Ѿ������ļ�ĩ�Σ��򷵻ؿ�����
-  []��</p>
-  <p>���С����ɲ��� rs
-  ��ָ�����ַ������Ͼ䣬rs ��Ĭ��ֵΪ "\n"��</p>
-  <p>��ָ�� nil Ϊ <var>rs</var> �������򲻻���з��С���ָ�����ַ��� ""
-  �����������ķ��з������Ͼ䣨����ģʽ����</p>
+  <p>读取所有数据，并返回一个由 一行 内容组成的数组。若是 IO 已经到达文件末段，则返回空数组
+  []。</p>
+  <p>「行」是由参数 rs
+  所指定的字符串做断句，rs 的默认值为 "\n"。</p>
+  <p>若指定 nil 为 <var>rs</var> 参数，则不会进行分行。若指定空字符串 ""
+  ，则会把连续的分行符当作断句（段落模式）。</p>
   <dt>write(<var>str</var>)
   <dd>
-  <p>�� <var>str</var> �������������˿ڡ��� str ��ʶ�ַ�������᳢��ʹ�� to_s
-  ����ת��Ϊ�ַ�����</p>
-  <p>����ʵ��������ֽ��������ʧ�ܻ��׳� <a
-  href="s_exceptions.html#Errno">Errno::EXXX</a> �쳣��</p></dd></dl>
+  <p>将 <var>str</var> 输出至输入输出端口。若 str 不识字符串，则会尝试使用 to_s
+  将其转换为字符串。</p>
+  <p>返回实际输出的字节数。输出失败会抛出 <a
+  href="s_exceptions.html#Errno">Errno::EXXX</a> 异常。</p></dd></dl>
 <h6></h6></body></html>

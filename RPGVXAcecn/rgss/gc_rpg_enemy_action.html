@@ -1,4 +1,4 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+ï»¿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html lang="zh">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -8,38 +8,38 @@
 </head>
 <body>
 <h1>RPG::Enemy::Action</h1>
-<p>µÐÈË[ÐÐÎªÄ£Ê½]µÄÊý¾ÝÀà¡£</p>
-<h2>³¬Àà</h2>
+<p>æ•Œäºº[è¡Œä¸ºæ¨¡å¼]çš„æ•°æ®ç±»ã€‚</p>
+<h2>è¶…ç±»</h2>
 <ul>
 <li><a href="sc_object.html">Object</a></li></ul>
-<h2>µ÷ÓÃÕß</h2>
+<h2>è°ƒç”¨è€…</h2>
 <ul>
 <li><a href="gc_rpg_enemy.html">RPG::Enemy</a></li></ul>
-<h2>ÊôÐÔ</h2>
+<h2>å±žæ€§</h2>
 <dl>
 <dt>skill_id
 <dd>
-<p>¼¼ÄÜ ID¡£</p>
+<p>æŠ€èƒ½ IDã€‚</p>
 <dt>condition_type
 <dd>
-<p>ÐÐ¶¯Ìõ¼þ¡£</p>
+<p>è¡ŒåŠ¨æ¡ä»¶ã€‚</p>
 <ul>
-<li>0: Æ½Ê±
-<li>1: »ØºÏÊý
-<li>2: ÌåÁ¦Öµ
-<li>3: Ä§Á¦Öµ
-<li>4: ×´Ì¬
-<li>5: ¶ÓÎéµÈ¼¶
-<li>6: ¿ª¹Ø</li></ul>
+<li>0: å¹³æ—¶
+<li>1: å›žåˆæ•°
+<li>2: ä½“åŠ›å€¼
+<li>3: é­”åŠ›å€¼
+<li>4: çŠ¶æ€
+<li>5: é˜Ÿä¼ç­‰çº§
+<li>6: å¼€å…³</li></ul>
 <dt>condition_param1
 <dt>condition_param2
 <dd>
-<p>Ìõ¼þµÄ²ÎÊý£¬ËùÓÐµÄÀàÐÍ¹²ÓÃ¡£</p>
-<p>¾ÙÀýÀ´Ëµ£¬µ±Ìõ¼þÎª[ÌåÁ¦Öµ]Ê±£¬condition_param1 ÊÇÏÂÏÞ¶ø condition_param2 ÊÇÉÏÏÞ¡£</p>
+<p>æ¡ä»¶çš„å‚æ•°ï¼Œæ‰€æœ‰çš„ç±»åž‹å…±ç”¨ã€‚</p>
+<p>ä¸¾ä¾‹æ¥è¯´ï¼Œå½“æ¡ä»¶ä¸º[ä½“åŠ›å€¼]æ—¶ï¼Œcondition_param1 æ˜¯ä¸‹é™è€Œ condition_param2 æ˜¯ä¸Šé™ã€‚</p>
 <dt>rating
 <dd>
-<p>ÓÅÏÈ¼¶£¨1..10£©¡£</p></dd></dl>
-<h2>¶¨Òå</h2><pre>class RPG::Enemy::Action
+<p>ä¼˜å…ˆçº§ï¼ˆ1..10ï¼‰ã€‚</p></dd></dl>
+<h2>å®šä¹‰</h2><pre>class RPG::Enemy::Action
   def initialize
     @skill_id = 1
     @condition_type = 0

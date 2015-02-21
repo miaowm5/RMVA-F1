@@ -1,58 +1,58 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html lang="zh">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta http-equiv="Content-Style-Type" content="text/css">
-<title>������Ʒ������</title>
+<title>制作礼品交换所</title>
 <link href="../style.css" type="text/css" rel="stylesheet">
 </head>
 <body>
 
-<h1>������Ʒ������</h1>
+<h1>制作礼品交换所</h1>
 <ul>
-<li><a href="#constant">���峣��</a></li>
-<li><a href="#command">����ָ��</a></li>
-<li><a href="#money">���Ľ�����ʾ</a></li>
-<li><a href="#buy">���Ĺ���Ĵ���</a></li>
-<li><a href="#terminate">׷�ӹر�ʱ�Ĵ���</a></li>
+<li><a href="#constant">定义常量</a></li>
+<li><a href="#command">更改指令</a></li>
+<li><a href="#money">更改金额的显示</a></li>
+<li><a href="#buy">更改购买的处理</a></li>
+<li><a href="#terminate">追加关闭时的处理</a></li>
 </ul>
 
-<p>���߽��ڱ��½�˵�̵껭��ĸ��췽����</p>
-<p>���ǻ�����������ĳ��������ֵ���ɳ��н��Խ�����Ʒ�����ġ���Ʒ����������Ϊ������</p>
+<p>笔者将在本章解说商店画面的改造方法。</p>
+<p>我们会制作可以用某个变量的值当成持有金，以进行物品交换的「礼品交换所」作为范例。</p>
 
 
-<h2><a name="constant">���峣��</a></h2>
-<p>��ĿǰΪֹ�ķ����У��ȷ�˵Ҫ�ο� 7 �ű�����ֵʱ�����Ƕ����� $game_variables[7] �����ķ�ʽֱ��ָ�����֡���ô����Ϊ����������׶�Ϊ��Ҫ�Ŀ��ǣ�Ȼ��һ�����������ĳ������֮��᳣���ı�ֵ����Ҫ�� 7 ������<strong>����</strong>����ʽȥ������ǽϺõ�������</p>
-<p>���ڳ������͸��� <a href="202_vocab.html">Vocab ģ��</a>�½��н�˵����һ����ֻҪ��Ӣ�Ĵ�д��ĸΪ��ͷ����������ƾͺã�ֻ��ϰ���ϳ�����ȫ����ĸ���ô�д��</p>
-<p>�������Ҫ�������̵�Ĺ���ǣ��� 20 �ſ���Ϊ ON ��״̬ʱ������һ���̵�ʱ���ɡ���Ʒ�������������ҽ��Ա��� 20 ��ֵ�������еĽ�</p>
+<h2><a name="constant">定义常量</a></h2>
+<p>到目前为止的范例中，比方说要参考 7 号变量的值时，我们都是用 $game_variables[7] 这样的方式直接指定数字。这么做是为范例必须简单易懂为主要的考虑，然而一般的情况，如果某个变量之后会常常改变值，不要用 7 而是用<strong>常量</strong>的形式去定义会是较好的做法。</p>
+<p>关于常量，就跟在 <a href="202_vocab.html">Vocab 模块</a>章节中解说过的一样，只要以英文大写字母为开头定义变量名称就好，只是习惯上常常会全部字母都用大写。</p>
+<p>这次我们要制作的商店的规格是，在 20 号开关为 ON 的状态时，呼叫一般商店时会变成「礼品交换所」，而且将以变量 20 的值当作持有的金额。</p>
 <pre>
 PRIZE_SHOP_SID = 20
 PRIZE_SHOP_VID = 20
 </pre>
-<p>���ǽ����� ID ʡ�Գ� SID������ ID ʡ�Գ� VID ����ʽ�������������ֱ��д����Ķ�����ⲿ�ͺá����Ҫ�ڲ�ͬ�ĵط�ʹ��ͬ������ֵ�Ļ������������ó���������ã�������Ҫ���ĳ�����ֵ��ʱ�򣬷����еط�©����������ʧ��ķ��վͻ���ʧ��</p>
-<p>��ʵ���̵�֮ǰ�����ǵ��ȵ���Ҫ���ԣ��鷳������һ���¼����ñ��� 20 ���ӵ��ʵ���ֵ������ 20 Ϊ ON ��״̬�����һ���г��̵ꡣ</p>
+<p>我们将开关 ID 省略成 SID、变量 ID 省略成 VID 的形式命名。这个定义直接写在类的定义的外部就好。如果要在不同的地方使用同样的数值的话，像这样先用常数来定义好，后面想要更改常量的值的时候，发生有地方漏掉更改这种失误的风险就会消失。</p>
+<p>在实作商店之前，考虑到等等需要测试，麻烦先制作一个事件，让变量 20 增加到适当的值、开关 20 为 ON 的状态，并且会呼叫出商店。</p>
 
-<h2><a name="command">����ָ��</a></h2>
-<p>��һ����Ҫ���̵껭���[����]ָ�����Ƹĳ�[�һ�]��Ȼ���Ƴ�[����]ָ�</p>
-<p>����Ӧѡ��[����]��ָ��Ĵ��ڵ����� Window_ShopCommand��</p>
+<h2><a name="command">更改指令</a></h2>
+<p>第一步是要将商店画面的[买入]指令名称改成[兑换]，然后移除[卖出]指令。</p>
+<p>而对应选择[买入]等指令的窗口的类是 Window_ShopCommand。</p>
 <pre>
 class Window_ShopCommand
   alias xxx001_make_command_list make_command_list
   def make_command_list
     if $game_switches[PRIZE_SHOP_SID]
-      add_command(&quot;�һ�&quot;, :buy)
-      add_command(&quot;�뿪&quot;, :cancel)
+      add_command(&quot;兑换&quot;, :buy)
+      add_command(&quot;离开&quot;, :cancel)
     else
       xxx001_make_command_list
     end
   end
 end
 </pre>
-<p>���������ο��˸ղŶ���ĳ���������ض��Ŀ��ر���� ON���ͻ���ʾ[�һ�]��[�뿪]����ָ���� add_command ��������Ϊ�����Ѿ���<a href="302_story.html">����������ʾ����</a>�н�˵��������Ӧ�ú��������⡣��������Ҫֱ��ʹ��һ���̵�Ĺ����������Է��� :buy �Ĳ��־Ͳ����Ķ���</p>
+<p>我们让它参考了刚才定义的常量，如果特定的开关变成了 ON，就会显示[兑换]、[离开]两个指令。关於 add_command 方法，因为笔者已经在<a href="302_story.html">制作剧情提示画面</a>中解说过，内容应该很容易理解。由于我们要直接使用一般商店的购买处理，所以符号 :buy 的部分就不作改动。</p>
 
 
-<h2><a name="money">���Ľ�����ʾ</a></h2>
-<p>����ʾ���н�Ĵ����У����Ǹĳ���ʾһ��������ֵ���������ͨ�����¶��� Window_Gold ��� value �������ܰ쵽��</p>
+<h2><a name="money">更改金额的显示</a></h2>
+<p>在显示持有金的窗口中，我们改成显示一个变量的值。这件事情通过重新定义 Window_Gold 类的 value 方法就能办到。</p>
 <pre>
 class Window_Gold
   alias xxx001_value value
@@ -65,24 +65,24 @@ class Window_Gold
   end
 end
 </pre>
-<p>ͬ���أ���Ҫ�ı���ҵĵ�λ��Ե�ʣ��������¶��� currency_unit ���������߼�����Ƕĳ�����������Ե�λ���á�ö������ʾ��</p>
+<p>同样地，需要改变货币的单位的缘故，我们重新定义 currency_unit 方法。笔者假想的是赌场的情况，所以单位就用「枚」来显示。</p>
 <pre>
 class Window_Gold
   alias xxx001_currency_unit currency_unit
   def currency_unit
     if $game_switches[PRIZE_SHOP_SID]
-      &quot;ö&quot;
+      &quot;枚&quot;
     else
       xxx001_currency_unit
     end
   end
 end
 </pre>
-<p>�����������ʾ�ı���ֵ�ͻ��ҵ�λ����ѡ����Ʒ�������빺�������ʱ�򣬻��Զ�������ȥ��</p>
+<p>在这个窗口显示的变量值和货币单位，在选择商品或是输入购买个数的时候，会自动沿用下去。</p>
 
 
-<h2><a name="buy">���Ĺ���Ĵ���</a></h2>
-<p>ʵ���Ͼ���������Ʒ֮�󣬻���� Scene_Shop ��� do_buy ������ͨ�����¶��������������������ϵͳ���۵���ң����Ǽ��ٱ�����ֵ��</p>
+<h2><a name="buy">更改购买的处理</a></h2>
+<p>实际上决定购买商品之后，会调用 Scene_Shop 类的 do_buy 方法。通过重新定义这个方法，我们能让系统不扣掉金币，而是减少变量的值。</p>
 <pre>
 class Scene_Shop
   alias xxx001_do_buy do_buy
@@ -96,13 +96,13 @@ class Scene_Shop
   end
 end
 </pre>
-<p> number ��ʾ����������@item �ǹ������Ʒ������buying_price ������Ʒ�ĵ��ۡ�</p>
-<p>����ߵ��õ� gain_item ���� Game_Party ��ķ����������������������Ʒָ����������Ʒ���еĴ�����</p>
+<p> number 表示购买数量，@item 是购买的物品本身，buying_price 则是物品的单价。</p>
+<p>在这边调用的 gain_item 则是 Game_Party 类的方法，进行增加所购买的物品指定个数到物品栏中的处理。</p>
 
 
-<h2><a name="terminate">׷�ӹر�ʱ�Ĵ���</a></h2>
-<p>��ͬ�ڽ��ƪ��<a href="208_scene.html">��������</a>�н�˵�ģ��������б����������С�������ʼ���͡������������ķ�����</p>
-<p>�������Ҫ������һ�����¶��崦�������ķ��� terminate��</p>
+<h2><a name="terminate">追加关闭时的处理</a></h2>
+<p>如同在解读篇的<a href="208_scene.html">场景管理</a>中解说的，场景类中备有用来进行「处理开始」和「处理结束」的方法。</p>
+<p>这次我们要向下面一样重新定义处理结束的方法 terminate。</p>
 <pre>
 class Scene_Shop
   alias xxx001_terminate terminate
@@ -112,7 +112,7 @@ class Scene_Shop
   end
 end
 </pre>
-<p>���һ�����ڹر��̵껭���ʱ������ʶ����Ʒ�������Ŀ��ػ��Զ��رա�</p>
+<p>如此一来，在关闭商店画面的时候，用来识别礼品交换所的开关会自动关闭。</p>
 
 
 <h6></h6>

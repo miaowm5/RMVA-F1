@@ -1,4 +1,4 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+ï»¿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
 <html lang=zh><head><title>Hash</title>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta content=text/css http-equiv=Content-Style-Type><link rel=stylesheet
@@ -6,76 +6,76 @@ type=text/css href="../style.css">
 <meta name=GENERATOR content="MSHTML 9.00.8112.16447"></head>
 <body>
 <h1>Hash</h1>
-<p>¹þÏ£±íµÄÀà£¬ÏêÇéÇë²Î¿´<a href="syntax03.html#L000280">¹þÏ£±í±í´ïÊ½</a>¡£</p>
-<h2>³¬Àà</h2>
+<p>å“ˆå¸Œè¡¨çš„ç±»ï¼Œè¯¦æƒ…è¯·å‚çœ‹<a href="syntax03.html#L000280">å“ˆå¸Œè¡¨è¡¨è¾¾å¼</a>ã€‚</p>
+<h2>è¶…ç±»</h2>
 <ul>
   <li><a href="sc_object.html">Object</a> </li></ul>
-<h2>°üº¬Ä£¿é</h2>
+<h2>åŒ…å«æ¨¡å—</h2>
 <ul>
   <li><a href="sm_enumerable.html">Enumerable</a> </li></ul>
-<h2>·½·¨</h2>
+<h2>æ–¹æ³•</h2>
 <dl>
   <dt>self[key]
   <dd>
-  <p>·µ»Ø¶ÔÓ¦Ö÷¼üÎª <var>key</var> µÄÔªËØÖµ¡£ÈôÊÇ¶ÔÓ¦µÄÖ÷¼ü²»´æÔÚ£¬Ôò·µ»Ø default
-  µÄ¶ÔÓ¦Öµ£¨ÈôÃ»ÓÐÖ¸¶¨ default Ôò·µ»Ø nil£©¡£</p>
+  <p>è¿”å›žå¯¹åº”ä¸»é”®ä¸º <var>key</var> çš„å…ƒç´ å€¼ã€‚è‹¥æ˜¯å¯¹åº”çš„ä¸»é”®ä¸å­˜åœ¨ï¼Œåˆ™è¿”å›ž default
+  çš„å¯¹åº”å€¼ï¼ˆè‹¥æ²¡æœ‰æŒ‡å®š default åˆ™è¿”å›ž nilï¼‰ã€‚</p>
   <dt>self[key]=value
   <dd>
-  <p>½«ÔªËØÖµ <var>value</var> ÉèÖÃ³É¶ÔÓ¦Ö÷¼ü <var>key</var>¡£·µ»Ø
-  <var>value</var>¡£</p>
+  <p>å°†å…ƒç´ å€¼ <var>value</var> è®¾ç½®æˆå¯¹åº”ä¸»é”® <var>key</var>ã€‚è¿”å›ž
+  <var>value</var>ã€‚</p>
   <dt>clear
   <dd>
-  <p>Çå³ý¹þÏ£±íÄÚÈÝ¡£·µ»Ø self¡£</p>
+  <p>æ¸…é™¤å“ˆå¸Œè¡¨å†…å®¹ã€‚è¿”å›ž selfã€‚</p>
   <dt>clone
   <dt>dup
   <dd>
-  <p>·µ»ØÒ»¸öÓëµ÷ÓÃÕßÓÐÍ¬ÑùÄÚÈÝµÄ¹þÏ£±í¡£¶Ô¶³½áµÄ¹þÏ£±íÊ¹ÓÃ clone »á·µ»ØÍ¬Ò»¸ö¶³½áµÄ¹þÏ£±í£¬µ«ÊÇ dup
-  »á·µ»ØÒ»¸öÎ´¶³½áµÄÏàÍ¬ÄÚÈÝµÄ¹þÏ£±í¡£</p>
-  <p>·µ»Ø <var>value ¡£</var></p>
+  <p>è¿”å›žä¸€ä¸ªä¸Žè°ƒç”¨è€…æœ‰åŒæ ·å†…å®¹çš„å“ˆå¸Œè¡¨ã€‚å¯¹å†»ç»“çš„å“ˆå¸Œè¡¨ä½¿ç”¨ clone ä¼šè¿”å›žåŒä¸€ä¸ªå†»ç»“çš„å“ˆå¸Œè¡¨ï¼Œä½†æ˜¯ dup
+  ä¼šè¿”å›žä¸€ä¸ªæœªå†»ç»“çš„ç›¸åŒå†…å®¹çš„å“ˆå¸Œè¡¨ã€‚</p>
+  <p>è¿”å›ž <var>value ã€‚</var></p>
   <dt>delete(<var>key</var>)
   <dt>delete(<var>key</var>) {|<var>key</var>| ... }
   <dd>
-  <p>É¾³ý²¢·µ»Ø¶ÔÓ¦Ö÷¼ü <var>key</var> µÄÔªËØÖµ¡£ÈôÃ»ÓÐ¶ÔÓ¦µÄÔªËØÖµ£¬¾Í·µ»Ø nil¡£
+  <p>åˆ é™¤å¹¶è¿”å›žå¯¹åº”ä¸»é”® <var>key</var> çš„å…ƒç´ å€¼ã€‚è‹¥æ²¡æœ‰å¯¹åº”çš„å…ƒç´ å€¼ï¼Œå°±è¿”å›ž nilã€‚
 </p>
   <dd>
-  <p>Èô´øÇø¿éµÄ»°£¬ÔÚÕÒ²»µ½¶ÔÓ¦µÄÔªËØÖµÊ±£¬¾Í»á¼ÆËãÇø¿é£¬²¢·µ»ØÆä¼ÆËãÖµ¡£</p>
+  <p>è‹¥å¸¦åŒºå—çš„è¯ï¼Œåœ¨æ‰¾ä¸åˆ°å¯¹åº”çš„å…ƒç´ å€¼æ—¶ï¼Œå°±ä¼šè®¡ç®—åŒºå—ï¼Œå¹¶è¿”å›žå…¶è®¡ç®—å€¼ã€‚</p>
   <dt>each {|<var>key</var>, <var>value</var>| ... }
   <dt>each_pair {|<var>key</var>, <var>value</var>| ... }
 
   <dd>
-  <p>Ê¹ÓÃ <var>key</var> ºÍ <var>value</var> ×÷Îª²ÎÊý¶ÔÇø¿é½øÐÐ¼ÆËã£¬·µ»Ø
-  self¡£</p>
+  <p>ä½¿ç”¨ <var>key</var> å’Œ <var>value</var> ä½œä¸ºå‚æ•°å¯¹åŒºå—è¿›è¡Œè®¡ç®—ï¼Œè¿”å›ž
+  selfã€‚</p>
   <dt>each_key {|<var>key</var>| ... }
   <dd>
-  <p>Ê¹ÓÃ <var>key </var>×÷Îª²ÎÊý¶ÔÇø¿é½øÐÐ¼ÆËã£¬·µ»Ø self¡£</p>
+  <p>ä½¿ç”¨ <var>key </var>ä½œä¸ºå‚æ•°å¯¹åŒºå—è¿›è¡Œè®¡ç®—ï¼Œè¿”å›ž selfã€‚</p>
   <dt>each_value {|<var>value</var>| ... }
   <dd>
-  <p>Ê¹ÓÃ<var> value</var> ×÷Îª²ÎÊý¶ÔÇø¿é½øÐÐ¼ÆËã£¬·µ»Ø self¡£</p>
+  <p>ä½¿ç”¨<var> value</var> ä½œä¸ºå‚æ•°å¯¹åŒºå—è¿›è¡Œè®¡ç®—ï¼Œè¿”å›ž selfã€‚</p>
   <dt>empty?
   <dd>
-  <p>Èô¹þÏ£±íÎª¿ÕÔò·µ»Ø true¡£</p>
+  <p>è‹¥å“ˆå¸Œè¡¨ä¸ºç©ºåˆ™è¿”å›ž trueã€‚</p>
   <dt>has_key?(<var>key</var>)
   <dt>include?(<var>key</var>)
   <dd>
-  <p>Èô¹þÏ£±íº¬ÓÐÖ÷¼ü <var>key</var> Ôò·µ»Ø true¡£</p>
+  <p>è‹¥å“ˆå¸Œè¡¨å«æœ‰ä¸»é”® <var>key</var> åˆ™è¿”å›ž trueã€‚</p>
   <dt>has_value?(<var>value</var>)
   <dd>
-  <p>Ê¹ÓÃ == ÅÐ¶Ï¹þÏ£±íÊÇ·ñº¬ÓÐ <var>value</var>
-  ×÷ÎªÆäÔªËØÖµÖ®Ò»£¬Èôº¬ÓÐ <var>value </var>Ôò·µ»Ø true¡£</p>
+  <p>ä½¿ç”¨ == åˆ¤æ–­å“ˆå¸Œè¡¨æ˜¯å¦å«æœ‰ <var>value</var>
+  ä½œä¸ºå…¶å…ƒç´ å€¼ä¹‹ä¸€ï¼Œè‹¥å«æœ‰ <var>value </var>åˆ™è¿”å›ž trueã€‚</p>
   <dt>index(<var>val</var>)
   <dd>
-  <p>·µ»ØÓë val
-  ¶ÔÓ¦µÄÖ÷¼ü¡£ÈôÎÞ·¨¶ÔÓ¦Ôò·µ»Ø nil¡£</p>
-  <p>ÈôÓÐÐí¶àÓë val
-  ¶ÔÓ¦µÄÖ÷¼ü£¬ÔòËæ»ú·µ»ØÒ»¸ö¡£</p>
+  <p>è¿”å›žä¸Ž val
+  å¯¹åº”çš„ä¸»é”®ã€‚è‹¥æ— æ³•å¯¹åº”åˆ™è¿”å›ž nilã€‚</p>
+  <p>è‹¥æœ‰è®¸å¤šä¸Ž val
+  å¯¹åº”çš„ä¸»é”®ï¼Œåˆ™éšæœºè¿”å›žä¸€ä¸ªã€‚</p>
   <dt>keys
   <dd>
-  <p>·µ»ØÒ»¸ö°üº¬ËùÓÐÖ÷¼üµÄÊý×é¡£</p>
+  <p>è¿”å›žä¸€ä¸ªåŒ…å«æ‰€æœ‰ä¸»é”®çš„æ•°ç»„ã€‚</p>
   <dt>length
   <dt>size
   <dd>
-  <p>·µ»Ø¹þÏ£±íÔªËØµÄÊýÄ¿¡£</p>
+  <p>è¿”å›žå“ˆå¸Œè¡¨å…ƒç´ çš„æ•°ç›®ã€‚</p>
   <dt>values
   <dd>
-  <p>·µ»Ø°üº¬ËùÓÐÔªËØÖµµÄÊý×é¡£</p></dd></dl>
+  <p>è¿”å›žåŒ…å«æ‰€æœ‰å…ƒç´ å€¼çš„æ•°ç»„ã€‚</p></dd></dl>
 <h6></h6></body></html>

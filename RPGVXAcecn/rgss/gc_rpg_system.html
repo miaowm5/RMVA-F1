@@ -1,4 +1,4 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
 <html lang=zh><head><title>RPG::System</title>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta content=text/css http-equiv=Content-Style-Type><link rel=stylesheet
@@ -6,146 +6,146 @@ type=text/css href="../style.css">
 <meta name=GENERATOR content="MSHTML 9.00.8112.16447"></head>
 <body>
 <h1>RPG::System</h1>
-<p>ϵͳ�������ࡣ</p>
-<h2>����</h2>
+<p>系统的数据类。</p>
+<h2>超类</h2>
 <ul>
   <li><a href="sc_object.html">Object</a> </li></ul>
-<h2>����</h2>
+<h2>属性</h2>
 <dl>
   <dt>game_title
   <dd>
-  <p>��Ϸ���⡣</p>
+  <p>游戏标题。</p>
   <dt>version_id
   <dd>
-  <p>�������õ���������༭��ÿ�α�������ʱ����������ֵ��</p>
+  <p>检查更新用的随机数，编辑器每次保存数据时都会变更此数值。</p>
   <dt>japanese
   <dd>
-  <p>���İ���ʼ��Ϊ true��</p>
+  <p>日文版中始终为 true。</p>
   <dt>party_members
   <dd>
-  <p>��ʼ���顣��ɫ ID �����顣</p>
+  <p>初始队伍。角色 ID 的数组。</p>
   <dt>currency_unit
   <dd>
-  <p>���ҵ�λ��</p>
+  <p>货币单位。</p>
   <dt>window_tone
   <dd>
-  <p>������ɫ��<a href="gc_tone.html">Tone</a>����</p>
+  <p>窗口颜色（<a href="gc_tone.html">Tone</a>）。</p>
   <dt>elements
   <dd>
-  <p>�����б��������� ID Ϊ�±���ַ������飬0 ��Ԫ��Ϊ���ַ�����</p>
+  <p>属性列表。以属性 ID 为下标的字符串数组，0 号元素为空字符串。</p>
   <dt>skill_types
   <dd>
-  <p>���������б����Լ������� ID Ϊ�±���ַ������飬0 ��Ԫ��Ϊ���ַ�����</p>
+  <p>技能类型列表。以技能类型 ID 为下标的字符串数组，0 号元素为空字符串。</p>
   <dt>weapon_types
   <dd>
-  <p>���������б������������� ID Ϊ�±���ַ������飬0 ��Ԫ��Ϊ���ַ�����</p>
+  <p>武器类型列表。以武器类型 ID 为下标的字符串数组，0 号元素为空字符串。</p>
   <dt>armor_types
   <dd>
-  <p>���������б����Ի������� ID Ϊ�±���ַ������飬0 ��Ԫ��Ϊ���ַ�����</p>
+  <p>护甲类型列表。以护甲类型 ID 为下标的字符串数组，0 号元素为空字符串。</p>
   <dt>switches
   <dd>
-  <p>�����б����Կ��� ID Ϊ�±���ַ������飬0 ��Ԫ��Ϊ nil��</p>
+  <p>开关列表。以开关 ID 为下标的字符串数组，0 号元素为 nil。</p>
   <dt>variables
   <dd>
-  <p>�����б����Ա��� ID Ϊ�±���ַ������飬0 ��Ԫ��Ϊ nil��</p>
+  <p>变量列表。以变量 ID 为下标的字符串数组，0 号元素为 nil。</p>
   <dt>boat
   <dd>
-  <p>С�����ã�<a
-  href="gc_rpg_system_vehicle.html">RPG::System::Vehicle</a>����</p>
+  <p>小舟设置（<a
+  href="gc_rpg_system_vehicle.html">RPG::System::Vehicle</a>）。</p>
   <dt>ship
   <dd>
-  <p>�����ã�<a
-  href="gc_rpg_system_vehicle.html">RPG::System::Vehicle</a>����</p>
+  <p>大船设置（<a
+  href="gc_rpg_system_vehicle.html">RPG::System::Vehicle</a>）。</p>
   <dt>airship
   <dd>
-  <p>��ͧ���ã�<a
-href="gc_rpg_system_vehicle.html">RPG::System::Vehicle</a>����</p>
+  <p>飞艇设置（<a
+href="gc_rpg_system_vehicle.html">RPG::System::Vehicle</a>）。</p>
   <dt>title1_name
   <dd>
-  <p>���⻭��ͼ�񣨱��������ļ�����</p>
+  <p>标题画面图像（背景）的文件名。</p>
   <dt>title2_name
   <dd>
-  <p>���⻭��ͼ�񣨱߿򣩵��ļ�����</p>
+  <p>标题画面图像（边框）的文件名。</p>
   <dt>opt_draw_title
   <dd>
-  <p>���Ʊ������ֵĿ��ء�</p>
+  <p>绘制标题文字的开关。</p>
   <dt>opt_use_midi
   <dd>
-  <p>����ʱ��ʼ�� MIDI �Ŀ��ء�</p>
+  <p>启动时初始化 MIDI 的开关。</p>
   <dt>opt_transparent
   <dd>
-  <p>��ʼʱ�������ͼ͸���Ŀ��ء�</p>
+  <p>初始时玩家行走图透明的开关。</p>
   <dt>opt_followers
   <dd>
-  <p>�����н������𳵣��Ŀ��ء�</p>
+  <p>队列行进（开火车）的开关。</p>
   <dt>opt_slip_death
   <dd>
-  <p>�����˺��ɵ����޷�ս���Ŀ��ء�</p>
+  <p>慢性伤害可导致无法战斗的开关。</p>
   <dt>opt_floor_death
   <dd>
-  <p>�����˺��ɵ����޷�ս���Ŀ��ء�</p>
+  <p>地形伤害可导致无法战斗的开关。</p>
   <dt>opt_display_tp
   <dd>
-  <p>��ս��������ʾ�ؼ�ֵ�Ŀ��ء�</p>
+  <p>在战斗画面显示特技值的开关。</p>
   <dt>opt_extra_exp
   <dd>
-  <p>�油��Ա�ɻ�þ���ֵ�Ŀ��ء�</p>
+  <p>替补队员可获得经验值的开关。</p>
   <dt>title_bgm
   <dd>
-  <p>���⻭�� BGM��<a href="gc_rpg_bgm.html">RPG::BGM</a>����</p>
+  <p>标题画面 BGM（<a href="gc_rpg_bgm.html">RPG::BGM</a>）。</p>
   <dt>battle_bgm
   <dd>
-  <p>ս������ BGM��<a href="gc_rpg_bgm.html">RPG::BGM</a>����</p>
+  <p>战斗画面 BGM（<a href="gc_rpg_bgm.html">RPG::BGM</a>）。</p>
   <dt>battle_end_me
   <dd>
-  <p>ս������ ME��<a href="gc_rpg_me.html">RPG::ME</a>��</p>
+  <p>战斗结束 ME（<a href="gc_rpg_me.html">RPG::ME</a>）</p>
   <dt>gameover_me
   <dd>
-  <p>��Ϸ���� ME��<a href="gc_rpg_me.html">RPG::ME</a>����</p>
+  <p>游戏结束 ME（<a href="gc_rpg_me.html">RPG::ME</a>）。</p>
   <dt>sounds
   <dd>
-  <p>��Ч��<a href="gc_rpg_se.html">RPG::SE</a> �����顣</p>
+  <p>声效。<a href="gc_rpg_se.html">RPG::SE</a> 的数组。</p>
   <dt>start_map_id
   <dd>
-  <p>��ҳ�ʼλ�õĵ�ͼ ID��</p>
+  <p>玩家初始位置的地图 ID。</p>
   <dt>start_x
   <dd>
-  <p>��ҳ�ʼλ�õĵ�ͼ X ���ꡣ</p>
+  <p>玩家初始位置的地图 X 坐标。</p>
   <dt>start_y
   <dd>
-  <p>��ҳ�ʼλ�õĵ�ͼ Y ���ꡣ</p>
+  <p>玩家初始位置的地图 Y 坐标。</p>
   <dt>terms
   <dd>
-  <p>���<a href="gc_rpg_system_terms.html">RPG::System::Terms</a>����</p>
+  <p>用语（<a href="gc_rpg_system_terms.html">RPG::System::Terms</a>）。</p>
   <dt>test_battlers
   <dd>
-  <p>ս�����ԵĶ������á�<a
-  href="gc_rpg_system_testbattler.html">RPG::System::TestBattler</a> �����顣</p>
+  <p>战斗测试的队伍设置。<a
+  href="gc_rpg_system_testbattler.html">RPG::System::TestBattler</a> 的数组。</p>
   <dt>test_troop_id
   <dd>
-  <p>ս�����Եĵ�Ⱥ ID��</p>
+  <p>战斗测试的敌群 ID。</p>
   <dt>battleback1_name
   <dd>
-  <p>�༭��Ⱥ�Լ�ս�������У�ս���������ذ壩ͼ����ļ�����</p>
+  <p>编辑敌群以及战斗测试中，战斗背景（地板）图像的文件名。</p>
   <dt>battleback2_name
   <dd>
-  <p>�༭��Ⱥ�Լ�ս�������У�ս��������ǽ�ڣ�ͼ����ļ�����</p>
+  <p>编辑敌群以及战斗测试中，战斗背景（墙壁）图像的文件名。</p>
   <dt>battler_name
   <dd>
-  <p>�ڱ༭����ʱʹ�õ�ս��ͼ�ļ�����</p>
+  <p>在编辑动画时使用的战斗图文件名。</p>
   <dt>battler_hue
   <dd>
-  <p>�ڱ༭����ʱʹ�õ�ս��ͼɫ���仯����0��360����</p>
+  <p>在编辑动画时使用的战斗图色调变化量（0～360）。</p>
   <dt>edit_map_id
   <dd>
-  <p>�༭���ڲ�ʹ�á���ǰ���ڱ༭�ĵ�ͼ ID ��</p></dd></dl>
-<h2>�ڲ���</h2>
+  <p>编辑器内部使用。当前正在编辑的地图 ID 。</p></dd></dl>
+<h2>内部类</h2>
 <ul>
   <li><a href="gc_rpg_system_vehicle.html">RPG::System::Vehicle</a>
   <li><a href="gc_rpg_system_terms.html">RPG::System::Terms</a>
   <li><a href="gc_rpg_system_testbattler.html">RPG::System::TestBattler</a>
 </li></ul>
-<h2>����</h2><pre>class RPG::System
+<h2>定义</h2><pre>class RPG::System
   def initialize
     @game_title = ''
     @version_id = 0

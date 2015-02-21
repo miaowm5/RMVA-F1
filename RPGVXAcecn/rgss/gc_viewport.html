@@ -1,4 +1,4 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html lang="zh">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -8,59 +8,59 @@
 </head>
 <body>
 <h1>Viewport</h1>
-<p>��ʾ�˿ڵ��ࡣ����ֻ�ڻ����һ������ʾ���飬����Ӱ�����ಿ�֡�</p>
-<h2>����</h2>
+<p>显示端口的类。用于只在画面的一部分显示精灵，而不影响其余部分。</p>
+<h2>超类</h2>
 <ul>
 <li><a href="sc_object.html">Object</a> </li></ul>
-<h2>�෽��</h2>
+<h2>类方法</h2>
 <dl>
 <dt>Viewport.new(<var>x</var>, <var>y</var>, <var>width</var>,
 <var>height</var>)
 <dt>Viewport.new(<var>rect</var>)
 <dt>Viewport.new <span class="rgss3">(RGSS3)</span>
 <dd>
-<p>���� Viewport ����</p>
-<p>���û��ָ�����������С������������ͬ��<span class="rgss3">(RGSS3)</span></p></dd></dl>
-<h2>����</h2>
+<p>生成 Viewport 对象。</p>
+<p>如果没有指定参数，则大小和整个画面相同。<span class="rgss3">(RGSS3)</span></p></dd></dl>
+<h2>方法</h2>
 <dl>
 <dt>dispose
 <dd>
-<p>�ͷ���ʾ�˿ڡ��������ͷ���ʲô��������</p>
-<p>�ò����������Զ��ͷ����������Ķ��� </p>
+<p>释放显示端口。若是已释放则什么都不做。</p>
+<p>该操作并不会自动释放其他关联的对象。 </p>
 <dt>disposed?
 <dd>
-<p>����ʾ�˿����ͷ��򷵻� true��</p>
+<p>当显示端口已释放则返回 true。</p>
 <dt><a name="flash">flash(<var>color</var>, <var>duration</var>)</a>
 <dd>
-<p>��ʼ��˸��ʾ�˿ڡ�<var>duration</var> ָ����˸��֡����</p>
-<p>�� <var>color</var> ��Ϊ nil����˸ʱ��ʾ�˿ڻ���ʧ��</p>
+<p>开始闪烁显示端口。<var>duration</var> 指定闪烁的帧数。</p>
+<p>若 <var>color</var> 设为 nil，闪烁时显示端口会消失。</p>
 <dt>update
 <dd>
-<p>������ʾ�˿ڵ���˸��ԭ���ϣ��˷���һ֡����һ�Ρ�</p>
-<p>����û��ʹ����˸Ч������������ô˷�����</p></dd></dl>
-<h2>����</h2>
+<p>更新显示端口的闪烁。原则上，此方法一帧调用一次。</p>
+<p>若是没有使用闪烁效果，则无须调用此方法。</p></dd></dl>
+<h2>属性</h2>
 <dl>
 <dt>rect
 <dd>
-<p>�趨Ϊ��ʾ�˿ڵľ��Σ�<a href="gc_rect.html">Rect</a>����</p>
+<p>设定为显示端口的矩形（<a href="gc_rect.html">Rect</a>）。</p>
 <dt>visible
 <dd>
-<p>��ʾ�˿ڵĿɼ�״̬��true �����ɼ���Ĭ��Ϊ true��</p>
+<p>显示端口的可见状态，true 代表可见。默认为 true。</p>
 <dt>z
 <dd>
-<p>��ʾ�˿ڵ� Z ���ꡣ��ֵԽ�����ʾ��Խǰ����</p>
-<p>Z ������ͬ�ģ�Խ�����ɵĶ�����ʾ��Խǰ����</p>
+<p>显示端口的 Z 坐标。数值越大的显示在越前方。</p>
+<p>Z 坐标相同的，越晚生成的对象显示在越前方。</p>
 <dt>ox
 <dd>
-<p>��ʾ�˿�ԭ��� X ���ꡣ�޸Ĵ���ֵ�����𶯻��档</p>
+<p>显示端口原点的 X 坐标。修改此数值可以震动画面。</p>
 <dt>oy
 <dd>
-<p>��ʾ�˿ڿ�ʼ��� Y ���ꡣ�޸Ĵ���ֵ�����𶯻��档</p>
+<p>显示端口开始点的 Y 坐标。修改此数值可以震动画面。</p>
 <dt>color
 <dd>
-<p>����ʾ�˿ںϳɵ���ɫ��<a href="gc_color.html">Color</a>����ɫ�ʵ� alpha ֵ��Ϊ�ϳɵı�����</p>
-<p>����ɫ�� <a href="#flash">flash</a> Ч������ɫ�ֿ�������</p>
+<p>与显示端口合成的颜色（<a href="gc_color.html">Color</a>）。色彩的 alpha 值作为合成的比例。</p>
+<p>此颜色与 <a href="#flash">flash</a> 效果的颜色分开处理。</p>
 <dt>tone
 <dd>
-<p>��ʾ�˿ڵ�ɫ����<a href="gc_tone.html">Tone</a>����</p></dd></dl>
+<p>显示端口的色调（<a href="gc_tone.html">Tone</a>）。</p></dd></dl>
 <h6></h6></body></html>

@@ -1,4 +1,4 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
 <html lang=zh><head><title>Method</title>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta content=text/css http-equiv=Content-Style-Type><link rel=stylesheet
@@ -6,10 +6,10 @@ type=text/css href="../style.css">
 <meta name=GENERATOR content="MSHTML 9.00.8112.16447"></head>
 <body>
 <h1>Method</h1>
-<p>�� <a
-href="rgss/sc_object.html#method">Object#method</a> ��װ������֮�еķ�������ɵ��ࡣ����������������ݣ�ע�ⲻ�����ƣ����䱻���ܵĶ��󱻷�װ�������С��� <a
-href="rgss/sc_proc.html">Proc</a> ��ͬ�����ɶ���ʱ���������ǲ��ᱻ����ġ�</p>
-<p>��ͬ�� <a href="sc_proc.html">Proc</a>: Method ����Ҫ��Ӧ��������ʱ���ܴ������� Proc ����׼�����ɴ������м��ڴˣ�Proc ���ʺ�һ����ʹ�ã��� Method �ʺ��ظ�ʹ�á����⣬�����ں��Ĵ�����������Proc �ʺ�С��ģ���룬�� Method �ʺϴ��ģ���롣</p><pre>class Foo
+<p>被 <a
+href="rgss/sc_object.html#method">Object#method</a> 封装进对象之中的方法所组成的类。这个方法本身的内容（注意不是名称）和其被接受的对象被封装到对象中。和 <a
+href="rgss/sc_proc.html">Proc</a> 不同，生成对象时的上下文是不会被保存的。</p>
+<p>不同于 <a href="sc_proc.html">Proc</a>: Method 必须要对应方法存在时才能创建，而 Proc 无需准备即可创建。有鉴于此，Proc 更适合一次性使用，而 Method 适合重复使用。此外，根据内含的代码量来看，Proc 适合小规模代码，而 Method 适合大规模代码。</p><pre>class Foo
   def foo(arg)
     "foo called with arg #{arg}"
   end
@@ -20,14 +20,14 @@ m = Foo.new.method(:foo)
 p m             # =&gt; #&lt;Method: Foo#foo&gt;
 p m.call(1)     # =&gt; "foo called with arg 1"
 </pre>
-<h2>����</h2>
+<h2>超类</h2>
 <ul>
   <li><a href="sc_object.html">Object</a> </li></ul>
-<h2>����</h2>
+<h2>方法</h2>
 <dl>
   <dt><a name=call></a>call(<var>arg</var> ... )
   <dt><a name=call_2></a>call(<var>arg</var> ... ) { ... }
 
   <dd>
-  <p>������װ�ڶ���֮�еķ��������������鶼ԭ�ⲻ���ش��ݸ���������</p></dd></dl>
+  <p>启动封装于对象之中的方法，参数和区块都原封不动地传递给方法。。</p></dd></dl>
 <h6></h6></body></html>

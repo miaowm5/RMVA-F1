@@ -1,4 +1,4 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html lang="zh">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -8,48 +8,48 @@
 </head>
 <body>
 <h1>Font</h1>
-<p>������ࡣ������ <a href="gc_bitmap.html">Bitmap</a> ������ԡ�</p>
-<p>�����Ϸ��Ŀ¼�´��ڡ�Fonts���ļ��У���ô����ϵͳ��û�а�װ��Ӧ���壬��Ϸ����Ȼ����ʹ�ø��ļ����д��ڵ����塣</p>
-<h2>����</h2>
+<p>字体的类。字体是 <a href="gc_bitmap.html">Bitmap</a> 类的属性。</p>
+<p>如果游戏根目录下存在“Fonts”文件夹，那么就算系统中没有安装相应字体，游戏中依然可以使用该文件夹中存在的字体。</p>
+<h2>超类</h2>
 <ul>
 <li><a href="sc_object.html">Object</a> </li></ul>
-<h2>�෽��</h2>
+<h2>类方法</h2>
 <dl>
 <dt>Font.new([<var>name</var>[, <var>size</var>]])
 <dd>
-<p>�����������</p>
+<p>生成字体对象。</p>
 <dt>Font.exist?(<var>name</var>)
 <dd>
-<p>��ϵͳ�д���ָ���������򷵻� true��</p></dd></dl>
-<h2>����</h2>
+<p>若系统中存在指定的字体则返回 true。</p></dd></dl>
+<h2>属性</h2>
 <dl>
 <dt>name
 <dd>
-<p>��������ơ�Ĭ��ֵ�� "nsimsun" <span class="rgss3">(RGSS3)</span>���������Ϊ�ַ������飬��������ϲ����˳��ָ��������塣</p><pre>font.name = ["΢���ź�", "����"]</pre>
-<p>����������У���ϵͳ�в��������ȶȸߵ� "΢���ź�"�����ʹ�õڶ�ѡ�� "����"��</p>
+<p>字体的名称。默认值是 "nsimsun" <span class="rgss3">(RGSS3)</span>。如果设置为字符串数组，可以依照喜欢的顺序指定多个字体。</p><pre>font.name = ["微软雅黑", "黑体"]</pre>
+<p>在这个例子中，若系统中不存在优先度高的 "微软雅黑"，则会使用第二选择 "黑体"。</p>
 <dt>size
 <dd>
-<p>�����С��Ĭ��Ϊ 24 <span class="rgss3">(RGSS3)</span>��</p>
+<p>字体大小，默认为 24 <span class="rgss3">(RGSS3)</span>。</p>
 <dt>bold
 <dd>
-<p>�����ǡ�Ĭ��Ϊ false��</p>
+<p>粗体标记。默认为 false。</p>
 <dt>italic
 <dd>
-<p>б���ǡ�Ĭ��Ϊ false��</p>
+<p>斜体标记。默认为 false。</p>
 <dt>outline <span class="rgss3">(RGSS3)</span>
 <dd>
-<p>����������ǣ�Ĭ��Ϊ true��</p>
+<p>文字轮廓标记，默认为 true。</p>
 <dt>shadow
 <dd>
-<p>������Ӱ��ǡ�Ĭ��Ϊ false <span class="rgss3">(RGSS3)</span>������ʱ�������ֵ����·�����ɫ��Ӱ�� </p>
+<p>文字阴影标记。默认为 false <span class="rgss3">(RGSS3)</span>。启用时会在文字的右下方描绘黑色阴影。 </p>
 <dt>color
 <dd>
-<p>������ɫ��<a href="gc_color.html">Color</a>����Ҳ���Ե��� alpha ֵ��Ĭ��Ϊ (255,255,255,255)��</p>
-<p>alpha ֵҲͬʱ��������������� <span class="rgss3">(RGSS3) </span>��������Ӱ��</p>
+<p>文字颜色（<a href="gc_color.html">Color</a>）。也可以调整 alpha 值。默认为 (255,255,255,255)。</p>
+<p>alpha 值也同时用来描绘文字轮廓 <span class="rgss3">(RGSS3) </span>和文字阴影。</p>
 <dt>out_color <span class="rgss3">(RGSS3)</span>
 <dd>
-<p>����������ɫ��<a href="gc_color.html">Color</a>����Ĭ��ֵΪ (0,0,0,128)��</p></dd></dl>
-<h2>������</h2>
+<p>文字轮廓颜色（<a href="gc_color.html">Color</a>），默认值为 (0,0,0,128)。</p></dd></dl>
+<h2>类属性</h2>
 <dl>
 <dt>default_name
 <dt>default_size
@@ -60,7 +60,7 @@
 <dt>default_color
 <dt>default_out_color <span class="rgss3">(RGSS3)</span>
 <dd>
-<p>���Ը��������µ� Font ����ʱ�����Ե�Ĭ��ֵ��</p><pre>Font.default_name = "΢���ź�"
+<p>可以更改生成新的 Font 对象时各属性的默认值。</p><pre>Font.default_name = "微软雅黑"
 Font.default_size = 22
 Font.default_bold = true
 </pre></dd></dl>

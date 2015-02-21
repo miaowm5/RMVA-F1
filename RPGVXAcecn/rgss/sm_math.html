@@ -1,4 +1,4 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+ï»¿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
 <html lang=zh><head><title>Math</title>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta content=text/css http-equiv=Content-Style-Type><link rel=stylesheet
@@ -6,95 +6,95 @@ type=text/css href="../style.css">
 <meta name=GENERATOR content="MSHTML 9.00.8112.16447"></head>
 <body>
 <h1>Math</h1>
-<p>Ö§³Ö¸¡µãÐ¡Êý¼ÆËãµÄÄ£¿é¡£</p>
-<h2>Ä£¿é·½·¨</h2>
+<p>æ”¯æŒæµ®ç‚¹å°æ•°è®¡ç®—çš„æ¨¡å—ã€‚</p>
+<h2>æ¨¡å—æ–¹æ³•</h2>
 <dl>
   <dt>Math.acos(<var>x</var>)
   <dt>Math.asin(<var>x</var>)
   <dt>Math.atan(<var>x</var>)
   <dd>
-  <p>ÒÔ»¡¶È·µ»Ø x µÄ·´Èý½Çº¯Êý¼ÆËãÖµ¡£</p>
-  <p>·µ»ØÖµµÄ·¶Î§·Ö±ðÊÇ [0, +&#960;]¡¢[-&#960;/2, +&#960;/2] ºÍ (-&#960;/2, +&#960;/2)¡£</p>
-  <p>ÔÚ acos(x) ºÍ asin(x) ÖÐ£¬<var>x</var> Ö®Öµ±ØÐëÊÇ -1.0 &lt;= <var>x</var> &lt;= 1
-  µÄ·¶Î§£¨Í¨³£·µ»Ø NaN£©¡£</p>
-  <p>acos() ºÍ asin() Óöµ½³¬³ö·¶Î§µÄ²ÎÊý£¬»áÅ×³ö <a
-  href="s_exceptions.html#Errno">Errno::EDOM</a> Òì³£¡£</p>
+  <p>ä»¥å¼§åº¦è¿”å›ž x çš„åä¸‰è§’å‡½æ•°è®¡ç®—å€¼ã€‚</p>
+  <p>è¿”å›žå€¼çš„èŒƒå›´åˆ†åˆ«æ˜¯ [0, +&#960;]ã€[-&#960;/2, +&#960;/2] å’Œ (-&#960;/2, +&#960;/2)ã€‚</p>
+  <p>åœ¨ acos(x) å’Œ asin(x) ä¸­ï¼Œ<var>x</var> ä¹‹å€¼å¿…é¡»æ˜¯ -1.0 &lt;= <var>x</var> &lt;= 1
+  çš„èŒƒå›´ï¼ˆé€šå¸¸è¿”å›ž NaNï¼‰ã€‚</p>
+  <p>acos() å’Œ asin() é‡åˆ°è¶…å‡ºèŒƒå›´çš„å‚æ•°ï¼Œä¼šæŠ›å‡º <a
+  href="s_exceptions.html#Errno">Errno::EDOM</a> å¼‚å¸¸ã€‚</p>
   <dt>Math.atan2(<var>y</var>, <var>x</var>)
   <dd>
-  <p>·µ»Ø [-&#960;, &#960;] ·¶Î§ÄÚµÄ <var>y</var>/<var>x</var> ·´ÕýÇÐº¯Êý¡£</p>
+  <p>è¿”å›ž [-&#960;, &#960;] èŒƒå›´å†…çš„ <var>y</var>/<var>x</var> åæ­£åˆ‡å‡½æ•°ã€‚</p>
   <dt>Math.acosh(<var>x</var>)
   <dt>Math.asinh(<var>x</var>)
   <dt>Math.atanh(<var>x</var>)
   <dd>
-  <p>·µ»Ø x µÄ·´Ë«Çúº¯Êý¼ÆËãÖµ¡£</p><pre>asinh(x) = log(x + sqrt(x * x + 1))
+  <p>è¿”å›ž x çš„ååŒæ›²å‡½æ•°è®¡ç®—å€¼ã€‚</p><pre>asinh(x) = log(x + sqrt(x * x + 1))
 acosh(x) = log(x + sqrt(x * x - 1)) [x &gt;= 1]
 atanh(x) = log((1+x)/(1-x)) / 2     [-1 &lt; x &lt; 1]
 </pre>
-  <p>ÔÚ&nbsp;acosh(x)£¬<var>x</var> ±ØÐë &gt;= 1£¨Í¨³£»áÅ×³ö <a
-  href="s_exceptions.html#Errno">Errno::EDOM</a> Òì³££©¡£</p>
-  <p>ÔÚ&nbsp;atanh(x)£¬<var>x</var> ±ØÐëÔÚ -1.0 &lt; <var>x</var> &lt; 1 µÄ·¶Î§ÄÚ£¨Í¨³£»áÅ×³ö
-  <a href="s_exceptions.html#Errno">Errno::EDOM</a> Òì³££©¡£</p>
+  <p>åœ¨&nbsp;acosh(x)ï¼Œ<var>x</var> å¿…é¡» &gt;= 1ï¼ˆé€šå¸¸ä¼šæŠ›å‡º <a
+  href="s_exceptions.html#Errno">Errno::EDOM</a> å¼‚å¸¸ï¼‰ã€‚</p>
+  <p>åœ¨&nbsp;atanh(x)ï¼Œ<var>x</var> å¿…é¡»åœ¨ -1.0 &lt; <var>x</var> &lt; 1 çš„èŒƒå›´å†…ï¼ˆé€šå¸¸ä¼šæŠ›å‡º
+  <a href="s_exceptions.html#Errno">Errno::EDOM</a> å¼‚å¸¸ï¼‰ã€‚</p>
   <dt>Math.cos(<var>x</var>)
   <dt>Math.sin(<var>x</var>)
   <dt>Math.tan(<var>x</var>)
   <dd>
-  <p>ÒÔ»¡¶È·µ»Ø x µÄÈý½Çº¯Êý [-1, 1] µÄ·¶Î§ÄÚµÄ¼ÆËãÖµ¡£</p>
+  <p>ä»¥å¼§åº¦è¿”å›ž x çš„ä¸‰è§’å‡½æ•° [-1, 1] çš„èŒƒå›´å†…çš„è®¡ç®—å€¼ã€‚</p>
   <dt>Math.cosh(<var>x</var>)
   <dt>Math.sinh(<var>x</var>)
   <dt>Math.tanh(<var>x</var>)
   <dd>
-  <p>·µ»Ø x µÄË«Çúº¯Êý¼ÆËãÖµ¡£</p><pre>cosh(x) = (exp(x) + exp(-x)) / 2
+  <p>è¿”å›ž x çš„åŒæ›²å‡½æ•°è®¡ç®—å€¼ã€‚</p><pre>cosh(x) = (exp(x) + exp(-x)) / 2
 sinh(x) = (exp(x) - exp(-x)) / 2
 tanh(x) = sinh(x) / cosh(x)
 </pre>
   <dt>Math.erf(<var>x</var>)
   <dt>Math.erfc(<var>x</var>)
   <dd>
-  <p>·µ»Ø x
-  µÄÎó²îº¯Êý£¨erf£©¡¢²¹ÓàÎó²îº¯Êý£¨erfc£©µÄ¼ÆËãÖµ¡£</p>
+  <p>è¿”å›ž x
+  çš„è¯¯å·®å‡½æ•°ï¼ˆerfï¼‰ã€è¡¥ä½™è¯¯å·®å‡½æ•°ï¼ˆerfcï¼‰çš„è®¡ç®—å€¼ã€‚</p>
   <dt>Math.exp(<var>x</var>)
   <dd>
-  <p>·µ»Ø <var>x</var> µÄÖ¸Êýº¯Êý¼ÆËãÖµ¡£</p>
+  <p>è¿”å›ž <var>x</var> çš„æŒ‡æ•°å‡½æ•°è®¡ç®—å€¼ã€‚</p>
   <dt>Math.frexp(<var>x</var>)
   <dd>
-  <p>·µ»ØÊµÊý <var>x</var> µÄ¸¡µãÊý×Ö±íÊ¾·¨£¨<font class=post>exponent and mantissa
-  </font><font class=post>Ö¸ÊýÓë¼ÙÊý</font>£©¡£</p>
+  <p>è¿”å›žå®žæ•° <var>x</var> çš„æµ®ç‚¹æ•°å­—è¡¨ç¤ºæ³•ï¼ˆ<font class=post>exponent and mantissa
+  </font><font class=post>æŒ‡æ•°ä¸Žå‡æ•°</font>ï¼‰ã€‚</p>
   <dt>Math.hypot(<var>x</var>, <var>y</var>)
   <dd>
-  <p>·µ»Ø sqrt(x*x + y*y)¡£</p>
+  <p>è¿”å›ž sqrt(x*x + y*y)ã€‚</p>
   <dt>Math.ldexp(<var>x</var>, <var>exp</var>)
   <dd>
-  <p>·µ»ØÊµÊý x ³ËÒÔ 2 µÄ exp ´Î·½¡£</p>
+  <p>è¿”å›žå®žæ•° x ä¹˜ä»¥ 2 çš„ exp æ¬¡æ–¹ã€‚</p>
   <dt>Math.log(<var>x</var>)
   <dd>
-  <p>·µ»Ø x µÄ×ÔÈ»¶ÔÊý¡£<var></var></p>
-  <p><var>x</var> ±ØÐëÊÇÕýÖµ£¨Í¨³£¸ºÖµ»á·µ»Ø NaN£¬0 »á·µ»Ø¸ºÎÞÇî£©¡£</p>
-  <p>³¬³ö·¶Î§µÄ²ÎÊý£¬¸ºÊý»áÅ×³ö <a href="s_exceptions.html#Errno">Errno::EDOM</a> Òì³££¬¶ø 0 »áÅ×³ö
-  <a href="s_exceptions.html#Errno">Errno::ERANGE</a> Òì³£¡£</p>
+  <p>è¿”å›ž x çš„è‡ªç„¶å¯¹æ•°ã€‚<var></var></p>
+  <p><var>x</var> å¿…é¡»æ˜¯æ­£å€¼ï¼ˆé€šå¸¸è´Ÿå€¼ä¼šè¿”å›ž NaNï¼Œ0 ä¼šè¿”å›žè´Ÿæ— ç©·ï¼‰ã€‚</p>
+  <p>è¶…å‡ºèŒƒå›´çš„å‚æ•°ï¼Œè´Ÿæ•°ä¼šæŠ›å‡º <a href="s_exceptions.html#Errno">Errno::EDOM</a> å¼‚å¸¸ï¼Œè€Œ 0 ä¼šæŠ›å‡º
+  <a href="s_exceptions.html#Errno">Errno::ERANGE</a> å¼‚å¸¸ã€‚</p>
   <dt>Math.log10(<var>x</var>)
   <dd>
-  <p>·µ»Ø x µÄ³£ÓÃ¶ÔÊý¡£<var></var></p>
-  <p><var>x</var> ±ØÐëÊÇÕýÖµ£¨Í¨³£¸ºÖµ»á·µ»Ø NaN£¬0 »á·µ»Ø¸ºÎÞÇî£©¡£</p>
-  <p>³¬³ö·¶Î§µÄ²ÎÊý£¬¸ºÊý»áÅ×³ö <a
+  <p>è¿”å›ž x çš„å¸¸ç”¨å¯¹æ•°ã€‚<var></var></p>
+  <p><var>x</var> å¿…é¡»æ˜¯æ­£å€¼ï¼ˆé€šå¸¸è´Ÿå€¼ä¼šè¿”å›ž NaNï¼Œ0 ä¼šè¿”å›žè´Ÿæ— ç©·ï¼‰ã€‚</p>
+  <p>è¶…å‡ºèŒƒå›´çš„å‚æ•°ï¼Œè´Ÿæ•°ä¼šæŠ›å‡º <a
   href="ata/Local/Temp/RPGVXAce/rgss/s_exceptions.html#Errno">Errno::EDOM</a>
-  Òì³££¬¶ø 0 »áÅ×³ö <a
+  å¼‚å¸¸ï¼Œè€Œ 0 ä¼šæŠ›å‡º <a
   href="ata/Local/Temp/RPGVXAce/rgss/s_exceptions.html#Errno">Errno::ERANGE</a>
-  Òì³£¡£</p>
+  å¼‚å¸¸ã€‚</p>
   <dt>Math.sqrt(<var>x</var>)
   <dd>
-  <p>·µ»Ø <var>x</var> µÄÆ½·½¸ù¡£Èô <var>x</var> Îª¸ºÊý£¬Å×³ö <a
-  href="s_exceptions.html#ArgumentError">ArgumentError</a> Òì³£¡£</p>
-  <p>Í¨³£¸ºÊý»áÅ×³ö <a href="s_exceptions.html#Errno">Errno::EDOM</a> Òì³£¡£</p></dd></dl>
-<h2>¶¨Êý</h2>
+  <p>è¿”å›ž <var>x</var> çš„å¹³æ–¹æ ¹ã€‚è‹¥ <var>x</var> ä¸ºè´Ÿæ•°ï¼ŒæŠ›å‡º <a
+  href="s_exceptions.html#ArgumentError">ArgumentError</a> å¼‚å¸¸ã€‚</p>
+  <p>é€šå¸¸è´Ÿæ•°ä¼šæŠ›å‡º <a href="s_exceptions.html#Errno">Errno::EDOM</a> å¼‚å¸¸ã€‚</p></dd></dl>
+<h2>å®šæ•°</h2>
 <dl>
   <dt>E
   <dd>
-  <p>×ÔÈ»¶ÔÊýµÄµ×Êý¡£</p><pre>p Math::E
+  <p>è‡ªç„¶å¯¹æ•°çš„åº•æ•°ã€‚</p><pre>p Math::E
 # =&gt; 2.718281828
 </pre>
   <dt>PI
   <dd>
-  <p>Ô²ÖÜÂÊ¡£</p><pre>p Math::PI
+  <p>åœ†å‘¨çŽ‡ã€‚</p><pre>p Math::PI
 # =&gt; 3.141592654
 </pre></dd></dl>
 <h6></h6></body></html>

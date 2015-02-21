@@ -1,4 +1,4 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
 <html lang=zh><head><title>Exception</title>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta content=text/css http-equiv=Content-Style-Type><link rel=stylesheet
@@ -6,41 +6,41 @@ type=text/css href="../style.css">
 <meta name=GENERATOR content="MSHTML 9.00.8112.16447"></head>
 <body>
 <h1>Exception</h1>
-<p>�����쳣�ĳ��ࡣ</p>
-<p>�������е�������Ϣ����ο� <a href="s_exceptions.html">�ڽ��쳣��</a> ��</p>
-<h2>����</h2>
+<p>所有异常的超类。</p>
+<p>关于所有的子类信息，请参看 <a href="s_exceptions.html">内建异常类</a> 。</p>
+<h2>超类</h2>
 <ul>
   <li><a href="sc_object.html">Object</a>
   </li></ul>
-<h2>�෽��</h2>
+<h2>类方法</h2>
 <dl>
   <dt>Exception.new([<var>error_message</var>])
   <dd>
-  <p>���ɲ�����һ���µ��쳣���󡣿����ṩһ����Ϊ������Ϣ���ַ�����Ϊ����������Ϣ���� <a
+  <p>生成并返回一个新的异常对象。可以提供一个作为错误信息的字符串作为参数。该信息就是 <a
   href="#L000732">message</a>
-  ���ԣ��ο��·�����ֵ������Ĭ�ϵ��쳣��������ʾ������</p></dd></dl>
-<h2>����</h2>
+  属性（参看下方）的值，并由默认的异常处理器显示出来。</p></dd></dl>
+<h2>方法</h2>
 <dl>
   <dt>exception([<var>error_message</var>])
   <dd>
-  <p>δָ������ʱ����&nbsp;<var>self</var>
-  ������ͻ����ɼ�����һ�������ĸ�������ʹ�ò�����ָ���Ĵ�����Ϣ��Ϊ <a href="#L000732">message</a>
-  <var>error_message</var>��</p>
-  <p><a href="s_functions.html#L000388">raise</a> ����ʵ���ϵ��õľ���exception����</p>
+  <p>未指定参数时返回&nbsp;<var>self</var>
+  。否则就会生成及返回一个自身的副本，并使用参数中指定的错误信息作为 <a href="#L000732">message</a>
+  <var>error_message</var>。</p>
+  <p><a href="s_functions.html#L000388">raise</a> 方法实际上调用的就是exception对象。</p>
   <dt>backtrace
   <dd>
-  <p>���ع��ڴ���׷�ٽ������Ϣ��</p>
+  <p>返回关于错误追踪结果的信息。</p>
   <ul>
     <li>
     <p>"#{sourcefile}:#{sourceline}:in `#{method}'"</p>
-    <p>(������)</p>
+    <p>(方法内)</p>
     <li>
     <p>"#{sourcefile}:#{sourceline}"</p>
-    <p>(����һ�������)</p>
+    <p>(最上一层代码内)</p>
     <li>
-    <p>��ע��sourcefileΪԴ�ļ���sourcelineΪԴ�У�method���Ƿ���</p></li></ul>
-  <p>����ֵ����ʽΪһ��&nbsp;<a href="sc_string.html">String</a>&nbsp;���顣</p>
+    <p>备注：sourcefile为源文件，sourceline为源行，method则是方法</p></li></ul>
+  <p>返回值的形式为一个&nbsp;<a href="sc_string.html">String</a>&nbsp;数组。</p>
   <dt><a name=L000732>message</a>
   <dd>
-  <p>���ش���ѶϢ�ַ�����</p></dd></dl>
+  <p>返回错误讯息字符串。</p></dd></dl>
 <h6></h6></body></html>

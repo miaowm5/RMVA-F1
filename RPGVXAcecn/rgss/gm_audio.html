@@ -1,4 +1,4 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html lang="zh">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -8,64 +8,64 @@
 </head>
 <body>
 <h1>Audio</h1>
-<p>ִ�����ֺ�����������ģ�顣</p>
-<h2>ģ�鷽��</h2>
+<p>执行音乐和声音处理的模块。</p>
+<h2>模块方法</h2>
 <dl>
 <dt>Audio.setup_midi <span class="rgss3">(RGSS3)</span>
 <dd>
-<p>ִ�� DirectMusic ���� MIDI ��׼����</p>
-<p>�������󣬿��Խ� RGSS2 ����ʱִ�еĴ�����������ʱ��ִ�С�</p>
-<p>�����ñ�����Ҳ���Բ��� MIDI�������� Windows Vista ֮��İ汾�У����β��Ż��� 1~2 ����ӳ١�</p>
+<p>执行 DirectMusic 播放 MIDI 的准备。</p>
+<p>方法化后，可以将 RGSS2 启动时执行的处理放在任意时机执行。</p>
+<p>不调用本方法也可以播放 MIDI，但是在 Windows Vista 之后的版本中，初次播放会有 1~2 秒的延迟。</p>
 <dt><a name="bgm_play">Audio.bgm_play(<var>filename</var>[, <var>volume</var>[,
 <var>pitch</var>[, <var>pos</var>]]])</a> <span class="rgss3">(RGSS3)</span>
 <dd>
-<p>��ʼ���� BGM������ָ���ļ�������������������ʼλ�á�</p>
-<p>��ʼλ�� <span class="rgss3">(RGSS3)</span> ֻ�� ogg �� wav ��Ч�� </p>
-<p><a href="rgss.html#rgss_rtp">RGSS-RTP</a> �ڵ��ļ�Ҳ���Զ���������չ������ʡ�ԡ�</p>
+<p>开始播放 BGM。依次指定文件名、音量、音调和起始位置。</p>
+<p>起始位置 <span class="rgss3">(RGSS3)</span> 只对 ogg 和 wav 有效。 </p>
+<p><a href="rgss.html#rgss_rtp">RGSS-RTP</a> 内的文件也会自动搜索。扩展名可以省略。</p>
 <dt>Audio.bgm_stop
 <dd>
-<p>ֹͣ���� BGM��</p>
+<p>停止播放 BGM。</p>
 <dt>Audio.bgm_fade(<var>time</var>)
 <dd>
-<p>��ʼ���� BGM��<var>time</var> �Ժ���Ϊ��λָ��������Ҫ��ʱ�䡣</p>
+<p>开始淡出 BGM。<var>time</var> 以毫秒为单位指定淡出需要的时间。</p>
 <dt>Audio.bgm_pos <span class="rgss3">(RGSS3)</span>
 <dd>
-<p>��ȡ BGM �Ĳ���λ�á�ֻ�� ogg �� wav ��Ч����Чʱ���� 0��</p>
+<p>获取 BGM 的播放位置。只对 ogg 和 wav 有效。无效时返回 0。</p>
 <dt><a name="bgs_play">Audio.bgs_play(<var>filename</var>[, <var>volume</var>[,
 <var>pitch</var>[, <var>pos</var>]]])</a> <span class="rgss3">(RGSS3)</span>
 <dd>
-<p>��ʼ���� BGS������ָ���ļ�������������������ʼλ�á�</p>
-<p>��ʼλ�� <span class="rgss3">(RGSS3)</span> ֻ�� ogg �� wav ��Ч�� </p>
-<p><a href="rgss.html#rgss_rtp">RGSS-RTP</a> �ڵ��ļ�Ҳ���Զ���������չ������ʡ�ԡ�</p></dd>
+<p>开始播放 BGS。依次指定文件名、音量、音调和起始位置。</p>
+<p>起始位置 <span class="rgss3">(RGSS3)</span> 只对 ogg 和 wav 有效。 </p>
+<p><a href="rgss.html#rgss_rtp">RGSS-RTP</a> 内的文件也会自动搜索。扩展名可以省略。</p></dd>
 <dt>Audio.bgs_stop
 <dd>
-<p>ֹͣ���� BGS��</p>
+<p>停止播放 BGS。</p>
 <dt>Audio.bgs_fade(<var>time</var>)
 <dd>
-<p>��ʼ���� BGS��<var>time</var> �Ժ���Ϊ��λָ��������Ҫ��ʱ�䡣</p>
+<p>开始淡出 BGS。<var>time</var> 以毫秒为单位指定淡出需要的时间。</p>
 <dt>Audio.bgs_pos <span class="rgss3">(RGSS3)</span>
 <dd>
-<p>��ȡ BGS �Ĳ���λ�á�ֻ�� ogg �� wav ��Ч����Чʱ���� 0��</p>
+<p>获取 BGS 的播放位置。只对 ogg 和 wav 有效。无效时返回 0。</p>
 <dt><a name="me_play">Audio.me_play(<var>filename</var>[, <var>volume</var>[,
 <var>pitch</var>]])</a>
 <dd>
-<p>��ʼ���� ME������ָ���ļ�����������������</p>
+<p>开始播放 ME，依次指定文件名、音量和音调。</p>
 <dd>
-<p><a href="rgss.html#rgss_rtp">RGSS-RTP</a> �ڵ��ļ�Ҳ���Զ���������չ������ʡ�ԡ�</p>
-<p>���� ME ʱ����ͣ BGM��BGM ���¿�ʼ��ʱ���� RGSS1 ���в�ͬ��</p>
+<p><a href="rgss.html#rgss_rtp">RGSS-RTP</a> 内的文件也会自动搜索。扩展名可以省略。</p>
+<p>播放 ME 时会暂停 BGM。BGM 重新开始的时机与 RGSS1 稍有不同。</p>
 <dt>Audio.me_stop
 <dd>
-<p>ֹͣ���� ME��</p>
+<p>停止播放 ME。</p>
 <dt>Audio.me_fade(<var>time</var>)
 <dd>
-<p>��ʼ���� ME��<var>time</var> �Ժ���Ϊ��λָ��������Ҫ��ʱ�䡣</p>
+<p>开始淡出 ME。<var>time</var> 以毫秒为单位指定淡出需要的时间。</p>
 <dt><a name="se_play">Audio.se_play(<var>filename</var>[, <var>volume</var>[,
 <var>pitch</var>]])</a>
 <dd>
-<p>��ʼ���� SE������ָ���ļ�����������������</p>
-<p><a href="rgss.html#rgss_rtp">RGSS-RTP</a> �ڵ��ļ�Ҳ���Զ���������չ������ʡ�ԡ�</p>
-<p>�����ڼ���ʱ�����ظ�����ͬһ�� SE�����Զ��ӳ�����Է����ֱ�����</p></dd>
+<p>开始播放 SE，依次指定文件名、音量和音调。</p>
+<p><a href="rgss.html#rgss_rtp">RGSS-RTP</a> 内的文件也会自动搜索。扩展名可以省略。</p>
+<p>若是在极短时间内重复播放同一个 SE，会自动延长间隔以防出现爆音。</p></dd>
 <dt>Audio.se_stop
 <dd>
-<p>ֹͣ���� SE��</p></dd></dl>
+<p>停止播放 SE。</p></dd></dl>
 <h6></h6></body></html>

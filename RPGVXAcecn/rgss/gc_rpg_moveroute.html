@@ -1,4 +1,4 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
 <html lang=zh><head><title>RPG::MoveRoute</title>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta content=text/css http-equiv=Content-Style-Type><link rel=stylesheet
@@ -6,30 +6,30 @@ type=text/css href="../style.css">
 <meta name=GENERATOR content="MSHTML 9.00.8112.16447"></head>
 <body>
 <h1>RPG::MoveRoute</h1>
-<p>�ƶ�·�ߵ������ࡣ</p>
-<h2>����</h2>
+<p>移动路线的数据类。</p>
+<h2>超类</h2>
 <ul>
   <li><a href="sc_object.html">Object</a> </li></ul>
-<h2>������</h2>
+<h2>调用者</h2>
 <ul>
   <li><a href="gc_rpg_eventpage.html">RPG::EventPage</a> </li></ul>
-<h2>����</h2>
+<h2>属性</h2>
 <dl>
   <dt>repeat
   <dd>
-  <p>�Ƿ�ѡ��ѭ��ִ�С�ѡ��ĸ�ѡ��</p>
+  <p>是否勾选「循环执行」选项的复选框。</p>
   <dt>skippable
   <dd>
-  <p>�Ƿ�ѡ�������ϰ���ѡ��ĸ�ѡ��</p>
+  <p>是否勾选「忽略障碍」选项的复选框。</p>
   <dt>wait
   <dd>
-  <p>�Ƿ�ѡ���ȴ����ƶ�������ѡ��ĸ�ѡ��</p>
+  <p>是否勾选「等待至移动结束」选项的复选框。</p>
   <dt>list
   <dd>
-  <p>�ƶ�·�����ݣ�<a
+  <p>移动路线内容，<a
   href="rgss/gc_rpg_movecommand.html">RPG::MoveCommand</a>
-  ��������顣</p></dd></dl>
-<h2>����</h2><pre>class RPG::MoveRoute
+  对象的数组。</p></dd></dl>
+<h2>定义</h2><pre>class RPG::MoveRoute
   def initialize
     @repeat = true
     @skippable = false

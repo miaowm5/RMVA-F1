@@ -1,4 +1,4 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
 <html lang=zh><head><title>RPG::System::Vehicle</title>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta content=text/css http-equiv=Content-Style-Type><link rel=stylesheet
@@ -6,34 +6,34 @@ type=text/css href="../style.css">
 <meta name=GENERATOR content="MSHTML 9.00.8112.16447"></head>
 <body>
 <h1>RPG::System::Vehicle</h1>
-<p>��ͨ���ߵ������ࡣ</p>
-<h2>����</h2>
+<p>交通工具的数据类。</p>
+<h2>超类</h2>
 <ul>
   <li><a href="sc_object.html">Object</a> </li></ul>
-<h2>������</h2>
+<h2>调用者</h2>
 <ul>
   <li><a href="gc_rpg_system.html">RPG::System</a> </li></ul>
-<h2>����</h2>
+<h2>属性</h2>
 <dl>
   <dt>character_name
   <dd>
-  <p>��ͨ���ߵ�����ͼ�ļ�����</p>
+  <p>交通工具的行走图文件名。</p>
   <dt>character_index
   <dd>
-  <p>��ͨ���ߵ�����ͼ������0��7��</p>
+  <p>交通工具的行走图索引（0～7）</p>
   <dt>bgm
   <dd>
-  <p>��ͨ���߱������֣�<a href="gc_rpg_bgm.html">RPG::BGM</a>&nbsp;����</p>
+  <p>交通工具背景音乐（<a href="gc_rpg_bgm.html">RPG::BGM</a>&nbsp;）。</p>
   <dt>start_map_id
   <dd>
-  <p>��ͨ���߳�ʼλ�����ڵĵ�ͼ ID ��š�</p>
+  <p>交通工具初始位置所在的地图 ID 编号。</p>
   <dt>start_x
   <dd>
-  <p>��ͨ���߳�ʼλ�õ� X ���ꡣ</p>
+  <p>交通工具初始位置的 X 坐标。</p>
   <dt>start_y
   <dd>
-  <p>��ͨ���߳�ʼλ�õ� Y ���ꡣ</p></dd></dl>
-<h2>����</h2><pre>class RPG::System::Vehicle
+  <p>交通工具初始位置的 Y 坐标。</p></dd></dl>
+<h2>定义</h2><pre>class RPG::System::Vehicle
   def initialize
     @character_name = ''
     @character_index = 0

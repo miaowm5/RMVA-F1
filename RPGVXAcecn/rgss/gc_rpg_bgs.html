@@ -1,4 +1,4 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html lang="zh">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -8,37 +8,37 @@
 </head>
 <body>
 <h1>RPG::BGS</h1>
-<p>BGS �������ࡣӵ��ͨ�� <a href="gm_audio.html">Audio</a> ģ�鲥�������Ĺ��ܡ�</p>
-<h2>����</h2>
+<p>BGS 的数据类。拥有通过 <a href="gm_audio.html">Audio</a> 模块播放自身的功能。</p>
+<h2>超类</h2>
 <ul>
 <li><a href="gc_rpg_audiofile.html">RPG::AudioFile</a></li></ul>
-<h2>������</h2>
+<h2>调用者</h2>
 <ul>
 <li><a href="gc_rpg_map.html">RPG::Map</a>
 <li><a href="gc_rpg_eventcommand.html">RPG::EventCommand</a></li></ul>
-<h2>�෽��</h2>
+<h2>类方法</h2>
 <dl>
 <dt>RPG::BGS.last
 <dd>
-<p>��ȡ���ڲ��ŵ� BGS��RPG::BGS����</p>
-<p>ͬʱ���ȡ�Ķ����б��沥��λ�á�</p>
-<p>����û�в��� BGS���򷵻�����Ϊ�յĶ���</p>
+<p>获取正在播放的 BGS（RPG::BGS）。</p>
+<p>同时向获取的对象中保存播放位置。</p>
+<p>若是没有播放 BGS，则返回内容为空的对象。</p>
 <dt>RPG::BGS.stop
 <dd>
-<p>ֹͣ���� BGS��</p>
+<p>停止播放 BGS。</p>
 <dt>RPG::BGS.fade(<var>time</var>)
 <dd>
-<p>��ʼ���� BGS��<var>time</var> �Ժ���Ϊ��λָ��������Ҫ��ʱ�䡣</p></dd></dl>
-<h2>����</h2>
+<p>开始淡出 BGS。<var>time</var> 以毫秒为单位指定淡出需要的时间。</p></dd></dl>
+<h2>方法</h2>
 <dl>
 <dt>play([<var>pos</var>])</dt>
 <dd>
-<p>��ʼ���� BGS��</p>
-<p>���� ogg �� wav ��ʽ�������� <var>pos</var> ָ�����ſ�ʼ��λ�á�</p>
+<p>开始播放 BGS。</p>
+<p>对于 ogg 或 wav 格式，可以用 <var>pos</var> 指定播放开始的位置。</p>
 <dt>replay</dt>
 <dd>
-<p>�ط� RPG::BGS.last ��ȡ�� BGS��</p></dd></dl>
-<h2>����</h2><pre>class RPG::BGS &lt; RPG::AudioFile
+<p>重放 RPG::BGS.last 获取的 BGS。</p></dd></dl>
+<h2>定义</h2><pre>class RPG::BGS &lt; RPG::AudioFile
   @@last = RPG::BGS.new
   def play(pos = 0)
     if @name.empty?
